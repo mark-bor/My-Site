@@ -1,0 +1,105 @@
+body {
+	font-family: Mukta, sans-serif;
+	background-color: #242F3E;
+}
+
+/*-------------------- DISCRIPTION ------------------------------------------------------*/
+
+h1 {
+	font-weight: 100;
+	line-height: 77px;
+	font-size: 50px;
+	text-align: center;
+	color: #4BAB00;
+}
+
+div {
+	margin: auto;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	font-size: 30px;
+}
+.tabel-div {
+	padding: 0;
+	height: 130px;
+	max-width: 450px;
+	align-items: center;
+}
+td {
+	text-align: center;
+	height: 50px;
+}
+.tabel {
+	padding: 0;
+	width: 90px;
+	border-collapse: collapse;
+	border: 1px solid #4BAB00;
+	box-sizing: border-box;
+}
+.td-a-b-c {
+	background-color: #B2ED83;
+	border-bottom: 1px solid #4BAB00;
+	margin: 0;
+}
+#inp {
+	background-color: #B2ED83;
+}
+.inp {
+	width: 90px;
+	height: 50px;
+	font-size: 25px;
+	border: none;
+	margin: 0;
+	background-color: #F5F5F5;
+	text-align: center;
+	box-sizing: border-box;
+	outline: none;
+}
+tr {
+	margin: 0;
+}
+
+/*-------------------- BUTTON ------------------------------------------------------*/
+
+#button {
+	height: 50px;
+	width: 200px;
+	background-color: #4BAB00;
+	color: white;
+	border: 1px solid #4BAB00;
+	border-radius: 5px;
+	margin: auto;
+	font-size: 25px;
+	transition: 0.05s;
+}
+#button:hover {
+	border: 3px solid #8FD855;
+}
+
+/*-------------------- LINE ------------------------------------------------------*/
+
+.hr {
+	display: center;
+	max-width: 550px;
+	height: 3px;
+	border: none;
+	background: linear-gradient(to left, #242F3E, #D9D9D9, #242F3E);
+}
+
+/*-------------------- FOTTER ------------------------------------------------------*/
+
+.tabel-2 {
+	width: 150px;
+	border-collapse: collapse;
+}
+.td-x1-x2 {
+	background-color: #A1BEEA;
+	margin: 0;
+	border: 1px solid #457FD6;
+}
+.td-x1-x2-2 {
+	font-size: 25px;
+	border: 1px solid #457FD6;
+	background-color: #F5F5F5;
+}

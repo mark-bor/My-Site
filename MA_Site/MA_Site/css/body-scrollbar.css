@@ -1,0 +1,21 @@
+/*-------------------- BODY ------------------------------------------------------*/
+
+body {
+	font-family: Montserrat, normal;
+	margin: 0;
+	background: #D9D9D9;
+}
+
+/*-------------------- SCROLLBAR ------------------------------------------------------*/
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+::-webkit-scrollbar-track {
+	background-color:  #D9D9D9;
+	box-shadow: inset 0 0 10px #616974;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #051937;
+	border-radius: 7px;
+}
