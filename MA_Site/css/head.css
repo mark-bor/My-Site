@@ -148,6 +148,9 @@
 	background-color: #051937;
 	border-left: 3px solid #8FD855;
 }
+#act {
+	border-left: 3px solid #8FD855;
+}
 #paw {
 	display: flex;
 	align-items: center;
@@ -157,9 +160,6 @@
 }
 #top:hover {
 	border-top-right-radius: 20px;
-}
-#paw:hover {
-	border-bottom-right-radius: 20px;
 }
 
 /*-------------------- TITLE ----------------------------------------------------*/
