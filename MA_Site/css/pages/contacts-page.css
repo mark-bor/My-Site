@@ -1,0 +1,59 @@
+body {
+	font-family: Montserrat, normal;
+	margin: 0;
+	background: #D9D9D9;
+	padding-bottom: 100px;
+}
+
+/*-------------------- TITLE ----------------------------------------------------*/
+
+.title {
+	margin: 53px auto;
+	width: 766px;
+	height: 138px;
+	padding: auto;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+h1 {
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 77px;
+	margin: auto;
+}
+
+/*-------------------- CONTACTS ----------------------------------------------------*/
+
+.phone-email {
+	width: 350px;
+	height: 90px;
+	margin: 0 auto;
+	text-align: center;
+}
+.phone-email p {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 39px;
+}
+.contacts {
+	width: 650px;
+	height: 200px;
+	margin: 20px auto;
+}
+.string-icons {
+	width: 100%;
+	height: 100px;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.icon img {
+	border-radius: 50%;
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+
+}
+.icon:hover {
+	opacity: 0.7;
+	transition: 0.1s;
+}
