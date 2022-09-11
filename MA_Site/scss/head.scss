@@ -1,0 +1,251 @@
+@import "pages/_variables.scss";
+
+
+/*-------------------- HEAD --------------------------*/
+.head {
+	background-color: $head_foot_title;
+	height: 90px;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-content: center;
+	
+	.menu-burger {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		
+		.link{
+			display: block;
+			width: 60px;
+			height: 60px;
+			background: none;
+			border: none;
+			border-radius: 20%;
+			position: relative;
+			transition: 0.1s;
+			
+			.burger,
+			.burger:before,
+			.burger:after {
+				position: absolute;
+				top: 50%; margin-top: calc(6px/-2);
+				left: 50%; margin-left: calc(40px/-2);
+				width: 40px;
+				height: 6px;
+				background-color: #616974;
+				border-radius: 20px;
+			}
+			.burger {
+				transition: 0.1s;
+			}
+			.burger:before,
+			.burger:after {
+				content: '';
+				display: block;
+				transition: 0.5s;
+			}
+			.burger:before {
+				transform: translateY(-12px);
+			}
+			.burger:after {
+				transform: translateY(12px);
+			}
+		}
+	}
+
+	.link_active {
+		display: block;
+		width: 60px;
+		height: 60px;
+		background: none;
+		border: none;
+		border-radius: 20%;
+		position: relative;
+		
+		.burger,
+		.burger:before,
+		.burger:after {
+			position: absolute;
+			top: 50%; margin-top: calc(6px/-2);
+			left: 50%; margin-left: calc(40px/-2);
+			width: 40px;
+			height: 6px;
+			background-color: #616974;
+			border-radius: 20px;
+		}
+		.burger {
+			visibility: hidden;
+		}
+		.burger:before,
+		.burger:after {
+			content: '';
+			display: block;
+			transition: 0.5s;
+		}
+		.burger:before {
+			visibility: visible;
+			transform: rotate(-45deg);
+		}
+		.burger:after {
+			visibility: visible;
+			transform: rotate(45deg);
+		}
+	}
+
+	.link:hover,
+	.link_active:hover {
+		background-color: #051937;
+	}
+
+	.logo {
+		height: 70px;
+		width: 70px;
+		margin: 10px auto;
+		transition: 0.2s;
+	}
+	.logo:hover {
+		opacity: 0.9;
+	}
+	.help,
+	.menu-burger {
+		width: 150px;
+		height: 100%;
+		margin: 0;
+	}
+	.help-img {
+		height: 90px;
+	}
+	.help {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		img {
+			height: 70px;
+		}
+	}
+}
+
+
+/*-------------------- MENU WINDOW --------------------------*/
+.transMenu {
+	position: absolute;
+	width: 257px;
+	height: 365px;
+	background: $head_foot_title;
+	border-top: 3px solid #78A2E1;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+	transition: 1s;
+	top: 90px;
+	transform: translateX(-110%);
+	z-index: 5;
+}
+.transMenu_2 {
+	position: absolute;
+	width: 257px;
+	height: 365px;
+	background: $head_foot_title;
+	border-top: 3px solid #78A2E1;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+	transition: 1s;
+	top: 90px;
+	transform: translateX(0%);
+	z-index: 5;
+}
+.menu-window div {
+	width: 100%;
+	height: 73px;
+	padding-left: 28px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+.menu-window > button {
+	display: block;
+	color: $white;
+	width: 100%;
+	font-family: Roboto, sans-serif;
+	line-height: 39px;
+	font-weight: 400;
+	font-size: 32px;
+	text-decoration: none;
+	padding: 0;
+}
+.menu-window > button > div:hover {
+	background-color: #051937;
+	border-left: 3px solid #8FD855;
+}
+.act {
+	border-left: 3px solid #8FD855;
+}
+#paw {
+	display: flex;
+	align-items: center;
+}
+.paw-img {
+	margin-left: 150px;
+}
+#top:hover {
+	border-top-right-radius: 20px;
+}
+
+/*-------------------- TITLE --------------------------*/
+.title {
+	margin: 53px auto;
+	max-width: 766px;
+	height: 138px;
+	padding: auto;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	
+	h1 {
+		font-family: Secular One, sans-serif;
+		color: $head_foot_title;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 77px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 481px) {
+	.title {
+		margin: 23px auto;
+
+		h1 {
+			font-weight: 400;
+			font-size: 54px;
+			line-height: 57px;
+		}
+	}
+	.head {
+		height: 70px;
+		
+		.link:hover,
+		.link_active:hover{
+			background: none;
+		}
+
+		.logo {
+			height: 50px;
+			width: 50px;
+			margin: 10px auto;
+		}
+
+		.help {
+			img {
+				height: 50px;
+			}
+		}
+	}
+
+	.transMenu, .transMenu_2 {
+		top: 70px;
+	}
+}

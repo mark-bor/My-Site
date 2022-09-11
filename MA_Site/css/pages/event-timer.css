@@ -1,29 +1,114 @@
-.bir-tim {
+.tim {
 	font-family: Montserrat, sans-serif;
 }
 
 /*-------------------- BODY ----------------------------------------------------*/
 
-.bir-tim > #img, 
-.bir-tim > #img-2 {
+.tim > #img, 
+.tim > #img-2 {
 	position: fixed;
 	bottom: 0;
 }
-.bir-tim > #img {
+.tim > #img {
 	max-height: 300px;
 	z-index: -1;
 	opacity: 0.5;
 }
-.bir-tim > #img-2 {
+.tim > #img-2 {
 	right: 0;
 	max-height: 150px;
 	z-index: -2;
 	opacity: 0.3;
 }
-.bir-tim > h1 {
+.tim > h1 {
 	/* Styles is in "body-scrollbar.css" */
 }
-.bir-tim > h2 {
+
+.date {
+	max-width: 270px;
+	min-height: 80px;
+	margin: 0 auto 30px auto;
+	text-align: center;
+}
+.date_time {
+	width: 100%;
+	height: 30px;
+	margin: 0 auto 25px auto;
+
+	outline: none;
+	width: 220px;
+	height: 30px;
+	font-weight: 400;
+	font-size: 19.5px;
+	line-height: 30px;
+	color: #FF9900;
+	box-sizing: border-box;
+	border: 1px solid #D9D9D9;
+	background-color: #242F3E;
+	box-shadow: inset 0 0 30px #1E2939;
+	border-radius: 5px;
+}
+.buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.reload {
+	width: 100px;
+	height: 25px;
+	margin: 0 auto;
+	background-color: #D9D9D9;
+	border-radius: 15px;
+	box-shadow: 0 0 30px #1E2939;
+	transition: 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: Roboto, cursive;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+	color: #4BAB00;
+}
+.getDateButton {
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: #D9D9D9;
+	border-radius: 15px;
+	box-shadow: 0 0 30px #1E2939;
+	transition: 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: Chakra Petch, cursive;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 28px;
+	color: #4BAB00;
+}
+.reload:hover {
+	opacity: 0.8;
+}
+.getDateButton:hover {
+	opacity: 0.8;
+}
+
+.error {
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+	color: #FF5555;
+	text-align: center;
+	margin: 0 auto 30px auto;
+}
+
+.tim > h2 {
 	font-family: Chakra Petch, sans-serif;
 	font-weight: 400;
 	font-size: 40px;
@@ -32,7 +117,7 @@
 	color: #FF9900;
 	margin: 0 0 55px 0;
 }
-.bir-tim > .timer {
+.tim > .timer {
 	max-width: 870px;
 	min-height: 150px;
 	margin: 0 auto;
@@ -40,19 +125,18 @@
 	justify-content: center;
 	align-items: center;
 }
-.bir-tim .string {
+.tim .string {
 	max-width: 840px;
 	height: 100%;
 	box-sizing: border-box;
-	margin: 0 30px;
+	margin: 0 30px 200px 30px;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	float: left;
 }
-.bir-tim .par {
+.tim .par {
 	min-width: 290px;
 	max-height: 130px;
 	margin: auto;
@@ -71,7 +155,7 @@
 	justify-content: space-around;
 	align-items: center;
 }
-.bir-tim .circle {
+.tim .circle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -81,7 +165,7 @@
 	fill: none;
 	stroke: none;
 }
-.bir-tim svg {
+.tim svg {
 	position: relative;
 	width: 130px;
 	height: 130px;
@@ -93,7 +177,7 @@
 				inset 0 0 20px #1E2939,
 				inset 0 0 50px #1E2939;
 }
-.bir-tim .meter {
+.tim .meter {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -106,10 +190,10 @@
 	stroke: #4BAB00;
 	stroke-dasharray: 394;
 }
-.bir-tim #five_5 {
+.tim #five_5 {
 	transition: 0s;
 }
-.bir-tim .text-in-circle {
+.tim .text-in-circle {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -117,19 +201,19 @@
 	justify-content: center;
 	align-items: center;
 }
-.bir-tim h6, 
-.bir-tim h5 {
+.tim h6, 
+.tim h5 {
 	font-family: Chakra Petch, sans-serif;
 	font-weight: 400;
 	margin: auto;
 	text-align: center;
 }
-.bir-tim h6 {
+.tim h6 {
 	color: #D9D9D9;
 	font-size: 20px;
 	line-height: 25px;
 }
-.bir-tim h5 {
+.tim h5 {
 	font-size: 30px;
 	line-height: 35px;
 	color: #FF9900;

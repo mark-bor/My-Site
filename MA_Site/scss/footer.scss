@@ -1,0 +1,82 @@
+@import "pages/_variables.scss";
+
+
+.footer {
+    background-color: $head_foot_title;
+    min-height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.footer-block {
+    height: 35px;
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+.footer-block > h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: $white;
+    margin: 0px;
+}
+.contacts-C {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto 0px;
+}
+.string-footer {
+    width: 50%;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+.phone_email {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    margin: 0px;
+}
+.contacts-C a {
+    color: $white;
+    opacity: 0.5;
+    text-decoration: none;
+}
+.phone_email img {
+    margin-bottom: 12px;
+}
+.phone_email_text > p {
+    color: $white;
+    opacity: 0.5;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
+    transition: all 0.1s ease 0s;
+}
+.string-foot {
+    width: 50%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+.img-contacts {
+    width: 200px;
+    height: 80px;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}

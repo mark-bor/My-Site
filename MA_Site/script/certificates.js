@@ -1,140 +1,30 @@
-/*------------------------------- CERTIFICATES ---------------------------------------------*/
 
-function blockText1 (el){
-	let menu = document.querySelector('.block-text-1');
+/*------------------------------- CERTIFICATES ------------------------------------------*/
+document.addEventListener('DOMContentLoaded', () => {
+	const certificate = document.querySelectorAll('#certific');
 
-	if (menu.className === 'block-text-1') {
-		menu.className = 'block-text-1-T';
-	}
-}
-function blockText1T (el){
-	let menu = document.querySelector('.block-text-1-T');
-	
-	if (menu.className === 'block-text-1-T') {
-		menu.className = 'block-text-1';
-	}	
-}
+	certificate.forEach((certific) => {
+		certific.onfocus = () => {
+			if (certific.firstElementChild.className === 'block_text_1') {
+				certific.firstElementChild.className = 'block_text_1_T';
+			}
+		};
+		certific.onblur = () => {
+			if (certific.firstElementChild.className === 'block_text_1_T') {
+				certific.firstElementChild.className = 'block_text_1';
+			}
+		};
+	});
+});
 
-function blockText2 (el){
-	let menu = document.querySelector('.block-text-2');
 
-	if (menu.className === 'block-text-2') {
-		menu.className = 'block-text-2-T';
-	}
-}
-function blockText2T (el){
-	let menu = document.querySelector('.block-text-2-T');
-	
-	if (menu.className === 'block-text-2-T') {
-		menu.className = 'block-text-2';
-	}	
-}
 
-function blockText3 (el){
-	let menu = document.querySelector('.block-text-3');
-
-	if (menu.className === 'block-text-3') {
-		menu.className = 'block-text-3-T';
-	}
-}
-function blockText3T (el){
-	let menu = document.querySelector('.block-text-3-T');
-	
-	if (menu.className === 'block-text-3-T') {
-		menu.className = 'block-text-3';
-	}	
-}
-
-function blockText4 (el){
-	let menu = document.querySelector('.block-text-4');
-
-	if (menu.className === 'block-text-4') {
-		menu.className = 'block-text-4-T';
-	}
-}
-function blockText4T (el){
-	let menu = document.querySelector('.block-text-4-T');
-	
-	if (menu.className === 'block-text-4-T') {
-		menu.className = 'block-text-4';
-	}	
-}
-
-/*------------------------------- SCROLE RIGHT ---------------------------------------------*/
-
-function right (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform === 'translateX(0px)'){
-		return slider.style.transform = 'translateX(-850px)';
-	}
-	if (slider.style.transform === 'translateX(-850px)'){
-		return slider.style.transform = 'translateX(-1700px)';
-	}
-	if (slider.style.transform === 'translateX(-1700px)'){
-		return slider.style.transform = 'translateX(-2550px)';
-	}
-	
-}
-
-/*------------------------------- SCROLE LEFT ---------------------------------------------*/
-
-function left (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform === 'translateX(-2550px)'){
-		return slider.style.transform = 'translateX(-1700px)';
-	}
-	if (slider.style.transform === 'translateX(-1700px)'){
-		return slider.style.transform = 'translateX(-850px)';
-	}
-	if (slider.style.transform === 'translateX(-850px)'){
-		return slider.style.transform = 'translateX(0px)';
-	}
-}
-
-/*------------------------------- BOTTOM BUTTONS ---------------------------------------------*/
-
-function checkbox1 (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform > 'translateX(0px)' || 
-		slider.style.transform < 'translateX(0px)'){
-		return slider.style.transform = 'translateX(0px)';
-	}
-}
-function checkbox2 (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform > 'translateX(-850px)' || 
-		slider.style.transform < 'translateX(-850px)'){
-		return slider.style.transform = 'translateX(-850px)';
-	}
-}
-function checkbox3 (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform > 'translateX(-1700px)' || 
-		slider.style.transform < 'translateX(-1700px)'){
-		return slider.style.transform = 'translateX(-1700px)';
-	}
-}
-function checkbox4 (el) {
-	let slider = document.querySelector('.menu-block-text');
-
-	if (slider.style.transform > 'translateX(-2550px)' || 
-		slider.style.transform < 'translateX(-2550px)'){
-		return slider.style.transform = 'translateX(-2550px)';
-	}
-}
-
-/*------------------------------- BOTTOM BUTTONS STYLE ---------------------------------------------*/
-
+/*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/
 function buttonStyle (el) {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 	let check = document.querySelectorAll('.checkbox');
 	let len = check.length;
-
 	let left = document.querySelector('.to_L');
 	let right = document.querySelector('.to_R');
 
@@ -142,167 +32,186 @@ function buttonStyle (el) {
 		for (let i=0; i<len; i++){
 			if (check[i] === document.getElementById('1')){
 				check[i].classList.add('active');
-			}
-			if (check[i] != document.getElementById('1')){
+			} else {
 				check[i].classList.remove('active');
 			}
 		}
-		left.style.height = '0px';
-		right.style.height = '100%';
+		left.style.width = '0';
+		right.style.width = '100%';
 		return;
-	}
-	if (slider.style.transform === 'translateX(-850px)'){
+	} else if (slider.style.transform === `translateX(-${widthCert}px)`){
 		for (let i=0; i<len; i++){
 			if (check[i] === document.getElementById('2')){
 				check[i].classList.add('active');
-			}
-			if (check[i] != document.getElementById('2')){
+			} else {
 				check[i].classList.remove('active');
 			}
 		}
-		left.style.height = '100%';
-		right.style.height = '100%';
+		left.style.width = '100%';
+		right.style.width = '100%';
 		return;
-	}
-	if (slider.style.transform === 'translateX(-1700px)'){
+	} else if (slider.style.transform === `translateX(-${widthCert*2}px)`){
 		for (let i=0; i<len; i++){
 			if (check[i] === document.getElementById('3')){
 				check[i].classList.add('active');
-			}
-			if (check[i] != document.getElementById('3')){
+			} else {
 				check[i].classList.remove('active');
 			}
 		}
-		left.style.height = '100%';
-		right.style.height = '100%';
+		left.style.width = '100%';
+		right.style.width = '100%';
 		return;
-	}
-	if (slider.style.transform === 'translateX(-2550px)'){
+	} else if (slider.style.transform === `translateX(-${widthCert*3}px)`){
 		for (let i=0; i<len; i++){
 			if (check[i] === document.getElementById('4')){
 				check[i].classList.add('active');
-			}
-			if (check[i] != document.getElementById('4')){
+			} else {
 				check[i].classList.remove('active');
 			}
 		}
-		left.style.height = '100%';
-		right.style.height = '0px';
+		left.style.width = '100%';
+		right.style.width = '0px';
 		return;
 	}
-	
 }
-
-
-
-
-
-/*------------------------------- CERTIFICATES LANGUAGES ---------------------------------------------*/
-
-function blockText1_Lang (el){
-	let menu = document.querySelector('.block-text-1-lang');
-
-	if (menu.className === 'block-text-1-lang') {
-		menu.className = 'block-text-1-T-lang';
-	}
-}
-function blockText1T_Lang (el){
-	let menu = document.querySelector('.block-text-1-T-lang');
-	
-	if (menu.className === 'block-text-1-T-lang') {
-		menu.className = 'block-text-1-lang';
-	}	
-}
-
-function blockText2_Lang (el){
-	let menu = document.querySelector('.block-text-2-lang');
-
-	if (menu.className === 'block-text-2-lang') {
-		menu.className = 'block-text-2-T-lang';
-	}
-}
-function blockText2T_Lang (el){
-	let menu = document.querySelector('.block-text-2-T-lang');
-	
-	if (menu.className === 'block-text-2-T-lang') {
-		menu.className = 'block-text-2-lang';
-	}	
-}
-
 /*------------------------------- SCROLE RIGHT ---------------------------------------------*/
+document.querySelector('#right').addEventListener('click', () => {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text');
 
-function right_Lang (el) {
+	if (slider.style.transform === 'translateX(0px)'){
+		slider.style.transform = `translateX(-${widthCert}px)`;
+	} else if (slider.style.transform === `translateX(-${widthCert}px)`){
+		slider.style.transform = `translateX(-${widthCert*2}px)`;
+	} else if (slider.style.transform === `translateX(-${widthCert*2}px)`){
+		slider.style.transform = `translateX(-${widthCert*3}px)`;
+	}
+	buttonStyle();
+});
+/*------------------------------- SCROLE LEFT ---------------------------------------------*/
+document.querySelector('#left').addEventListener('click', () => {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text');
+
+	if (slider.style.transform === `translateX(-${widthCert*3}px)`){
+		slider.style.transform = `translateX(-${widthCert*2}px)`;
+	} else if (slider.style.transform === `translateX(-${widthCert*2}px)`){
+		slider.style.transform = `translateX(-${widthCert}px)`;
+	} else if (slider.style.transform === `translateX(-${widthCert}px)`){
+		slider.style.transform = 'translateX(0px)';
+	}
+	buttonStyle();
+});
+
+/*------------------------------- BOTTOM BUTTONS ---------------------------------------------*/
+document.getElementById('1').addEventListener('click', function () {
+	let slider = document.querySelector('.menu-block-text');
+
+	if (slider.style.transform !== 'translateX(0px)'){
+		slider.style.transform = 'translateX(0px)';
+	}
+	buttonStyle();
+});
+document.getElementById('2').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text');
+
+	if (slider.style.transform !== `translateX(-${widthCert}px)`){
+		slider.style.transform = `translateX(-${widthCert}px)`;
+	}
+	buttonStyle();
+});
+document.getElementById('3').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text');
+
+	if (slider.style.transform !== `translateX(-${widthCert*2}px)`){
+		slider.style.transform = `translateX(-${widthCert*2}px)`;
+	}
+	buttonStyle();
+});
+document.getElementById('4').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text');
+
+	if (slider.style.transform !== `translateX(-${widthCert*3}px)`){
+		slider.style.transform = `translateX(-${widthCert*3}px)`;
+	}
+	buttonStyle();
+});
+
+
+
+/*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/
+function buttonStyle_Lang() {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let slider = document.querySelector('.menu-block-text-lang');
+	let check = document.querySelectorAll('.checkbox-lang');
+	let len = check.length;
+	let left = document.querySelector('#to_L-lang');
+	let right = document.querySelector('#to_R-lang');
+
+	if (slider.style.transform === 'translateX(0px)'){
+		for (let i=0; i<len; i++){
+			if (check[i] === document.getElementById('1_lang')){
+				check[i].classList.add('active-lang');
+			} else {
+				check[i].classList.remove('active-lang');
+			}
+		}
+		left.style.width = '0';
+		right.style.width = '100%';
+		return;
+	} else if (slider.style.transform === `translateX(-${widthCert}px)`){
+		for (let i=0; i<len; i++){
+			if (check[i] === document.getElementById('2_lang')){
+				check[i].classList.add('active-lang');
+			} else {
+				check[i].classList.remove('active-lang');
+			}
+		}
+		left.style.width = '100%';
+		right.style.width = '0';
+		return;
+	}
+}
+/*------------------------------- SCROLE RIGHT ---------------------------------------------*/
+document.getElementById('right_lang').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text-lang');
 
 	if (slider.style.transform === 'translateX(0px)'){
-		return slider.style.transform = 'translateX(-850px)';
+		slider.style.transform = `translateX(-${widthCert}px)`;
 	}
-}
-
+	buttonStyle_Lang();
+});
 /*------------------------------- SCROLE LEFT ---------------------------------------------*/
-
-function left_Lang (el) {
+document.getElementById('left_lang').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text-lang');
 
-	if (slider.style.transform === 'translateX(-850px)'){
-		return slider.style.transform = 'translateX(0px)';
+	if (slider.style.transform === `translateX(-${widthCert}px)`){
+		slider.style.transform = `translateX(0px)`;
 	}
-}
-
-/*------------------------------- BOTTOM BUTTONS ---------------------------------------------*/
-
-function checkbox1_Lang () {
+	buttonStyle_Lang();
+});
+/*------------------------------- BOTTOM BUTTONS -----------------------------------*/
+document.getElementById('1_lang').addEventListener('click', function () {
 	let slider = document.querySelector('.menu-block-text-lang');
 
 	if (slider.style.transform > 'translateX(0px)' || 
 		slider.style.transform < 'translateX(0px)'){
-		return slider.style.transform = 'translateX(0px)';
+		slider.style.transform = 'translateX(0px)';
 	}
-}
-function checkbox2_Lang () {
+	buttonStyle_Lang();
+});
+document.getElementById('2_lang').addEventListener('click', function () {
+	let widthCert = document.querySelector('.block-menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text-lang');
 
-	if (slider.style.transform > 'translateX(-850px)' || 
-		slider.style.transform < 'translateX(-850px)'){
-		return slider.style.transform = 'translateX(-850px)';
+	if (slider.style.transform > `translateX(-${widthCert}px)` || 
+		slider.style.transform < `translateX(-${widthCert}px)`){
+		slider.style.transform = `translateX(-${widthCert}px)`;
 	}
-}
-
-/*------------------------------- BOTTOM BUTTONS STYLE ---------------------------------------------*/
-
-function buttonStyle_Lang () {
-	let slider = document.querySelector('.menu-block-text-lang');
-	let check = document.querySelectorAll('.checkbox-lang');
-	let len = check.length;
-
-	let left = document.querySelector('.to_L-lang');
-	let right = document.querySelector('.to_R-lang');
-
-	if (slider.style.transform === 'translateX(0px)'){
-		for (let i=0; i<len; i++){
-			if (check[i] === document.getElementById('1-lang')){
-				check[i].classList.add('active-lang');
-			}
-			if (check[i] != document.getElementById('1-lang')){
-				check[i].classList.remove('active-lang');
-			}
-		}
-		left.style.height = '0px';
-		right.style.height = '100%';
-		return;
-	}
-	if (slider.style.transform === 'translateX(-850px)'){
-		for (let i=0; i<len; i++){
-			if (check[i] === document.getElementById('2-lang')){
-				check[i].classList.add('active-lang');
-			}
-			if (check[i] != document.getElementById('2-lang')){
-				check[i].classList.remove('active-lang');
-			}
-		}
-		left.style.height = '100%';
-		right.style.height = '0px';
-		return;
-	}
-	
-}
+	buttonStyle_Lang();
+});
