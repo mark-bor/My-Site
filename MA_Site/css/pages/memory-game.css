@@ -1,7 +1,7 @@
 /*-------------------- TITLE -----------------------------------------*/
-.mem-gam > h1 {
-  /* Styles is in "body-scrollbar.css" */
-}
+/* .mem-gam > h1 {
+  Styles is in "body-scrollbar.css"
+} */
 
 /*-------------------- BODY -----------------------------------------*/
 .menu_game {
@@ -131,7 +131,6 @@ svg {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #FF9900;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,9 +139,11 @@ svg {
   transition: transform 400ms;
 }
 .game__back-card {
+  background: #FF9900;
   z-index: 1;
 }
 .game__front-card {
+  background: #d9d9d9;
   transform: rotateY(180deg);
 }
 

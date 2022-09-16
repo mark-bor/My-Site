@@ -20,9 +20,11 @@
 	z-index: -2;
 	opacity: 0.3;
 }
+/* 
 .bir-tim > h1 {
-	/* Styles is in "body-scrollbar.css" */
-}
+	Styles is in "body-scrollbar.css"
+} 
+*/
 .bir-tim > h2 {
 	font-family: Chakra Petch, sans-serif;
 	font-weight: 400;
@@ -95,27 +97,30 @@
 }
 .bir-tim .meter {
 	display: block;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	box-sizing: border-box;
 	stroke-width: 5px;
 	stroke-linecap: round;
 	transform: rotate(-90deg);
 	transform-origin: 50% 50%;
 	transition: 1s;
+	transition-timing-function: linear;
 	stroke: #4BAB00;
 	stroke-dasharray: 394;
 }
 .bir-tim #five_5 {
 	transition: 0s;
+	transition-timing-function: linear;
 }
 .bir-tim .text-in-circle {
-	width: 100%;
-	height: 100%;
+	width: 70px;
 	position: absolute;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
+	align-content: space-around;
 }
 .bir-tim h6, 
 .bir-tim h5 {
