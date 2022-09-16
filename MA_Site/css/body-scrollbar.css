@@ -1,7 +1,10 @@
 /*-------------------- BODY ------------------------------------------------------*/
-
+@font-face {
+	font-family: "e-Ukraine-Regular";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Regular.otf');
+}
 body {
-	font-family: Montserrat, normal;
+	font-family: "e-Ukraine-Regular", normal;
 	margin: 0;
 	background: #D9D9D9;
 }
@@ -14,7 +17,7 @@ button {
 	padding: 0;
 }
 
-*{
+* {
 	box-sizing: border-box;
 }
 
@@ -57,12 +60,16 @@ button {
 
 /*-------------------- TITLE --------------------------*/
 
+@font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+}
 .bir-tim > h1,
 .pas-gen > h1,
 .mem-gam > h1,
 .exc-rat > h1,
 .tim > h1 {
-	font-family: Montserrat, sans-serif;
+	font-family: "e-Ukraine-Light", sans-serif;
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 77px;

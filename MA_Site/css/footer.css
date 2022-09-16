@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "e-Ukraine-Light";
+  src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+}
+
 .footer {
   background-color: rgb(30, 41, 57);
   min-height: 200px;
@@ -8,35 +13,29 @@
   border-radius: 30% 30% 0 0;
 }
 
-.footer-block {
-  height: 35px;
+.footer > button {
   width: 170px;
-  text-align: center;
+  height: 35px;
   margin: 20px auto;
-}
-
-.footer-block > button {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
 }
 
-.footer-block > button:hover {
+.footer > button:hover {
   color: #8FD855;
 }
 
-.footer-block > button > h3 {
-  font-family: Roboto, sans-serif;
+.footer > button > h3 {
+  font-family: "e-Ukraine-Light", sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
   margin: 0px;
 }
 
-.contacts-C {
+.contacts_C {
   width: 100%;
   min-height: 60px;
   display: flex;
@@ -45,7 +44,7 @@
   margin: 20px auto 0px;
 }
 
-.string-footer {
+.string_footer {
   width: 50%;
   min-height: 60px;
   display: flex;
@@ -61,13 +60,13 @@
   margin: 0px;
 }
 
-.contacts-C a {
+.contacts_C a {
   color: rgb(255, 255, 255);
   opacity: 0.5;
   text-decoration: none;
 }
 
-.contacts-C a:hover {
+.contacts_C a:hover {
   opacity: 1;
 }
 
@@ -86,7 +85,7 @@
   transition: all 0.1s ease 0s;
 }
 
-.string-foot {
+.string_foot {
   width: 50%;
   min-height: 60px;
   display: flex;
@@ -94,15 +93,12 @@
   margin: 0px auto;
 }
 
-.img-contacts {
+.img_contacts {
   width: 200px;
   height: 80px;
-}
-
-.img {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 0px auto;
 }
 

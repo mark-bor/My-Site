@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "e-Ukraine-Regular";
+  src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Regular.otf');
+}
+
 /*-------------------- HEAD --------------------------*/
 .head {
   background-color: #1E2939;
@@ -22,18 +27,20 @@
   position: relative;
   transition: 0.1s;
 }
+.link > .burger {
+  width: 30px;
+  left: 25%;
+}
 .link > .burger,
 .link > .burger:before,
 .link > .burger:after {
   position: absolute;
   top: 50%;
   margin-top: -3px;
-  left: 50%;
-  margin-left: -20px;
-  width: 40px;
   height: 6px;
   background-color: #616974;
   border-radius: 20px;
+  text-align: center;
 }
 .link > .burger {
   transition: 0.1s;
@@ -43,6 +50,8 @@
   content: "";
   display: block;
   transition: 0.5s;
+  width: 40px;
+  margin-left: -5px;
 }
 .link > .burger:before {
   transform: translateY(-12px);
@@ -59,14 +68,16 @@
   border-radius: 20%;
   position: relative;
 }
+.link_active > .burger {
+  width: 30px;
+  left: 25%;
+}
 .link_active > .burger,
 .link_active > .burger:before,
 .link_active > .burger:after {
   position: absolute;
   top: 50%;
   margin-top: -3px;
-  left: 50%;
-  margin-left: -20px;
   width: 40px;
   height: 6px;
   background-color: #616974;
@@ -80,6 +91,8 @@
   content: "";
   display: block;
   transition: 0.5s;
+  width: 40px;
+  margin-left: -5px;
 }
 .link_active > .burger:before {
   visibility: visible;
@@ -93,13 +106,22 @@
 .link_active:hover {
   background-color: #051937;
 }
-.head .logo {
-  height: 70px;
+.head > .but {
+  display: block;
   width: 70px;
-  margin: 10px auto;
-  transition: 0.2s;
+  height: 70px;
+  margin: auto;
 }
-.head .logo:hover {
+.head > .but > .logo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  opacity: 1;
+  z-index: 0;
+}
+.head > .but > .logo:hover {
   opacity: 0.9;
 }
 .help,
@@ -107,9 +129,6 @@
   width: 150px;
   height: 100%;
   margin: 0;
-}
-.head .help-img {
-  height: 90px;
 }
 .head > .help {
   display: flex;
@@ -142,28 +161,15 @@
   width: 100%;
   height: 100%;
 }
-.help > img {
+.help a {
   align-self: flex-end;
+}
+.help img {
   height: 70px;
 }
 
 /*-------------------- MENU WINDOW --------------------------*/
-.transMenu {
-  position: absolute;
-  width: 257px;
-  height: 365px;
-  background: #1E2939;
-  border: 1px solid #78A2E1;
-  border-left: none;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
-  transition: 1s;
-  top: 90px;
-  transform: translateX(-110%);
-  z-index: 5;
-}
-
+.transMenu,
 .transMenu_2 {
   position: absolute;
   width: 257px;
@@ -176,11 +182,18 @@
   box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
   transition: 1s;
   top: 90px;
-  transform: translateX(0%);
   z-index: 5;
 }
 
-.menu-window div {
+.transMenu {
+  transform: translateX(-110%);
+}
+
+.transMenu_2 {
+  transform: translateX(0%);
+}
+
+#menu_window div {
   width: 100%;
   height: 73px;
   padding-left: 28px;
@@ -189,22 +202,29 @@
   align-items: center;
 }
 
-.menu-window > .but {
+#menu_window > .but {
   display: block;
   color: #FFF;
   width: 100%;
-  font-family: Roboto, sans-serif;
-  line-height: 39px;
+  padding: 0 0 0 10px;
+  /*font-family: Roboto, sans-serif;*/
   font-weight: 400;
   font-size: 32px;
+  line-height: 39px;
   text-decoration: none;
-  padding: 0;
 }
 
-.menu-window > .but > .men_win:hover {
+#menu_window > .but:hover {
+  border-left: 3px solid #8FD855;
+}
+
+#menu_window > .but > .men_win {
+  border-radius: 23px;
+}
+
+#menu_window > .but > .men_win:hover {
   color: #8FD855;
   background-color: #051937;
-  border-left: 3px solid #8FD855;
 }
 
 .act {
@@ -225,32 +245,29 @@
   border-top-right-radius: 20px;
 }
 
-/*-------------------- TITLE --------------------------*/
-.title {
-  margin: 53px auto;
+/*-------------------- TITLE --------------------------------------*/
+
+h1.title {
+  display: flex;
   max-width: 766px;
   height: 138px;
+  margin: 53px auto;
   padding: auto;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-}
-.title h1 {
+
   font-family: Russo One, sans-serif;/*Secular One*/
   color: #1E2939;
   font-weight: 400;
   font-size: 64px;
   line-height: 77px;
-  margin: auto;
 }
 
 
 
 @media screen and (max-width: 481px) {
-  .title {
+  h1.title {
     margin: 23px auto;
-  }
-  .title h1 {
     font-weight: 400;
     font-size: 54px;
     line-height: 57px;
@@ -262,10 +279,10 @@
   .head .link_active:hover {
     background: none;
   }
-  .head .logo {
+  .head > .but {
     height: 50px;
     width: 50px;
-    margin: 10px auto;
+    margin: auto;
   }
   .head .help img {
     height: 50px;
