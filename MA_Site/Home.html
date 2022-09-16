@@ -39,11 +39,11 @@
 		<!------------ HEAD ---------------------->
 		<nav class="head">
 			<div class="menu-burger">
-				<button id="link" class="link" onclick="even(this)">
+				<button id="link" class="link" name="window menu">
 					<div class="burger"></div>
 				</button>
 			</div>
-			<button class="but" data-page="home">
+			<button class="but" data-page="home" name="logo">
 				<img class="logo" src="images/Logo.png">
 			</button>
 			<div class="help">
@@ -54,34 +54,35 @@
 						<option class="puncts" id="pl" value="PL">PL</option>
 					</select>
 				</form>
-				<img id="cat" src="images/cat.png">
+				<a target="_blank" href="https://github.com/mark-bor?tab=repositories">
+					<img id="cat" src="images/cat.png" title="GitHub">
+				</a>
 			</div>
 		</nav>
 		<!------------ TRANS MENU ---------------------->
-		<div class="transMenu" id="transMenu">
-			<div class="menu-window">
-				<button class="but" data-page="resume">
+		<article class="transMenu" id="menu_window">
+				<button class="but" data-page="resume" name="Cv">
 					<div class="men_win" id="top">
 						<p class="ukraine">Резюме</p>
 						<p class="english">CV</p>
 						<p class="polish">CV</p>
 					</div>
 				</button>
-				<button class="but" data-page="projects">
+				<button class="but" data-page="projects" name="Projects">
 					<div class="men_win">
 						<p class="ukraine">Проекти</p>
 						<p class="english">Projects</p>
 						<p class="polish">Projektowanie</p>
 					</div>
 				</button>
-				<button class="but" data-page="certificates">
+				<button class="but" data-page="certificates" name="Certificates">
 					<div class="men_win">
 						<p class="ukraine">Сертифікати</p>
 						<p class="english">Certificates</p>
 						<p class="polish">Certyfikaty</p>
 					</div>
 				</button>
-				<button class="but" data-page="contacts">
+				<button class="but" data-page="contacts" name="Contacts">
 					<div class="men_win">
 						<p class="ukraine">Контакти</p>
 						<p class="english">Contacts</p>
@@ -91,431 +92,369 @@
 				<div id="paw">
 					<img class="paw-img" src="images/cats-paw.png" height="40px">
 				</div>
-			</div>
-		</div>
+		</article>
 
 		<!------------ HOME MENU ---------------------->
-		<div class="div h" id="home" >
+		<main class="div h" id="home" >
 			<!------------ TITLE ---------------------->
-			<div class="title">
-				<h1 class="ukraine">Мій Сайт</h1>
-				<h1 class="english">My Site</h1>
-				<h1 class="polish">Moja strona internetowa</h1>
-			</div>
+			<h1 class="title">
+				<span class="ukraine">Мій Сайт</span>
+				<span class="english">My Site</span>
+				<span class="polish">Moja strona internetowa</span>
+			</h1>
 			<!------------ MENU ---------------------->
-			<div class="head-block-menu">
-				<div class="block-menu-H">
-					<button class="but one" data-page="resume">
-						<div class="block-text">
-							<div class="block">				
-								<img src="images/cv for site.png" >
-							</div>
-							<div class="text">
-								<h3 class="ukraine">Резюме</h3>
-								<h3 class="english">CV</h3>
-								<h3 class="polish">CV</h3>
-							</div>
+			<section class="head-block-menu">
+				<article class="block-menu-H">
+					<button class="but block_text one" data-page="resume" name="Cv">
+						<div class="block">				
+							<img src="images/cv for site.png" >
+						</div>
+						<div class="text">
+							<h3>
+								<span class="ukraine">Резюме</span>
+								<span class="english">CV</span>
+								<span class="polish">CV</span>
+							</h3>
 						</div>
 					</button>
 
-					<button class="but two" data-page="certificates">
-						<div class="block-text">
-							<div class="block">
-								<img id="certificate" src="images/certificate 5.png" >
-							</div>
-							<div class="text">
-								<h3 class="ukraine">Сертифікати</h3>
-								<h3 class="english">Certificates</h3>
-								<h3 class="polish">Certyfikaty</h3>
-							</div>
+					<button class="but block_text two" data-page="certificates" name="Certificates">
+						<div class="block">
+							<img id="certificate" src="images/certificate 5.png" >
+						</div>
+						<div class="text">
+							<h3>
+								<span class="ukraine">Сертифікати</span>
+								<span class="english">Certificates</span>
+								<span class="polish">Certyfikaty</span>
+							</h3>
 						</div>
 					</button>
 
-					<button class="but three" data-page="projects">
-						<div class="block-text">
-							<div class="block">
-								<img src="images/gear.png" >
-							</div>
-							<div class="text">
-								<h3 class="ukraine">Мої Проекти</h3>
-								<h3 class="english">My Project</h3>
-								<h3 class="polish">Мoje projekty</h3>
-							</div>
+					<button class="but block_text three" data-page="projects" name="My Project">
+						<div class="block">
+							<img src="images/gear.png" >
+						</div>
+						<div class="text">
+							<h3>
+								<span class="ukraine">Мої Проекти</span>
+								<span class="english">My Project</span>
+								<span class="polish">Мoje projekty</span>
+							</h3>
 						</div>
 					</button>
-				</div>
-			</div>
-		</div>
+				</article>
+			</section>
+		</main>
 
 		<!------------ RESUME MENU ---------------------->
-		<div class="div h" id="resume" >
+		<main class="div h" id="resume" >
 			<!------------ TITLE ---------------------->
-			<div class="title">
-				<h1 class="ukraine">Резюме</h1>
-				<h1 class="english">CV</h1>
-				<h1 class="polish">CV</h1>
-			</div>
+			<h1 class="title">
+				<span class="ukraine">Резюме</span>
+				<span class="english">CV</span>
+				<span class="polish">CV</span>
+			</h1>
 			<!------------ MENU ---------------------->
-			<div class="cvs">
-				<div class="div_in_cvs">
-					<button class="but button_in_cvs button_in_cvs_one" data-page="resume_1">
-						<div class="text-p">
-							<!-- <img src="css/pages/img/school-bord.jpg"> -->
-							<p class="ukraine">Резюме 1</p>
-							<p class="english">CV 1</p>
-							<p class="polish">CV 1</p>
-						</div>
+			<section class="cvs">
+				<article class="div_in_cvs">
+					<button class="but button_in_cvs button_in_cvs_one text-p" data-page="resume_1" name="Cv 1">
+						<p class="ukraine">Резюме 1</p>
+						<p class="english">CV 1</p>
+						<p class="polish">CV 1</p>
 					</button>
-					<button class="but button_in_cvs button_in_cvs_two" data-page="resume_2">
-						<div class="text-p">
-							<!-- <img src="css/pages/img/school-bord.jpg"> -->
-							<p class="ukraine">Резюме 2</p>
-							<p class="english">CV 2</p>
-							<p class="polish">CV 2</p>
-						</div>
+					<button class="but button_in_cvs button_in_cvs_two text-p" data-page="resume_2" name="Cv 2">
+						<p class="ukraine">Резюме 2</p>
+						<p class="english">CV 2</p>
+						<p class="polish">CV 2</p>
 					</button>
-				</div>
-			</div>
-		</div>
+				</article>
+			</section>
+		</main>
 
 		<!------------ RESUME 1 MENU ---------------------->
-		<div class="div r_1" id="resume_1">
-			<!------------ RESUME ---------------------->
-			<div class="resume-list">
+		<main class="resume-list div r_1" id="resume_1">
+			<!------------ RIGHT LINE ---------------------->
+			<article class="right-line">
 
-				<div class="right-line">
-
-					<a class="download ukraine" href="Resume/Mark Bordakov Front-end (ua).pdf" download>
-						<button class="download_button">
-							<p>Завантажити</p>
-							<div>
-								<img src="images/Download.png">
-							</div>
-						</button>
-					</a>
-
-					<a class="download english" href="Resume/Mark Bordakov Front-end (en).pdf" download>
-						<button class="download_button">
-							<p>Download</p>
-							<div>
-								<img src="images/Download.png">
-							</div>
-						</button>
-					</a>
-
-					<a class="download polish" href="Resume/Mark Bordakov Front-end (en).pdf" download>
-						<button class="download_button">
-							<p>Ściągnij</p>
-							<div>
-								<img src="images/Download.png">
-							</div>
-						</button>
-					</a>
-
-					<div class="right-line-block name_in_right_line">
-						<h5 class="ukraine"><big>Front-End Розробник</big></h5>
-						<h5 class="english"><big>Front-End Developer</big></h5>
-						<h5 class="polish"><big>Programista Front-End</big></h5>
-
-						<h1 class="ukraine">Марк Бордаков</h1>
-						<h1 class="english">Mark Bordakov</h1>
-						<h1 class="polish">Mark Bordakow</h1>
-
-						<p class="description"></p>
-					</div>
-
-					<div class="right-line-block">
-						<h3 class="ukraine">Проекти</h3>
-						<h3 class="english">Projects</h3>
-						<h3 class="polish">Projektowanie</h3>
-						<ol class="ukraine">
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://takct.netlify.app/">Мій сайт-портфоліо</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Робота з курсу "WEB UI розробка"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-						</ol>
-
-						<ol class="english">
-							<li class="number">
-								<span class="link-R number">
-									<a target="_blank" href="https://takct.netlify.app/">My Site (completely made by me)</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-								<br />
-								<!-- <ul>
-									<li>HTML5.</li>
-									<li>CSS3 and SCSS/Sass.</li>
-									<li>JavaScript/ES6.</li>
-									<li>GitHub for version control of my site.</li>
-									<li>WEB API in <a href="https://takct.netlify.app/#progects/exchange-rate">Exchange rate</a>.</li>
-								</ul> -->
-							</li>
-							<li class="number">
-								<span class="link-R number">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Work from course "WEB UI development"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-								<br />
-								<!-- <ul>
-									<li>HTML5.</li>
-									<li>CSS3.</li>
-									<li>JavaScript.</li>
-								</ul> -->
-							</li>
-						</ol>
-
-						<ol class="polish">
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://takct.netlify.app/">Moja strona internetowa</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Praca z kursu "WEB UI rozwój"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-						</ol>
-					</div>
-
-					<div class="right-line-block">
-						<h3 class="ukraine">Мови</h3>
-						<h3 class="english">Languages</h3>
-						<h3 class="polish">Języki</h3>
-
-						<ol class="ukraine">
-							<li class="number">
-								Англійська:<span class="link-R">.....В1.....(Intermediate)</span>
-							</li>
-							<li class="number">
-								Українська:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-							<li class="number">
-								Польська:<span class="link-R">.....A1.....(Elementary)</span>
-							</li>
-							<li class="number">
-								Російська:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-						</ol>
-
-						<ol class="english">
-							<li class="number">
-								English:<span class="link-R">.....В1.....(Intermediate)</span>
-							</li>
-							<li class="number">
-								Ukrainian:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-							<li class="number">
-								Polish:<span class="link-R">.....A1.....(Elementary)</span>
-							</li>
-							<li class="number">
-								Rassian:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-						</ol>
-
-						<ol class="polish">
-							<li class="number">
-								Angielski:<span class="link-R">.....В1.....(Intermediate)</span>
-							</li>
-							<li class="number">
-								Ukraiński:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-							<li class="number">
-								Polska:<span class="link-R">.....A1.....(Elementary)</span>
-							</li>
-							<li class="number">
-								Rosyjski:<span class="link-R">.....C1.....(Advanced)</span>
-							</li>
-						</ol>
-					</div>
-
-					<div class="right-line-block">
-						<h3 class="ukraine">Досвід роботи</h3>
-						<h3 class="english">Work Experience</h3>
-						<h3 class="polish">Doświadczenie zawodowe</h3>
-
-						<div class="right-line-block">
-							<h4 class="ukraine">Front-End Розробник <span>Пошук роботи</span></h4>
-							<h4 class="english">Front-End Developer <span>Job search</span></h4>
-							<h4 class="polish">Programista Front-End <span>Poszukiwania pracy</span></h4>
-
-							<p class="date-description">
-								<span class="ukraine">Червень 2022 - наразі</span>
-								<span class="english">June 2022 - up to now</span>
-								<span class="polish">Czerwiec 2022 - obecnie</span>
-							</p>
-							
-							<ul class="ukraine">
-								<li>HTML5, CSS3, JavaScript.</li>
-								<li>Робота з: Sublime, Figma, Wisual Studio Code.</li>
-							</ul>
-
-							<ul class="english">
-								<li>HTML5, CSS3, JavaScript.</li>
-								<li>Work with: Sublime, Figma, Wisual Studio Code.</li>
-							</ul>
-
-							<ul class="polish">
-								<li>HTML5, CSS3, JavaScript.</li>
-								<li>Pracować z: Sublime, Figma, Wisual Studio Code.</li>
-							</ul>
-							
-						</div>
-
+				<a class="download ukraine" href="Resume/Mark Bordakov Front-end (ua).pdf" download>
+					<div class="download_button">
+						<p>Завантажити</p>
 						<div>
-							<h4 class="ukraine">Бітмейкер <span>Хобі / Фріланс</span></h4>
-							<h4 class="english">Beatmaker <span>Hobby / Freelance</span></h4>
-							<h4 class="polish">Bitmejker <span>Hobby / Frilans</span></h4>
-							<p class="date-description">
-								<span class="ukraine">Ховтень 2021 - Березень 2022</span>
-								<span class="english">October 2021 - March 2022</span>
-								<span class="polish">Październik 2021 - Marsz 2022</span>
-							</p>
-							
-							<ul class="ukraine">
-								<li>Робота з секвенсорами (Ableton Live, FL Studio).</li>
-								<li>Робота з плагінами.</li>
-								<li>Робота з Photoshop та відео редактором.</li>
-							</ul>
-
-							<ul class="english">
-								<li>Work with sequencers (Ableton Live, FL Studio).</li>
-								<li>Wor with plugins.</li>
-								<li>Work with Photoshop and video redactor.</li>
-							</ul>
-
-							<ul class="polish">
-								<li>Pracować z sekwencerami (Ableton Live, FL Studio).</li>
-								<li>Pracować z wtyczkami.</li>
-								<li>Pracować z Photoshop i edytor wideo.</li>
-							</ul>
-							
-						</div>
-
-						<div class="right-line-block">
-							<h4 class="ukraine">Розробник сайтів на Tilda <span>Часткова зайнятість</span></h4>
-							<h4 class="english">Site Developer on Tilda <span>Upper-time</span></h4>
-							<h4 class="polish">Rozwój strony internetowej w Tilda <span>zatrudnienie w niepełnym wymiarze godzin</span></h4>
-							<p class="date-description">2020</p>
-							
-							<ul class="ukraine">
-								<li>Робота з Tilda.</li>
-							</ul>
-
-							<ul class="english">
-								<li>Work with Tilda.</li>
-							</ul>
-
-							<ul class="polish">
-								<li>Pracować z Tilda.</li>
-							</ul>
-							
-						</div>
-
-						<div class="right-line-block">
-
-							<h3 class="ukraine">Освіта</h3>				
-							<h3 class="english">Education</h3>
-							<h3 class="polish">Edukacja</h3>
-
-							<h4 class="ukraine"><span>ЗОШ (|-||| ступенів)</span></h4>
-							<h4 class="english"><span>School (|-||| grade)</span></h4>
-							<h4 class="polish"><span>Szkoła (|-||| stopni)</span></h4>
-							<!--<h5>Management</h5>-->
-							<p class="date-description"><span class="ukraine">Украіна</span><span class="english">Ukraine</span><span class="polish">Ukraina</span></p>
+							<img src="images/Download.png">
 						</div>
 					</div>
+				</a>
+				<a class="download english" href="Resume/Mark Bordakov Front-end (en).pdf" download>
+					<div class="download_button">
+						<p>Download</p>
+						<div>
+							<img src="images/Download.png">
+						</div>
+					</div>
+				</a>
+				<a class="download polish" href="Resume/Mark Bordakov Front-end (en).pdf" download>
+					<div class="download_button">
+						<p>Ściągnij</p>
+						<div>
+							<img src="images/Download.png">
+						</div>
+					</div>
+				</a>
+
+				<h4>
+					<span class="ukraine">Front-End Розробник</span>
+					<span class="english">Front-End Developer</span>
+					<span class="polish">Programista Front-End</span>
+				</h4>
+
+				<h1>
+					<span class="ukraine">Марк Бордаков</span>
+					<span class="english">Mark Bordakov</span>
+					<span class="polish">Mark Bordakow</span>
+				</h1>
+
+				<p class="description"></p>
+
+				<h3>
+					<span class="ukraine">Проекти</span>
+					<span class="english">Projects</span>
+					<span class="polish">Projektowanie</span>
+				</h3>
+				<ol>
+					<li class="number">
+						<span class="link-R ukraine">
+							<a target="_blank" href="https://takct.netlify.app/">Мій сайт-портфоліо</a>..............
+							<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+						</span>
+						<span class="link-R english">
+							<a target="_blank" href="https://takct.netlify.app/">My Site (completely made by me)</a>..............
+							<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+						</span>
+						<!-- <ul>
+							<li>HTML5.</li>
+							<li>CSS3 and SCSS/Sass.</li>
+							<li>JavaScript/ES6.</li>
+							<li>GitHub for version control of my site.</li>
+							<li>WEB API in <a href="https://takct.netlify.app/#progects/exchange-rate">Exchange rate</a>.</li>
+						</ul> -->
+						<span class="link-R polish">
+							<a target="_blank" href="https://takct.netlify.app/">Moja strona internetowa</a>..............
+							<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+						</span>
+					</li>
+					<li class="number">
+						<span class="link-R ukraine">
+							<a target="_blank" href="https://web-ui-development.netlify.app/">Робота з курсу "WEB UI розробка"</a>..............
+							<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+						</span>
+						<span class="link-R english">
+							<a target="_blank" href="https://web-ui-development.netlify.app/">Work from course "WEB UI development"</a>..............
+							<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+						</span>
+						<!-- <ul>
+							<li>HTML5.</li>
+							<li>CSS3.</li>
+							<li>JavaScript.</li>
+						</ul> -->
+						<span class="link-R polish">
+							<a target="_blank" href="https://web-ui-development.netlify.app/">Praca z kursu "WEB UI rozwój"</a>..............
+							<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+						</span>
+					</li>
+				</ol>
+
+				<h3>
+					<span class="ukraine">Мови</span>
+					<span class="english">Languages</span>
+					<span class="polish">Języki</span>
+				</h3>
+				<ol>
+					<li class="number">
+						<span class="ukraine">Англійська:<span class="link-R">.....В1.....(Intermediate)</span></span>
+						<span class="english">English:<span class="link-R">.....В1.....(Intermediate)</span></span>
+						<span class="polish">Angielski:<span class="link-R">.....В1.....(Intermediate)</span></span>
+					</li>
+					<li class="number">
+						<span class="ukraine">Українська:<span class="link-R">.....C1.....(Advanced)</span></span>
+						<span class="english">Ukrainian:<span class="link-R">.....C1.....(Advanced)</span></span>
+						<span class="polish">Ukraiński:<span class="link-R">.....C1.....(Advanced)</span></span>
+					</li>
+					<li class="number">
+						<span class="ukraine">Польська:<span class="link-R">.....A1.....(Elementary)</span></span>
+						<span class="english">Polish:<span class="link-R">.....A1.....(Elementary)</span></span>
+						<span class="polish">Polska:<span class="link-R">.....A1.....(Elementary)</span></span>
+					</li>
+					<li class="number">
+						<span class="ukraine">Російська:<span class="link-R">.....C1.....(Advanced)</span></span>
+						<span class="english">Rassian:<span class="link-R">.....C1.....(Advanced)</span></span>
+						<span class="polish">Rosyjski:<span class="link-R">.....C1.....(Advanced)</span></span>
+					</li>
+				</ol>
+
+				<h3>
+					<span class="ukraine">Досвід роботи</span>
+					<span class="english">Work Experience</span>
+					<span class="polish">Doświadczenie zawodowe</span>
+				</h3>
+
+				<div class="right-line-block">
+					<h4>
+						<span class="ukraine">Front-End Розробник <span>Пошук роботи</span></span>
+						<span class="english">Front-End Developer <span>Job search</span></span>
+						<span class="polish">Front-End <span>Poszukiwania pracy</span></span>
+					</h4>
+					<p class="date-description">
+						<span class="ukraine">Червень 2022 - наразі</span>
+						<span class="english">June 2022 - up to now</span>
+						<span class="polish">Czerwiec 2022 - obecnie</span>
+					</p>
+					<ul>
+						<li>HTML5, CSS3, JavaScript.</li>
+						<li>
+							<span class="ukraine">Робота з: Sublime, Figma, Wisual Studio Code.</span>
+							<span class="english">Work with: Sublime, Figma, Wisual Studio Code.</span>
+							<span class="polish">Pracować z: Sublime, Figma, Wisual Studio Code.</span>
+						</li>
+					</ul>		
 				</div>
 
-				<aside class="left-line">
+				<div class="right-line-block">
+					<h4>
+						<span class="ukraine">Бітмейкер <span>Хобі / Фріланс</span></span>
+						<span class="english">Beatmaker <span>Hobby / Freelance</span></span>
+						<span class="polish">Bitmejker <span>Hobby / Frilans</span></span>
+					</h4>
+					<p class="date-description">
+						<span class="ukraine">Ховтень 2021 - Березень 2022</span>
+						<span class="english">October 2021 - March 2022</span>
+						<span class="polish">Październik 2021 - Marsz 2022</span>
+					</p>
+					<ul>
+						<li>
+							<span class="ukraine">Робота з секвенсорами (Ableton Live, FL Studio).</span>
+							<span class="english">Work with sequencers (Ableton Live, FL Studio).</span>
+							<span class="polish">Pracować z sekwencerami (Ableton Live, FL Studio).</span>
+						</li>
+						<li>
+							<span class="ukraine">Робота з плагінами.</span>
+							<span class="english">Work with plugins.</span>
+							<span class="polish">Pracować z wtyczkami.</span>
+						</li>
+						<li>
+							<span class="ukraine">Робота з Photoshop та відео редактором.</span>
+							<span class="english">Work with Photoshop and video redactor.</span>
+							<span class="polish">Pracować z Photoshop i edytor wideo.</span>
+						</li>
+					</ul>
+				</div>
 
-					<img class="photo" src="images/Photo for Resume.jpg" alt="Photo">
+				<div class="right-line-block">
+					<h4>
+						<span class="ukraine">Розробник сайтів на Tilda <span>Часткова зайнятість</span></span>
+						<span class="english">Site Developer on Tilda <span>Upper-time</span></span>
+						<span class="polish">Rozwój strony internetowej w Tilda <span>zatrudnienie w niepełnym wymiarze godzin</span></span>
+					</h4>
+					<p class="date-description">2020</p>
+					<ul>
+						<li>
+							<span class="ukraine">Робота з Tilda.</span>
+							<span class="english">Work with Tilda.</span>
+							<span class="polish">Pracować z Tilda.</span>
+						</li>
+					</ul>
+				</div>
 
-					<div class="left-line-block">
-						<div class="name_in_left_line">
-							<h5 class="ukraine">Front-End Розробник</h5>
-							<h5 class="english">Front-End Developer</h5>
-							<h5 class="polish">Programista Front-End</h5>
+				<div class="right-line-block">
+					<h3>
+						<span class="ukraine">Освіта</span>
+						<span class="english">Education</span>
+						<span class="polish">Edukacja</span>
+					</h3>
+					<h4>
+						<span class="ukraine">ЗОШ (|-||| ступенів)</span>
+						<span class="english">School (|-||| grade)</span>
+						<span class="polish">Szkoła (|-||| stopni)</span>
+					</h4>
+					<!--<h5>Management</h5>-->
+					<p class="date-description">
+						<span class="ukraine">Украіна</span>
+						<span class="english">Ukraine</span>
+						<span class="polish">Ukraina</span>
+					</p>
+				</div>
+			</article>
+			<!------------ LEFT LINE ---------------------->
+			<aside class="left-line">
 
-							<h1 class="ukraine">Марк Бордаков</h1>
-							<h1 class="english">Mark Bordakov</h1>
-							<h1 class="polish">Mark Bordakow</h1>
-						</div>						
+				<img class="photo" src="images/Photo for Resume.jpg" alt="Photo">
 
-						<h3 class="ukraine">Контакти</h3>
-						<h3 class="english">Contacts</h3>
-						<h3 class="polish">Moje kontakty</h3>
+				<section class="left-line-block">
+					<h5>
+						<span class="ukraine">Front-End Розробник</span>
+						<span class="english">Front-End Developer</span>
+						<span class="polish">Programista Front-End</span>
+					</h5>
 
-						<p class="ukraine"><span>Т:</span><a href="tel:+380957625669">
-						+38 095 762 56 69</a></p>
-						<p class="ukraine"><span>П:</span><a target="_blank" href="mailto:mark12bord@gmail.com">
-						mark12bord@gmail.com</a></p>
+					<h1>
+						<span class="ukraine">Марк Бордаков</span>
+						<span class="english">Mark Bordakov</span>
+						<span class="polish">Mark Bordakow</span>
+					</h1>
 
-						<p class="english"><span>C:</span><a href="tel:+380957625669">
-						+38 095 762 56 69</a></p>
-						<p class="english"><span>E:</span><a target="_blank" href="mailto:mark12bord@gmail.com">
-						mark12bord@gmail.com</a></p>
+					<h3>
+						<span class="ukraine">Контакти</span>
+						<span class="english">Contacts</span>
+						<span class="polish">Moje kontakty</span>
+					</h3>
 
-						<p class="polish"><span>T:</span><a href="tel:+380957625669">
-						+38 095 762 56 69</a></p>
-						<p class="polish"><span>P:</span><a target="_blank" href="mailto:mark12bord@gmail.com">
-						mark12bord@gmail.com</a></p>
-					</div>
+					<p><span>C:</span><a href="tel:+380957625669">
+					+38 095 762 56 69</a></p>
+					<p><span>E:</span><a target="_blank" href="mailto:mark12bord@gmail.com">
+					mark12bord@gmail.com</a></p>
+				</section>
 
-					<div class="left-line-block">
-						<h3 class="ukraine">Технічні навичкі</h3>
-						<h3 class="english">Tech Skills</h3>
-						<h3 class="polish">Umiejętności techniczne</h3>
-						<ul>
-							<li><span>HTML5/CSS3</span></li>	
-							<li><span>JavaScript</span></li>
-							<li><span>GitHub</span></li>
-							<li><span>SCSS/Sass</span></li>
-							<li>
-								<span class="ukraine">Тестова Документація</span>
-								<span class="english">Test Documentation</span>
-								<span class="polish">Dokumentacja Testowa</span>
-							</li>
-						</ul>
-					</div>
+				<section class="left-line-block">
+					<h3>
+						<span class="ukraine">Технічні навичкі</span>
+						<span class="english">Tech Skills</span>
+						<span class="polish">Umiejętności techniczne</span>
+					</h3>
+					<ul>
+						<li><span>HTML5/CSS3</span></li>	
+						<li><span>JavaScript</span></li>
+						<li><span>GitHub</span></li>
+						<li><span>SCSS/Sass</span></li>
+						<li>
+							<span class="ukraine">Тестова Документація</span>
+							<span class="english">Test Documentation</span>
+							<span class="polish">Dokumentacja Testowa</span>
+						</li>
+					</ul>
+				</section>
 
-					<div class="left-line-block">
-						<h3 class="ukraine">Особисті навичкі</h3>
-						<h3 class="english">Soft Skills</h3>
-						<h3 class="polish">Umiejętności osobiste</h3>
-
-						<ul class="ukraine">
-							<li><span>Розуміння Waterfall,<br>Agile (Scrum, Kanban)</span></li>
-							<li><span>GTD</span></li>
-							<li><span>Командна робота</span></li>
-						</ul>
-
-						<ul class="english">
-							<li><span>Knowledge Waterfall,<br>Agile (Scrum, Kanban)</span></li>
-							<li><span>GTD</span></li>
-							<li><span>Teamwork</span></li>
-						</ul>
-
-						<ul class="polish">
-							<li><span>Zrozumienie Waterfall,<br>Agile (Scrum, Kanban)</span></li>
-							<li><span>GTD</span></li>
-							<li><span>Praca zespołowa</span></li>
-						</ul>
-					</div>
-
-				</aside>
-			</div>
-		</div>
+				<section class="left-line-block">
+					<h3>
+						<span class="ukraine">Особисті навичкі</span>
+						<span class="english">Soft Skills</span>
+						<span class="polish">Umiejętności osobiste</span>
+					</h3>
+					<ul>
+						<li>
+							<span class="ukraine">Розуміння Waterfall,<br>Agile (Scrum, Kanban)</span>
+							<span class="english">Knowledge Waterfall,<br>Agile (Scrum, Kanban)</span>
+							<span class="polish">Zrozumienie Waterfall,<br>Agile (Scrum, Kanban)</span>
+						</li>
+						<li><span>GTD</span></li>
+						<li>
+							<span class="ukraine">Командна робота</span>
+							<span class="english">Teamwork</span>
+							<span class="polish">Praca zespołowa</span>
+						</li>
+					</ul>
+				</section>
+			</aside>
+		</main>
 
 		<!------------ RESUME 2 MENU ---------------------->
 		<main class="div r_2" id="resume_2">
@@ -524,13 +463,17 @@
 				<header class="header_in_cv2">
 					<img src="images/Photo for Resume.jpg">
 					<div>
-						<h1 class="ukraine">МАРК БОРДАКОВ</h1>
-						<h1 class="english">MARK BORDAKOV</h1>
-						<h1 class="polish">MARK BORDAKOW</h1>
+						<h1>
+							<span class="ukraine">МАРК БОРДАКОВ</span>
+							<span class="english">MARK BORDAKOV</span>
+							<span class="polish">MARK BORDAKOW</span>
+						</h1>
 
-						<h5 class="ukraine">FRONT-END РОЗРОБНИК</h5>
-						<h5 class="english">FRONT-END DEVELOPER</h5>
-						<h5 class="polish">PROGRAMISTA FRONT-END</h5>
+						<h5>
+							<span class="ukraine">FRONT-END РОЗРОБНИК</span>
+							<span class="english">FRONT-END DEVELOPER</span>
+							<span class="polish">PROGRAMISTA FRONT-END</span>
+						</h5>
 					</div>
 				</header>
 
@@ -552,51 +495,48 @@
 					
 					<h1 class="title_in_right_line work_experience">WORK EXPERIENCE</h1>
 
-					<ol class="ukraine">
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://takct.netlify.app/">Мій сайт-портфоліо</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Робота з курсу "WEB UI розробка"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-						</ol>
-
-						<ol class="english">
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://takct.netlify.app/">My Site (completely made by me)</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Work from course "WEB UI development"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-						</ol>
-
-						<ol class="polish">
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://takct.netlify.app/">Moja strona internetowa</a>..............
-									<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-							<li class="number">
-								<span class="link-R">
-									<a target="_blank" href="https://web-ui-development.netlify.app/">Praca z kursu "WEB UI rozwój"</a>..............
-									<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
-								</span>
-							</li>
-						</ol>
-					</div>
+					<ol>
+						<li class="number">
+							<span class="link-R ukraine">
+								<a target="_blank" href="https://takct.netlify.app/">Мій сайт-портфоліо</a>..............
+								<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+							</span>
+							<span class="link-R english">
+								<a target="_blank" href="https://takct.netlify.app/">My Site (completely made by me)</a>..............
+								<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+							</span>
+							<!-- <ul>
+								<li>HTML5.</li>
+								<li>CSS3 and SCSS/Sass.</li>
+								<li>JavaScript/ES6.</li>
+								<li>GitHub for version control of my site.</li>
+								<li>WEB API in <a href="https://takct.netlify.app/#progects/exchange-rate">Exchange rate</a>.</li>
+							</ul> -->
+							<span class="link-R polish">
+								<a target="_blank" href="https://takct.netlify.app/">Moja strona internetowa</a>..............
+								<span class="number">[</span> HTML, CSS, SCSS, JavaScript <span class="number">]</span>
+							</span>
+						</li>
+						<li class="number">
+							<span class="link-R ukraine">
+								<a target="_blank" href="https://web-ui-development.netlify.app/">Робота з курсу "WEB UI розробка"</a>..............
+								<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+							</span>
+							<span class="link-R english">
+								<a target="_blank" href="https://web-ui-development.netlify.app/">Work from course "WEB UI development"</a>..............
+								<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+							</span>
+							<!-- <ul>
+								<li>HTML5.</li>
+								<li>CSS3.</li>
+								<li>JavaScript.</li>
+							</ul> -->
+							<span class="link-R polish">
+								<a target="_blank" href="https://web-ui-development.netlify.app/">Praca z kursu "WEB UI rozwój"</a>..............
+								<span class="number">[</span> HTML, CSS, JavaScript <span class="number">]</span>
+							</span>
+						</li>
+					</ol>
 				</section>
 
 				<!---------------------------------- LEFT LINE ---------->
@@ -656,116 +596,91 @@
 					</div>
 
 					<div class="title_in_left_line">HOBBIES</div>
+					<div class="hobbyes">
+							<img title="Listening and writing music" src="images/headphone.png">
+							<img title="Studying languages" src="images/languages.jpg">
+					</div>
 				</aside>
 			</section>
 		</main>
 
 		<!------------ CERTIFICATES MENU ---------------------->
-		<div class="div cer" id="certificates">
+		<main class="div cer" id="certificates">
 			<!------------ TITLE ---------------------->
-			<div class="title">
-				<h1 class="ukraine">Сертифікати</h1>
-				<h1 class="english">Certificates</h1>
-				<h1 class="polish">Certyfikaty</h1>
-			</div>
+			<h1 class="title">
+				<span class="ukraine">Сертифікати</span>
+				<span class="english">Certificates</span>
+				<span class="polish">Certyfikaty</span>
+			</h1>
 			<!------------ MENU NOT TECHNICAL IT ---------------------->
-			<div class="menu">
-				<div class="title-sert">
-					<h3><!--Not technical--> IT</h3>
-				</div>
-				<div class="buttonCert">
-					<div class="block-menu" id="button_certificate">
-						<div class="menu-block-text" style="transform: translateX(0px)">
+			<h3 class="title-sert"><!--Not technical--> IT</h3>
+			
+			<div class="buttonCert">
+				<div class="block_menu" id="button_certificate">
+					<div class="menu-block-text" style="transform: translateX(0px)">
 
-							<button id="certific">
-								<div class="block_text_1" id="block_text_0">			
-									<div class="block1 block0">
-										<div class="block_">			
-											<h3 class="data_from_certificate" id="course">UX/UI</h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company">ITVDN</h4>
-										</div>
-									</div>
-									<div class="text1 text0">
-										<object type="application/pdf" data="Certificates/UXUI design.pdf"></object>
-									</div>
-								</div>
-							</button>
-						
-							<button id="certific">
-								<div class="block_text_1" id="block_text_0">
-									<div class="block2 block0">
-										<div class="block_">
-											<h3 class="data_from_certificate" id="course">QA</h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company">DataArt</h4>
-										</div>
-									</div>
-									<div class="text2 text0">
-										<object type="application/pdf" data="Certificates/QA.pdf"></object>
-									</div>
-								</div>
-							</button>
-					
-							<button id="certific">
-								<div class="block_text_1" id="block_text_0">
-									<div class="block3 block0">
-										<div class="block_">
-											<h3 class="data_from_certificate" id="course">
-												<span class="ukraine">WEB UI<br><small>розробка</small></span>
-												<span class="english">WEB UI<br><small>development</small></span>
-												<span class="polish">WEB UI<br><small>rozwój</small></span>
-											</h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company">Lviv IT school</h4>
-										</div>
-									</div>
-									<div class="text3 text0">
-										<object type="application/pdf" data="Certificates/Основи WEB UI розробки 2022.pdf"></object>
-									</div>
-								</div>
-							</button>
+						<button class="block_text_0" id="block_text_0" name="UX/UI design">			
+							<div class="block1 block0">			
+								<h3 class="data_from_certificate" id="course">UX/UI</h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company">ITVDN</h4>
+							</div>
+							<object class="text1 text0" type="application/pdf" data="Certificates/UXUI design.pdf"></object>
+						</button>
+				
+						<button class="block_text_0" id="block_text_0" name="QA course">
+							<div class="block2 block0">
+								<h3 class="data_from_certificate" id="course">QA</h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company">DataArt</h4>
+							</div>
+							<object class="text2 text0" type="application/pdf" data="Certificates/QA.pdf"></object>
+						</button>
+				
+						<button class="block_text_0" id="block_text_0" name="WEB UI development">
+							<div class="block3 block0">
+								<h3 class="data_from_certificate" id="course">
+									<span class="ukraine">WEB UI<br><small>розробка</small></span>
+									<span class="english">WEB UI<br><small>development</small></span>
+									<span class="polish">WEB UI<br><small>rozwój</small></span>
+								</h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company">Lviv IT school</h4>
+							</div>
+							<object class="text3 text0" type="application/pdf" data="Certificates/Основи WEB UI розробки 2022.pdf"></object>
+						</button>
 
-							<button id="certific">
-								<div class="block_text_1" id="block_text_0">
-									<div class="block4 block0">
-										<div class="block_">
-											<h3 class="data_from_certificate" id="course">
-												<span class="ukraine">Web-програмування з Python та JavaScript</span>
-												<span class="english">Web-programming with Python and JavaScript</span>
-												<span class="polish">Programowanie sieciowe z Python i JavaScript</small></span>
-											</h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company">Harvard University</h4>
-										</div>
-									</div>
-									<div class="text4 text0">
-										<object type="application/pdf" data="Certificates/Web-programming with Pithon and JavaScript.pdf"></object>
-									</div>
-								</div>
-							</button>
+						<button class="block_text_0" id="block_text_0" name="Web-programming with Pyton and JS">
+							<div class="block4 block0">
+								<h3 class="data_from_certificate" id="course">
+									<span class="ukraine">Web-програмування з Python та JavaScript</span>
+									<span class="english">Web-programming with Python and JavaScript</span>
+									<span class="polish">Programowanie sieciowe z Python i JavaScript</small></span>
+								</h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company">Harvard University</h4>
+							</div>
+							<object class="text4 text0" type="application/pdf" data="Certificates/Web-programming with Pithon and JavaScript.pdf"></object>
+						</button>
 
-						</div>
-					</div>
-					<div class="right-left">
-						<div class="button btn_left">
-							<button class="chceck_slider" id="left">
-								<img class="to_L" src="images/Left.png" style="width: 0">
-							</button>
-						</div>
-						<div class="button btn_right">
-							<button class="chceck_clider" id="right">
-								<img class="to_R" src="images/Right.png" width="100%">
-							</button>
-						</div>
 					</div>
 				</div>
-				<div class="checkbox-block">
-					<button class="chceck_slider checkbox active" id="1" name="UX/UI">
-					<button class="chceck_slider checkbox" id="2" name="QA">
-					<button class="chceck_slider checkbox" id="3" name="WEB UI dev">
-					<button class="chceck_slider checkbox" id="4" name="">
+
+				<div class="right-left">
+					<button class="button btn_left" id="left" name="left">
+						<img class="to_L" src="images/Left.png" style="width: 0">
+					</button>
+					<button class="button btn_right" id="right" name="right">
+						<img class="to_R" src="images/Right.png" width="100%">
+					</button>
 				</div>
+			</div>
+
+			<div class="checkbox_block">
+				<button class="chceck_slider checkbox active" id="1" name="UX/UI"></button>
+				<button class="chceck_slider checkbox" id="2" name="QA"></button>
+				<button class="chceck_slider checkbox" id="3" name="WEB UI dev"></button>
+				<button class="chceck_slider checkbox" id="4" name="Web-programming with Pyton and JS"></button>
 			</div>
 			<!------------ MENU TECHNICAL IT ---------------------->
 			<!--
@@ -831,228 +746,206 @@
 			</div>
 			-->
 			<!------------ MENU LAHGUAGES ---------------------->
-			<div class="menu" id="button_certificate">
-				<div class="title-sert">
-					<h3 class="ukraine">Мови</h3>
-					<h3 class="english">Languages</h3>
-					<h3 class="polish">Języki</h3>
-				</div>
-				<div class="buttonCert">
-					<div class="block-menu" id="button_certificate">
-						<div class="menu-block-text-lang" style="transform: translateX(0px)">
+			<h3 class="title-sert">
+				<span class="ukraine">Мови</span>
+				<span class="english">Languages</span>
+				<span class="polish">Języki</span>
+			</h3>
 
-							<button id="certific">
-								<div class="block_text_1">
-									<div class="block1-lang block0">
-										<div class="block_">
-											<h3 class="data_from_certificate" id="course">
-												<span class="ukraine">Англійська<br>рівень (A1-A2)</span>
-												<span class="english">English<br>Elementary level<br>(A1-A2)</span>
-												<span class="polish">Angielski<br>poziom<br>(A1-A2)</small></span>
-											</h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company">EnglishDOM</h4>
-										</div>
-									</div>
-									<div class="text1-lang text0">
-										<object type="application/pdf" data="Certificates/English A1-A2.pdf"></object>
-									</div>
-								</div>
-							</button>
+			<div class="buttonCert">
+				<div class="block_menu" id="button_certificate">
+					<div class="menu_block_text_lang" style="transform: translateX(0px)">
 
-							<button id="certific">
-								<div class="block_text_1">
-									<div class="block2-lang block0">
-										<div class="block_">
-											<h3 class="data_from_certificate" id="course"></h3>
-											<h3 class="data_from_certificate" id="line">---------</h3>
-											<h4 class="data_from_certificate" id="company"></h4>
-										</div>
-									</div>
-									<div class="text2-lang text0">
-										<object type="application/pdf" data=""></object>
-									</div>
-								</div>
-							</button>
+						<button class="block_text_0" id="block_text_0">
+							<div class="block1-lang block0">
+								<h3 class="data_from_certificate" id="course">
+									<span class="ukraine">Англійська<br>рівень (A1-A2)</span>
+									<span class="english">English<br>Elementary level<br>(A1-A2)</span>
+									<span class="polish">Angielski<br>poziom<br>(A1-A2)</small></span>
+								</h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company">EnglishDOM</h4>
+							</div>
+							<object class="text1-lang text0" type="application/pdf" data="Certificates/English A1-A2.pdf"></object>
+						</button>
 
-						</div>
-					</div>
-					<div class="right-left">
-						<div class="button btn_left">
-							<button id="left_lang">
-								<img id="to_L-lang" class="to_L" src="images/Left.png" style="width: 0">
-							</button>
-						</div>
-						<div class="button btn_right">
-							<button id="right_lang">
-								<img id="to_R-lang" class="to_R" src="images/Right.png" width="100%">
-							</button>
-						</div>
+						<button class="block_text_0" id="block_text_0">
+							<div class="block2-lang block0">
+								<h3 class="data_from_certificate" id="course"></h3>
+								<h3 class="data_from_certificate" id="line">---------</h3>
+								<h4 class="data_from_certificate" id="company"></h4>
+							</div>
+							<object class="text2-lang text0" type="application/pdf" data=""></object>
+						</button>
+
 					</div>
 				</div>
-				<div class="checkbox-block-lang">
-					<button class="checkbox-lang active-lang" id="1_lang" name="">
-					<button class="checkbox-lang" id="2_lang" name="">
+				<div class="right-left">
+					<button class="button btn_left" id="left_lang" name="left">
+						<img id="to_L-lang" class="to_L" src="images/Left.png" style="width: 0">
+					</button>
+					<button class="button btn_right" id="right_lang" name="right">
+						<img id="to_R-lang" class="to_R" src="images/Right.png" width="100%">
+					</button>
 				</div>
 			</div>
-		</div>
+			<div class="checkbox_block_lang">
+				<button class="checkbox-lang active-lang" id="1_lang" name="English A1-A2"></button>
+				<button class="checkbox-lang" id="2_lang" name=""></button>
+			</div>
+		</main>
 
 		<!------------ PROJECTS MENU ---------------------->
-		<div class="div pr" id="projects">
+		<main class="div pr" id="projects">
 			<!------------ TITLE ---------------------->
-			<div class="title">
-				<h1 class="ukraine">Проекти</h1>
-				<h1 class="english">Project</h1>
-				<h1 class="polish">Projektowanie</h1>
-			</div>
+			<h1 class="title">
+				<span class="ukraine">Проекти</span>
+				<span class="english">Project</span>
+				<span class="polish">Projektowanie</span>
+			</h1>
 			<!------------ LEGEND ---------------------->
-			<div class="legend">
-				<div class="leg-el">
+			<section class="legend">
+				<article class="leg-el">
 					<div class="color" id="blue"></div>
-					<div class="leg-text">
-						<p class="ukraine"> - в процесі розробки.</p>
-						<p class="english"> - in developing proces.</p>
-						<p class="polish"> - w procesie rozwoju.</p>
-					</div>
-				</div>
-				<br>
-				<div class="leg-el">
+					<p>
+						<span class="ukraine"> - в процесі розробки.</span>
+						<span class="english"> - in developing proces.</span>
+						<span class="polish"> - w procesie rozwoju.</span>
+					</p>
+				</article>
+				<article class="leg-el">
 					<div class="color" id="green"></div>
-					<div class="leg-text">
-						<p class="ukraine"> - завершено.</p>
-						<p class="english"> - to complete.</p>
-						<p class="polish"> - zakończony.</p>
-					</div>
-				</div>
-			</div>
+					<p>
+						<span class="ukraine"> - завершено.</span>
+						<span class="english"> - to complete.</span>
+						<span class="polish"> - zakończony.</span>
+					</p>
+				</article>
+			</section>
 			<!------------ MENU ---------------------->
-			<div class="block-menu-p">
-				<div class="string-p">
-					<button class="but" data-page="calculator">
-						<div class="text-p close q_e_c">
-							<img src="css/pages/img/school-bord.jpg">
-							<h3 class="ukraine">Калькулятор<br>квадратних<br>рівнянь</h3>
-							<h3 class="english">Quadratic<br>equation<br>calculator</h3>
-							<h3 class="polish">Kalkulator<br>równań<br>kwadratowych</h3>
-						</div>
+			<section class="block-menu-p">
+				<article class="string-p">
+					<button class="but close q_e_c" data-page="calculator">
+						<img src="css/pages/img/school-bord.jpg">
+						<h3>
+							<span class="ukraine">Калькулятор<br>квадратних<br>рівнянь</span>
+							<span class="english">Quadratic<br>equation<br>calculator</span>
+							<span class="polish">Kalkulator<br>równań<br>kwadratowych</span>
+						</h3>
 					</button>
 
-					<button class="but" data-page="birthday-timer">
-						<div class="text-p close b_t">
-							<img src="css/pages/img/tort.jpg">
-							<h3 class="ukraine">Таймер<br>до Дня<br>Народження</h3>
-							<h3 class="english">Birthday<br>timer</h3>
-							<h3 class="polish">Minutnik<br>Urodzin</h3>
-						</div>
+					<button class="but close b_t" data-page="birthday-timer">
+						<img src="css/pages/img/tort.jpg">
+						<h3>
+							<span class="ukraine">Таймер<br>до Дня<br>Народження</span>
+							<span class="english">Birthday<br>timer</span>
+							<span class="polish">Minutnik<br>Urodzin</span>
+						</h3>
 					</button>
 
-					<button class="but" data-page="password-generator">
-						<div class="text-p close p_g">
-							<img src="css/pages/img/passwords.png">
-							<h3 class="ukraine">Генератор<br>паролей</h3>
-							<h3 class="english">Password<br>generator</h3>
-							<h3 class="polish">Generator<br>hasła</h3>
-						</div>
+					<button class="but close p_g" data-page="password-generator">
+						<img src="css/pages/img/passwords.png">
+						<h3>
+							<span class="ukraine">Генератор<br>паролей</span>
+							<span class="english">Password<br>generator</span>
+							<span class="polish">Generator<br>hasła</span>
+						</h3>
 					</button>
 
-					<button class="but" data-page="memory-game">
-						<div class="text-p close m_g">
-							<img src="css/pages/img/memory-game.png">
-							<h3>Memory<br>game</h3>
-						</div>
+					<button class="but close m_g" data-page="memory-game">
+						<img src="css/pages/img/memory-game.png">
+						<h3>Memory<br>game</h3>
 					</button>
 
-					<button class="but" data-page="exchange-rate">
-						<div class="text-p close e_r">
-							<img src="css/pages/img/exchange-rate.jpg">
-							<h3 class="ukraine">Курс<br>валют</h3>
-							<h3 class="english">Exchange<br>rate</h3>
-							<h3 class="polish">Kurs<br>wymiany<br>walut</h3>
-						</div>
+					<button class="but close e_r" data-page="exchange-rate">
+						<img src="css/pages/img/exchange-rate.jpg">
+						<h3>
+							<span class="ukraine">Курс<br>валют</span>
+							<span class="english">Exchange<br>rate</span>
+							<span class="polish">Kurs<br>wymiany<br>walut</span>
+						</h3>
 					</button>
 
-					<button class="but" data-page="timer">
-						<div class="text-p close t">
-							<img src="css/pages/img/event-timer.jpg">
-							<h3 class="ukraine">Таймер<br>до події</h3>
-							<h3 class="english">Event<br>Timer</h3>
-							<h3 class="polish">Minutnik<br>wydarzenie</h3>
-						</div>
+					<button class="but close t" data-page="timer">
+						<img src="css/pages/img/event-timer.jpg">
+						<h3>
+							<span class="ukraine">Таймер<br>до події</span>
+							<span class="english">Event<br>timer</span>
+							<span class="polish">Minutnik<br>wydarzenie</span>
+						</h3>
 					</button>
-				</div>
-			</div>
-		</div>
+				</article>
+			</section>
+		</main>
 
 		<!------------ CONTACS MENU ---------------------->
-		<div class="div con" id="contacts">
+		<main class="div con" id="contacts">
 			<!------------ TITLE ---------------------->
-			<div class="title">
-				<h1 class="ukraine">Контакти</h1>
-				<h1 class="english">Contacts</h1>
-				<h1 class="polish">Moje kontakty</h1>
-			</div>
+			<h1 class="title">
+				<span class="ukraine">Контакти</span>
+				<span class="english">Contacts</span>
+				<span class="polish">Moje kontakty</span>
+			</h1>
+
+			<p class="phone-email">+38 095 762 56 69<br>mark12bor@gmail.com</p>
+
 			<!------------ CONTACTS ---------------------->
-			<div class="phone-email">
-				<p>+38 095 762 56 69<br>mark12bor@gmail.com</p>
-			</div>
-			<div class="contacts">
-				<div class="string-icons">
-					<div class="par-icons">
-						<div class="icon"> 
-							<a href="tel:+380957625669">
-								<img src="images/mobile-icon.png">
-							</a>
-						</div>
+			<section class="contacts">
+				<article class="string-icons">
+					<section class="par-icons">
+						<a href="tel:+380957625669">
+							<img class="icon" src="images/mobile-icon.png">
+						</a>
 
-						<div class="icon">
-							<a target="_blank" href="mailto:mark12bord@gmail.com">
-								<img src="images/email-icon.jpg">
-							</a>
-						</div>
-					</div>
+						<a target="_blank" href="mailto:mark12bord@gmail.com">
+							<img class="icon" src="images/email-icon.jpg">
+						</a>
+					</section>
 					
-					<div class="par-icons">
-						<div class="icon"> 
-							<a target="_blank" href="https://www.facebook.com/mark.uvarov.1">
-								<img src="images/FB-ICON.png">
-							</a>
-						</div>
+					<section class="par-icons">
+						<a target="_blank" href="https://www.facebook.com/mark.uvarov.1">
+							<img class="icon" src="images/FB-ICON.png">
+						</a>
 
-						<div class="icon">
-							<a target="_blank" href="https://t.me/marchi003">
-								<img src="images/telegram_logo.png">
-							</a>
-						</div>
-					</div>
+						<a target="_blank" href="https://t.me/marchi003">
+							<img class="icon" src="images/telegram_logo.png">
+						</a>
+					</section>
 
-					<div class="par-icons" id="par">
-						<div class="icon"> 
-							<a target="_blank" href="https://www.instagram.com/uvarovjr">
-								<img src="images/instagram.png">
-							</a>
-						</div>
+					<section class="par-icons" id="par">
+						<a target="_blank" href="https://www.instagram.com/uvarovjr">
+							<img class="icon" src="images/instagram.png">
+						</a>
 
-						<div class="icon">
-							<a target="_blank" href="https://www.linkedin.com/in/mark-bordakov-8441bb241/">
-								<img src="images/linkedin.png">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+						<a target="_blank" href="https://www.linkedin.com/in/mark-bordakov-8441bb241/">
+							<img class="icon" src="images/linkedin.png">
+						</a>
+					</section>
+
+					<section class="par-icons" id="par">
+						<a target="_blank" href="https://twitter.com/uvarov_mark">
+							<img class="icon" src="images/Twitter.png">
+						</a>
+
+						<a target="_blank" href="https://github.com/mark-bor?tab=repositories">
+							<img class="icon" src="images/GitHub.png">
+						</a>
+					</section>
+				</article>
+			</section>
+		</main>
 
 		<!------------ FOOTER ---------------------->
-		<div class="footer" id="footer">
-			<div class="footer-block">
-				<button class="but" data-page="contacts">
-					<h3 class="ukraine">Контакти</h3>
-					<h3 class="english">Contacts</h3>
-					<h3 class="polish">Moje kontakty</h3>
-				</button>
-			</div>
-			<div class="contacts-C">
-				<div class="string-footer">
+		<footer class="footer" id="footer">
+			<button class="but" data-page="contacts">
+				<h3>
+					<span class="ukraine">Контакти</span>
+					<span class="english">Contacts</span>
+					<span class="polish">Moje kontakty</span>
+				</h3>
+			</button>
+			<nav class="contacts_C">
+				<section class="string_footer">
 					<figure class="phone_email">
 						<a href="tel:+380957625669">
 							<img src="images/phone.jpg" height="30px">
@@ -1070,35 +963,29 @@
 								<p>mark12bord@gmail.com</p>
 						</figcaption>
 					</figure>
-				</div>
+				</section>
 
-				<div class="string-foot">
-					<div class="img-contacts">
-						<div class="img">
-							<a target="_blank" href="https://www.facebook.com/mark.uvarov.1">
-								<img src="images/facebook2.png" height="45px">
-							</a>
-						</div>
-					</div>
+				<section class="string_foot">
+					<a class="img_contacts" target="_blank" href="https://www.facebook.com/mark.uvarov.1">
+						<img src="images/facebook2.png" height="45px">
+					</a>
 
-					<div class="img-contacts">
-						<div class="img">
-							<a target="_blank" href="https://t.me/marchi003">
-								<img src="images/telegram4.png" height="45px">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					<a class="img_contacts" target="_blank" href="https://t.me/marchi003">
+						<img src="images/telegram4.png" height="45px">
+					</a>
+				</section>
+			</nav>
+		</footer>
 
 		<!------------ CALCULATOR MENU ---------------------->
-		<div class="div cal" id="calculator">	
-			<h1 class="h1_calc ukraine">Калькулятор квадратних рівнянь</h1>
-			<h1 class="h1_calc english">Quadratic equation calculator</h1>
-			<h1 class="h1_calc polish">Kalkulator równań kwadratowych</h1>
+		<main class="div cal" id="calculator">	
+			<h1 class="h1_calc">
+				<span class="ukraine">Калькулятор квадратних рівнянь</span>
+				<span class="english">Quadratic equation calculator</span>
+				<span class="polish">Kalkulator równań kwadratowych</span>
+			</h1>
 
-			<div class="tabel_div_cal">
+			<section class="tabel_div_cal">
 				<from class="tabel_cal">
 						<div class="a_b_c">a</div>
 						<div class="a_b_c">b</div>					
@@ -1108,71 +995,77 @@
 						<input id="b" class="inp" type="numer" name="">
 						<input id="c" class="inp" type="numer" name="">
 				</from>
-			</div>
-			
-			<h3 id="massege_in_calc" class="massege"></h3>
-
-			<button class="btn_for_calc" id="btn_for_calc">
-				<span class="ukraine">Розрахувати</span>
-				<span class="english">Calculate</span>
-				<span class="polish">Oblicz</span>
-			</button>
+				
+				<h3 id="massege_in_calc" class="massege"></h3>
+				
+				<button class="btn_for_calc" id="btn_for_calc">
+					<span class="ukraine">Розрахувати</span>
+					<span class="english">Calculate</span>
+					<span class="polish">Oblicz</span>
+				</button>
+			</section>
 
 			<hr class="hr"></hr>
 
 			<section class="tabel_div_cal">
-				<div class="tabel_2">
-						<div class="x1_x2">x1</div>
-						<div class="x1_x2">x2</div>
+				<article class="tabel_2">
+					<div class="x1_x2">x1</div>
+					<div class="x1_x2">x2</div>
 
-						<div id="x_1" class="x1_x2_result"></div>
-						<div id="x_2" class="x1_x2_result"></div>
-				</div>
+					<div id="x_1" class="x1_x2_result"></div>
+					<div id="x_2" class="x1_x2_result"></div>
+				</article>
 			</section>
-		</div>
+		</main>
 
 		<!------------ BIRTHDAY TIMER MENU ---------------------->
-		<div class="div bir-tim" id="birthday-timer">
+		<main class="div bir-tim" id="birthday-timer">
 			<!------------ BODY ---------------------->
 			<img id="img" src="images/bamboo_32.png">
 			<img id="img-2" src="images/bamboo_1.png">
 
-			<h1 class="ukraine">Таймер до Дня Народження</h1>
-			<h1 class="english">Birthday Timer</h1>
-			<h1 class="polish">Minutnik Urodzin</h1>
+			<h1>
+				<span class="ukraine">Таймер до Дня Народження</span>
+				<span class="english">Birthday Timer</span>
+				<span class="polish">Minutnik Urodzin</span>
+			</h1>
 
-			<h2 class="ukraine">До ДР залишилось:</h2>
-			<h2 class="english">To my birthday:</h2>
-			<h2 class="polish">Pozostaje do Urodzin:</h2>
+			<h2>
+				<span class="ukraine">До ДР залишилось:</span>
+				<span class="english">To my birthday:</span>
+				<span class="polish">Pozostaje do Urodzin:</span>
+			</h2>
 
 			<div class="timer">
 				<div class="string">
 					<div class="par">
 						<div class="circle">
 							<svg>
-								<circle class="bg" cx="65" cy="65" r="63" />
 								<circle class="meter one_bt" cx="65" cy="65" r="63" />
 							</svg>
 							<div class="text-in-circle">
-								<dv>
-									<h6 class="ukraine">міcяців</h6>
-									<h6 class="english">mounts</h6>
-									<h6 class="polish">miesiące</h6>
+								<div>
+									<h6>
+										<span class="ukraine">міcяців</span>
+										<span class="english">mounts</span>
+										<span class="polish">miesiące</span>
+									</h6>
 									<h5 id="mount">00</h5>
-								</dv>
+								</div>
 							</div>
 						</div>
 
 						<div class="circle">
 							<svg>
-								<circle class="bg" cx="65" cy="65" r="63" />
 								<circle class="meter two_bt" cx="65" cy="65" r="63" />
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">дней</h6>
-									<h6 class="english">days</h6>
-									<h6 class="polish">dni</h6>
+									<h6>
+										<span class="ukraine">дней</span>
+										<span class="english">days</span>
+										<span class="polish">midniesiące</span>
+									</h6>
 									<h5 id="day">00</h5>
 								</div>
 							</div>
@@ -1182,14 +1075,15 @@
 					<div class="par p">
 						<div class="circle">
 							<svg>
-								<circle class="bg" cx="65" cy="65" r="63" />
 								<circle class="meter three_bt" cx="65" cy="65" r="63" />
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">годин</h6>
-									<h6 class="english">hours</h6>
-									<h6 class="polish">godziny</h6>
+									<h6>
+										<span class="ukraine">годин</span>
+										<span class="english">hours</span>
+										<span class="polish">godziny</span>
+									</h6>
 									<h5 id="hour">00</h5>
 								</div>
 							</div>
@@ -1197,14 +1091,15 @@
 
 						<div class="circle">
 							<svg>
-								<circle class="bg" cx="65" cy="65" r="63" />
 								<circle class="meter four_bt" cx="65" cy="65" r="63" />
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">хвилин</h6>
-									<h6 class="english">minutes</h6>
-									<h6 class="polish">minuty</h6>
+									<h6>
+										<span class="ukraine">хвилин</span>
+										<span class="english">minutes</span>
+										<span class="polish">minuty</span>
+									</h6>
 									<h5 id="minute">00</h5>
 								</div>
 							</div>
@@ -1214,14 +1109,15 @@
 					<div class="one-bir">
 						<div class="circle" id="s">
 							<svg>
-								<circle class="bg" cx="65" cy="65" r="63" />
 								<circle id="five_5" class="meter five_bt" cx="65" cy="65" r="62.8" />
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">секунд</h6>
-									<h6 class="english">seconds</h6>
-									<h6 class="polish">sekundy</h6>
+									<h6>
+										<span class="ukraine">секунд</span>
+										<span class="english">seconds</span>
+										<span class="polish">sekundy</span>
+									</h6>
 									<h5 id="second">00</h5>
 								</div>
 							</div>
@@ -1229,21 +1125,26 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 
 		<!------------ PASSWORD GENERATOR MENU ---------------------->
-		<div class="div pas-gen" id="password-generator">
+		<main class="div pas-gen" id="password-generator">
 			<!------------ BODY ---------------------->
-			<h1 class="ukraine">Генератор паролей</h1>
-			<h1 class="english">Password Generator</h1>
-			<h1 class="polish">Generator hasła</h1>
+			<h1>
+				<span class="ukraine">Генератор паролей</span>
+				<span class="english">Password Generator</span>
+				<span class="polish">Generator hasła</span>
+			</h1>
+
 			<div class="functional">
 				<div class="left">
-					<div class="options">
+					<section class="options">
 						<div class="param">
-							<h3 class="ukraine">Параметри генератора</h3>
-							<h3 class="english">Generator's parametrs</h3>
-							<h3 class="polish">Parametry generatora</h3>
+							<h3>
+								<span class="ukraine">Параметри генератора</span>
+								<span class="english">Generator's parametrs</span>
+								<span class="polish">Parametry generatora</span>
+							</h3>
 						</div>
 						<form>
 							<div class="param-one">
@@ -1308,15 +1209,13 @@
 								</div>
 							</div>
 						</form>
-					</div>
+					</section>
 					<!------------ BUTTON ---------------------->
-					<!-- <div class="button"> -->
-						<button class="butto">
-							<span class="ukraine">Генерувати</span>
-							<span class="english">Generate</span>
-							<span class="polish">Generować</span>
-						</button>
-					<!-- </div> -->
+					<button class="butto">
+						<span class="ukraine">Генерувати</span>
+						<span class="english">Generate</span>
+						<span class="polish">Generować</span>
+					</button>
 				</div>
 				<!------------ PASSWORDS ---------------------->
 				<div class="right">
@@ -1342,7 +1241,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 
 		<!------------ MEMORY GAME ---------------------->
 		<main class="div mem-gam" id="memory-game">
@@ -2127,9 +2026,11 @@
 		<!------------ EXCHANGE RATE ---------------------->
 		<main class="div exc-rat" id="exchange-rate">
 			<!------------ TITLE ---------------------->
-			<h1 class="ukraine">Курс валют</h1>
-			<h1 class="english">Exchange Rate</h1>
-			<h1 class="polish">Kurs wymiany walut</h1>
+			<h1>
+				<span class="ukraine">Курс валют</span>
+				<span class="english">Exchange Rate</span>
+				<span class="polish">Kurs wymiany walut</span>
+			</h1>
 			<!------------ BODY ---------------------->
 			<section class="second_block">
 				<select class="rates_one">
@@ -2159,11 +2060,13 @@
 		</main>
 
 		<!------------ EVENT TIMER ---------------------->
-		<div class="div tim" id="timer">
+		<main class="div tim" id="timer">
 			<!------------ BODY ---------------------->
-			<h1 class="ukraine">Таймер до події</h1>
-			<h1 class="english">Event Timer</h1>
-			<h1 class="polish">Minutnik do wydarzenie</h1>
+			<h1>
+				<span class="ukraine">Таймер до події</span>
+				<span class="english">Event Timer</span>
+				<span class="polish">Minutnik do wydarzenie</span>
+			</h1>
 
 			<div class="date">
 				<form method="get">
@@ -2176,17 +2079,19 @@
 						<span class="english">Reload</span>
 						<span class="polish">Rzucać</span>
 					</button>
-					<button class="getDateButton" id="getDateButton">GO</button>
+					<button class="getDateButton" id="getDateButton" name="GO">GO</button>
 				</div>
 			</div>
 
 			<h3 class="error" id="error"></h3>
 
-			<h2 class="ukraine">До події залишилось:</h2>
-			<h2 class="english">To event:</h2>
-			<h2 class="polish">Pozostaje do wydarzenie:</h2>
+			<h2>
+				<span class="ukraine">До події залишилось:</span>
+				<span class="english">To event:</span>
+				<span class="polish">Pozostaje do wydarzenie:</span>
+			</h2>
 
-			<div class="timer">
+			<section class="timer">
 				<div class="string">
 					<div class="par">
 						<div class="circle">
@@ -2195,12 +2100,14 @@
 								<circle class="meter one_bt_tim" cx="65" cy="65" r="63" />
 							</svg>
 							<div class="text-in-circle">
-								<dv>
-									<h6 class="ukraine">міcяців</h6>
-									<h6 class="english">mounts</h6>
-									<h6 class="polish">miesiące</h6>
+								<div>
+									<h6>
+										<span class="ukraine">міcяців</span>
+										<span class="english">mounts</span>
+										<span class="polish">miesiące</span>
+									</h6>
 									<h5 id="mount_tim">00</h5>
-								</dv>
+								</div>
 							</div>
 						</div>
 
@@ -2211,9 +2118,11 @@
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">дней</h6>
-									<h6 class="english">days</h6>
-									<h6 class="polish">dni</h6>
+									<h6>
+										<span class="ukraine">дней</span>
+										<span class="english">days</span>
+										<span class="polish">dni</span>
+									</h6>
 									<h5 id="day_tim">00</h5>
 								</div>
 							</div>
@@ -2228,9 +2137,11 @@
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">годин</h6>
-									<h6 class="english">hours</h6>
-									<h6 class="polish">godziny</h6>
+									<h6>
+										<span class="ukraine">годин</span>
+										<span class="english">hours</span>
+										<span class="polish">godziny</span>
+									</h6>
 									<h5 id="hour_tim">00</h5>
 								</div>
 							</div>
@@ -2243,9 +2154,11 @@
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">хвилин</h6>
-									<h6 class="english">minutes</h6>
-									<h6 class="polish">minuty</h6>
+									<h6>
+										<span class="ukraine">хвилин</span>
+										<span class="english">minutes</span>
+										<span class="polish">minuty</span>
+									</h6>
 									<h5 id="minute_tim">00</h5>
 								</div>
 							</div>
@@ -2260,17 +2173,19 @@
 							</svg>
 							<div class="text-in-circle">
 								<div>
-									<h6 class="ukraine">секунд</h6>
-									<h6 class="english">seconds</h6>
-									<h6 class="polish">sekundy</h6>
+									<h6>
+										<span class="ukraine">секунд</span>
+										<span class="english">seconds</span>
+										<span class="polish">sekundy</span>
+									</h6>
 									<h5 id="second_tim">00</h5>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 		
 	</body>
 </html>
