@@ -1,17 +1,17 @@
 
 /*------------------------------- CERTIFICATES ------------------------------------------*/
 document.addEventListener('DOMContentLoaded', () => {
-	const certificate = document.querySelectorAll('#certific');
+	const certificate = document.querySelectorAll('#block_text_0');
 
 	certificate.forEach((certific) => {
 		certific.onfocus = () => {
-			if (certific.firstElementChild.className === 'block_text_1') {
-				certific.firstElementChild.className = 'block_text_1_T';
+			if (certific.className === 'block_text_0') {
+				certific.className = 'block_text_0_T';
 			}
 		};
 		certific.onblur = () => {
-			if (certific.firstElementChild.className === 'block_text_1_T') {
-				certific.firstElementChild.className = 'block_text_1';
+			if (certific.className === 'block_text_0_T') {
+				certific.className = 'block_text_0';
 			}
 		};
 	});
@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 /*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/
 function buttonStyle (el) {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 	let check = document.querySelectorAll('.checkbox');
 	let len = check.length;
@@ -76,7 +78,7 @@ function buttonStyle (el) {
 }
 /*------------------------------- SCROLE RIGHT ---------------------------------------------*/
 document.querySelector('#right').addEventListener('click', () => {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 
 	if (slider.style.transform === 'translateX(0px)'){
@@ -90,7 +92,7 @@ document.querySelector('#right').addEventListener('click', () => {
 });
 /*------------------------------- SCROLE LEFT ---------------------------------------------*/
 document.querySelector('#left').addEventListener('click', () => {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 
 	if (slider.style.transform === `translateX(-${widthCert*3}px)`){
@@ -113,7 +115,7 @@ document.getElementById('1').addEventListener('click', function () {
 	buttonStyle();
 });
 document.getElementById('2').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 
 	if (slider.style.transform !== `translateX(-${widthCert}px)`){
@@ -122,7 +124,7 @@ document.getElementById('2').addEventListener('click', function () {
 	buttonStyle();
 });
 document.getElementById('3').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 
 	if (slider.style.transform !== `translateX(-${widthCert*2}px)`){
@@ -131,7 +133,7 @@ document.getElementById('3').addEventListener('click', function () {
 	buttonStyle();
 });
 document.getElementById('4').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
+	let widthCert = document.querySelector('.block_menu').clientWidth;
 	let slider = document.querySelector('.menu-block-text');
 
 	if (slider.style.transform !== `translateX(-${widthCert*3}px)`){
@@ -142,10 +144,12 @@ document.getElementById('4').addEventListener('click', function () {
 
 
 
+
+
 /*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/
 function buttonStyle_Lang() {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
-	let slider = document.querySelector('.menu-block-text-lang');
+	let widthCert = document.querySelector('.block_menu').clientWidth;
+	let slider = document.querySelector('.menu_block_text_lang');
 	let check = document.querySelectorAll('.checkbox-lang');
 	let len = check.length;
 	let left = document.querySelector('#to_L-lang');
@@ -177,8 +181,8 @@ function buttonStyle_Lang() {
 }
 /*------------------------------- SCROLE RIGHT ---------------------------------------------*/
 document.getElementById('right_lang').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
-	let slider = document.querySelector('.menu-block-text-lang');
+	let widthCert = document.querySelector('.block_menu').clientWidth;
+	let slider = document.querySelector('.menu_block_text_lang');
 
 	if (slider.style.transform === 'translateX(0px)'){
 		slider.style.transform = `translateX(-${widthCert}px)`;
@@ -187,8 +191,8 @@ document.getElementById('right_lang').addEventListener('click', function () {
 });
 /*------------------------------- SCROLE LEFT ---------------------------------------------*/
 document.getElementById('left_lang').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
-	let slider = document.querySelector('.menu-block-text-lang');
+	let widthCert = document.querySelector('.block_menu').clientWidth;
+	let slider = document.querySelector('.menu_block_text_lang');
 
 	if (slider.style.transform === `translateX(-${widthCert}px)`){
 		slider.style.transform = `translateX(0px)`;
@@ -197,7 +201,7 @@ document.getElementById('left_lang').addEventListener('click', function () {
 });
 /*------------------------------- BOTTOM BUTTONS -----------------------------------*/
 document.getElementById('1_lang').addEventListener('click', function () {
-	let slider = document.querySelector('.menu-block-text-lang');
+	let slider = document.querySelector('.menu_block_text_lang');
 
 	if (slider.style.transform > 'translateX(0px)' || 
 		slider.style.transform < 'translateX(0px)'){
@@ -206,8 +210,8 @@ document.getElementById('1_lang').addEventListener('click', function () {
 	buttonStyle_Lang();
 });
 document.getElementById('2_lang').addEventListener('click', function () {
-	let widthCert = document.querySelector('.block-menu').clientWidth;
-	let slider = document.querySelector('.menu-block-text-lang');
+	let widthCert = document.querySelector('.block_menu').clientWidth;
+	let slider = document.querySelector('.menu_block_text_lang');
 
 	if (slider.style.transform > `translateX(-${widthCert}px)` || 
 		slider.style.transform < `translateX(-${widthCert}px)`){

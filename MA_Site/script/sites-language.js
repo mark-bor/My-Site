@@ -22,15 +22,16 @@ function getGeolocationDateTimeLocale(){
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	let language = document.querySelector(".form_in_head");
-	let ukraine = document.querySelectorAll(".ukraine");
-	let english = document.querySelectorAll(".english");
-	let polish = document.querySelectorAll(".polish");
-	let ua = document.querySelector("#ua");
-	let en = document.querySelector("#en");
-	let pl = document.querySelector("#pl");
-	let input_first = document.querySelector(".input_first_block");
-    let input_second = document.querySelector(".input_second_block");
+	const language = document.querySelector(".form_in_head");
+	const ukraine = document.querySelectorAll(".ukraine");
+	const english = document.querySelectorAll(".english");
+	const polish = document.querySelectorAll(".polish");
+	const ua = document.querySelector("#ua");
+	const en = document.querySelector("#en");
+	const pl = document.querySelector("#pl");
+	const input_first = document.querySelector(".input_first_block");
+    const input_second = document.querySelector(".input_second_block");
+    const html = document.querySelector("html");
 
     function Ukraine () {
     	english.forEach((en) => { en.style.display = 'none'; });
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		pl.removeAttribute("selected");
 		en.removeAttribute("selected");
 		ua.setAttribute("selected", " ");
+		html.setAttribute("lang", "ua");
 		language.style.background = 'linear-gradient(45deg, #FFF85C, #457FD6)';
 		input_first.setAttribute("placeholder", `сума`);
 		input_second.setAttribute("placeholder", `сума`);
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		ua.removeAttribute("selected");
 		en.removeAttribute("selected");
 		pl.setAttribute("selected", " ");
+		html.setAttribute("lang", "pl");
 		language.style.background = 'linear-gradient(45deg, #FF5555, #FFF)';
 		input_first.setAttribute("placeholder", `suma`);
 		input_second.setAttribute("placeholder", `suma`);
@@ -66,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		ua.removeAttribute("selected");
 		pl.removeAttribute("selected");
 		en.setAttribute("selected", " ");
+		html.setAttribute("lang", "en");
 		language.style.background = 'linear-gradient(45deg, rgba(80, 44, 132, 1), rgba(69, 127, 214, 1))';
 		input_first.setAttribute("placeholder", `amount`);
 		input_second.setAttribute("placeholder", `amount`);

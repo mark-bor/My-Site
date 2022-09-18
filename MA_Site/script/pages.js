@@ -29,57 +29,55 @@ function showPage(page) {
 
         const men_win = document.querySelectorAll('.men_win');
         const div_block = document.querySelectorAll('.div');
-        let len = men_win.length;
-        let len_div = div_block.length;
 
+        let cv = men_win[0].innerHTML;
+        let project = men_win[1].innerHTML;
+        let certificate = men_win[2].innerHTML;
+        let contact = men_win[3].innerHTML;
+                
         // Позначити вибраний пункт
-        div_block.forEach(div_block => {
-            if (div_block.style.display === 'block') {
-                for (let j=0; j<len; j++) {
-                    let cv = men_win[0].innerHTML;
-                    let project = men_win[1].innerHTML;
-                    let certificate = men_win[2].innerHTML;
-                    let contact = men_win[3].innerHTML;
-                    
-                    if (page === 'resume' & men_win[j].innerHTML === cv){
-                        men_win[j].classList.add('act');
-                    } else if (page === 'projects' & men_win[j].innerHTML === project){
-                        men_win[j].classList.add('act');
-                    } else if (page === 'certificates' & men_win[j].innerHTML === certificate){
-                        men_win[j].classList.add('act');
-                    } else if (page === 'contacts' & men_win[j].innerHTML === contact){
-                        men_win[j].classList.add('act');
+        div_block.forEach(div => {
+            if (div.style.display === 'block') {
+                men_win.forEach(win => {
+                    if (page === 'resume' & win.innerHTML === cv){
+                        win.classList.add('act');
+                    } else if (page === 'projects' & win.innerHTML === project){
+                        win.classList.add('act');
+                    } else if (page === 'certificates' & win.innerHTML === certificate){
+                        win.classList.add('act');
+                    } else if (page === 'contacts' & win.innerHTML === contact){
+                        win.classList.add('act');
                     } else {
-                        men_win[j].classList.remove('act');
+                        win.classList.remove('act');
                     }
-                }
+                });
             }
         });
-
+        
         // Сховати всі div:
         document.querySelectorAll('.div').forEach(div => {
             div.style.display = 'none';
         });
-
+        
         document.querySelector('body').style.background = '#D9D9D9';
-
+        
         if (page === 'home') {
             document.querySelector('#cat').style.display = 'block';
         } else {
             document.querySelector('#cat').style.display = 'none';
         }
-
+        
         if (page === 'contacts'){
             document.querySelector('#footer').style.display = 'none';
         } else {
             document.querySelector('#footer').style.display = 'block';
         }
-
+        
         // Показати div, переданий у аргументі функції
         document.querySelector(`#${page}`).style.display = 'block';
-
+        
     } else if (page === 'resume_1' | page === 'resume_2'){
-
+        
         // Сховати всі div:
         document.querySelectorAll('.div').forEach(div => {
             div.style.display = 'none';
@@ -108,7 +106,7 @@ function showPage(page) {
     }
 
     document.querySelector('button').className = 'link';
-    document.querySelector('#transMenu').className = 'transMenu';
+    document.querySelector('#menu_window').className = 'transMenu';
 }
 
 function getPage() {

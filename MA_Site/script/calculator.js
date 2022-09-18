@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const massege_in_calc = document.querySelector('#massege_in_calc');
 
     button.onmousedown = function (){
-        button.style.opacity = 0.7;
+        // button.style.opacity = 1;
+        button.style.boxShadow = 'inset 0 0 10px #1E2939';
     }
 
     button.onmouseup = function (){
-        button.style.opacity = 1;
+        // button.style.opacity = 1;
+        button.style.boxShadow = 'none';
         let a_vel = a.value;
         let b_vel = b.value;
         let c_vel = c.value;
@@ -37,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             let desk = (b_vel*b_vel) + (4*a_vel*c_vel);
             let dk = Math.sqrt(desk);
             let a2 = 2*a_vel;
-            let x1 = Math.floor((-b_vel+dk)/a2);
-            let x2 = Math.floor((-b_vel-dk)/a2);
-            let x = Math.floor(-b_vel/a2);
+            let x1 = ((-b_vel+dk)/a2).toFixed(1);
+            let x2 = ((-b_vel-dk)/a2).toFixed(1);
+            let x = (-b_vel/a2).toFixed(1);
 
             if (desk<0 || a2===0){
                 x_1.innerHTML = 'NON';
