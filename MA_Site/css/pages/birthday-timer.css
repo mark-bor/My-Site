@@ -114,7 +114,7 @@
 	transition-timing-function: linear;
 }
 .bir-tim .text-in-circle {
-	width: 70px;
+	width: 60px;
 	position: absolute;
 	display: flex;
 	flex-wrap: wrap;

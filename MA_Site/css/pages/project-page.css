@@ -5,44 +5,55 @@
 
 /*-------------------- LEGEND --------------------*/
 
-.pr .legend {
+.legend {
   width: 220px;
   height: 50px;
   margin: 0 auto 43px auto;
+}
+.legend > ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: space-between;
 }
-.pr .legend .leg-el {
+.legend > ul > .leg-el {
+  display: block;
   width: 100%;
   height: 25px;
-  font-family: "e-Ukraine-UltraLight", sans-serif;
-  font-size: 17.5px;
-  color: #1E2939;
+  margin: 0;
+  padding: 0;
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
 }
-.pr .legend .color {
+.legend .color {
   display: inline-block;
   width: 15px;
   height: 15px;
   margin-right: 5px;
   border-radius: 30%;
 }
-.pr .legend .color p {
+.legend .color p {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  
+  color: #1E2939;
+  font-family: "e-Ukraine-UltraLight", sans-serif;
+  font-size: 17.5px;
 }
-.pr .legend #blue {
+.legend #blue {
   background-color: rgb(120, 162, 225);
 }
-.pr .legend #green {
+.legend #green {
   background-color: rgb(143, 216, 85);
 }
 
@@ -57,6 +68,8 @@
   height: 100%;
   max-width: 570px;
   margin: 0px 30px;
+  padding: 0;
+  list-style-type: none;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -67,12 +80,18 @@
   grid-row-gap: 35px;
   grid-column-gap: 30px;
 }
-.pr .string-p .but {
-  box-sizing: border-box;
+.pr .string-p > li {
+  display: block;
   max-width: 270px;
   max-height: 200px;
   min-width: 270px;
   min-height: 200px;
+  margin: 0;
+  padding: 0;
+}
+.pr .string-p .but {
+  width: 100%;
+  height: 100%;
   position: relative;
   background-color: rgba(245, 245, 245, 0.0);
   box-shadow: rgba(0, 0, 0, 0.19) 5px 7px 13px;
@@ -94,14 +113,14 @@
 .q_e_c > img {
   width: 150%;
 }
-/* .b_t {}
-.p_g {}
-.m_g {}
-.e_r {} */
+/* .b_t {} */
+/* .p_g {} */
+/* .m_g {} */
+/* .e_r {} */
 .t > img {
   width: 120%;
 }
-.pr .but h3 {
+.pr .but h2 {
   color: #1E2939;
   font-weight: 400;
   font-size: 40px;
@@ -167,12 +186,14 @@
     grid-row-gap: 15px;
     grid-column-gap: 10px;
   }
-  .pr .string-p .but {
+  .pr .string-p > li {
     min-width: 110px;
     min-height: 100px;
+  }
+  .pr .string-p .but {
     border-radius: 23px;
   }
-  .pr .string-p .but h3 {
+  .pr .string-p .but h2 {
     color: #1E2939;
     font-weight: 400;
     font-size: 19px;

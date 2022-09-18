@@ -3,16 +3,13 @@
 /* Text color: home, projects */
 /*-------------------- MENU ----------------------*/
 .h .head-block-menu {
-  /* position: relative; */
-  height: 340px;
   max-width: 710px;
   margin: 0 auto;
   padding: 0;
 }
 .block-menu-H {
-  /* position: relative; */
-  height: 100%;
   max-width: 650px;
+  height: 340px;
   margin: 0 30px;
   padding: 0;
   display: grid;
@@ -61,7 +58,7 @@
   border-radius: 9px 39px 39px 39px;
   transform: rotateX(180deg);
 }
-.h .text h3 {
+.h .text h2 {
   color: #502C84;
   font-weight: 400;
   font-size: 40px;
