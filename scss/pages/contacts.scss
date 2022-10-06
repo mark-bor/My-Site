@@ -1,0 +1,61 @@
+/*-------------------- CONTACTS --------------------*/
+
+.con {
+
+	.phone-email {
+		width: 350px;
+		height: 90px;
+		margin: 0 auto;
+		text-align: center;
+		
+		p {
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 39px;
+		}
+	}
+
+	.contacts {
+		max-width: 720px;
+		min-height: 200px;
+		margin: 20px auto;
+		
+		.string-icons {
+			width: 100%;
+			min-height: 100px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			
+			.par-icons {
+				width: 240px;
+				height: 100px;
+				display: inline-flex;
+				justify-content: space-around;
+				align-items: center;
+				
+				.icon {
+					
+					img {
+						height: 60px;
+						border-radius: 50%;
+						box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+					}
+					
+					img:hover {
+						height: 70px;
+						transition: 0.05s;
+					}
+				}
+			}
+			
+			#par {
+				img {
+					border-radius: 22%;
+					box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+				}
+			}
+		}
+	}
+}

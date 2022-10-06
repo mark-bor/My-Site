@@ -1,0 +1,81 @@
+/* ------------------------ BODY ---------------------- */
+
+/* .exc-rat {
+} */
+.second_block {
+  display: block;
+  width: 350px;
+  height: 50px;
+  background-color: #D9D9D9;
+  border-radius: 3px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.rates_one,
+.rates_two {
+  display: block;
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  background-color: #D9D9D9;
+  border-radius: 3px;
+
+  color: #000;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 22px;
+}
+.input_first_block,
+.input_second_block {
+  display: block;
+  width: 190px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 30px;
+  outline: none /*1px solid lime*/;
+  border: none;
+  background-color: #FFFFFF;
+  z-index: 1;
+
+  color: #457FD6;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 218;
+  font-size: 21px;
+  line-height: 24px;
+}
+/*.input_first_block {
+  outline: 1px solid #8FD855;
+}
+.input_second_block {
+  outline: 1px solid #FF1E1E;
+}*/
+.input_first_block::placeholder,
+.input_second_block::placeholder {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 218;
+  font-size: 21px;
+  line-height: 24px;
+  color: #457FD6;
+  /*margin-left: 25px;*/
+}
+.massege {
+  display: none;
+  max-width: 550px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  color: #FF5555;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+
+
+
+/*@media screen and (max-width: 481px) {
+
+}*/

@@ -1,0 +1,19 @@
+/*-------------------- HEAD ------------------------------------------------------*/
+
+.head {
+	background-color: #1E2939;
+	height: 90px;
+	width: 100%;
+}
+.conteiner {
+	width: 100%;
+	height: 90px;
+	display: inline-flex;
+	justify-content: space-between;
+}
+.logo {
+	margin: 15px auto;
+}
+.logo:hover {
+	opacity: 0.9;
+}
