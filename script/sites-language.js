@@ -23,92 +23,63 @@ function getGeolocationDateTimeLocale(){
 }
 // getGeolocationDateTimeLocale();
 
-let language;
+let language = document.querySelector(".form_in_head");
 let ukraine, english, polish;
 let ua, en, pl;
 let input_first, input_second;
-// let html;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	language = document.querySelector(".form_in_head");
 	ukraine = document.querySelectorAll(".ukraine");
 	english = document.querySelectorAll(".english");
 	polish = document.querySelectorAll(".polish");
 	ua = document.querySelector("#ua");
 	en = document.querySelector("#en");
 	pl = document.querySelector("#pl");
-	input_first = document.querySelector(".input_first_block");
-	input_second = document.querySelector(".input_second_block");
-	// html = document.getElementsByTagName('html');
+
+	ukraine.forEach((ua) => ua.setAttribute("lang", "uk"));
+	english.forEach((en) => en.setAttribute("lang", "en"));
+	polish.forEach((pl) => pl.setAttribute("lang", "pl"));
 
 	// Перевірити, чи вже є значення у локальному сховищі
 	if (!localStorage.getItem('language')) {
 		if (getGeolocationDateTimeLocale()){
-			// Встановити мову на сайті та у локальному сховищі
-			Lang(getGeolocationDateTimeLocale().code);
-
+			Lang(getGeolocationDateTimeLocale().code);// Встановити мову на сайті та у локальному сховищі
 		} else {
 			Lang('EN');
 		}
 	} else {
-		// Якщо так, встановити мову сайту
-		Lang(localStorage.getItem('language'))
+		Lang(localStorage.getItem('language'));// Якщо є, встановити мову сайту
 	}
+});
 
-	language.addEventListener('change', function Language(){
-		Lang(language.value);
-	});
+//встановити слухач події для перемикача мови
+language.addEventListener('change', function Language(){
+	Lang(language.value);
 });
 
 function Lang(lang) {
 	if (lang === 'UA') {
-		english.forEach((en) => { en.style.display = 'none'; });
-		polish.forEach((pl) => { pl.style.display = 'none'; });
-		ukraine.forEach((ua) => { 
-			ua.style.display = 'inline-block'; 
-			ua.setAttribute("lang", "uk");
-		});
-	
-		pl.removeAttribute("selected");
-		en.removeAttribute("selected");
-		ua.setAttribute("selected", " ");
+		setLanguage(english, polish, ukraine);
+		setAttributesSelected(en, pl, ua);
 		language.style.background = 'linear-gradient(45deg, #FFF85C, #457FD6)';
-		// input_first.setAttribute("placeholder", `сума`);
-		// input_second.setAttribute("placeholder", `сума`);
-
 	} else if (lang === 'PL') {
-
-		ukraine.forEach((ua) => { ua.style.display = 'none'; });
-		english.forEach((en) => { en.style.display = 'none'; });
-		polish.forEach((pl) => { 
-			pl.style.display = 'inline-block'; 
-			pl.setAttribute("lang", "pl");
-		});
-
-		ua.removeAttribute("selected");
-		en.removeAttribute("selected");
-		pl.setAttribute("selected", " ");
+		setLanguage(ukraine, english, polish);
+		setAttributesSelected(ua, en, pl);
 		language.style.background = 'linear-gradient(45deg, #FF5555, #FFF)';
-		// input_first.setAttribute("placeholder", `suma`);
-		// input_second.setAttribute("placeholder", `suma`);
-
 	} else if (lang === 'EN') {
-		
-		ukraine.forEach((ua) => { ua.style.display = 'none'; });
-		polish.forEach((pl) => { pl.style.display = 'none'; });
-		english.forEach((en) => { 
-			en.style.display = 'inline-block'; 
-			en.setAttribute("lang", "en");
-		});
-
-		ua.removeAttribute("selected");
-		pl.removeAttribute("selected");
-		en.setAttribute("selected", " ");
-		language.style.background = 'linear-gradient(45deg, rgba(80, 44, 132, 1), rgba(69, 127, 214, 1))';
-		// input_first.setAttribute("placeholder", `amount`);
-		// input_second.setAttribute("placeholder", `amount`);
+		setLanguage(ukraine, polish, english);
+		setAttributesSelected(ua, pl, en);
+		language.style.background = 'linear-gradient(45deg, #502C84, #457FD6)';
 	}
-
 	localStorage.setItem('language', lang);
+}
+
+function setLanguage(lang1, lang2, lang3) {
+	[...lang1, ...lang2].forEach((lng) => lng.style.display = 'none');
+	lang3.forEach((lng) => lng.style.display = 'inline-block');
+}
+function setAttributesSelected(lang1, lang2, lang3) {
+	[lang1, lang2].forEach((lng) => lng.removeAttribute("selected"));
+	lang3.setAttribute("selected", " ");
 }

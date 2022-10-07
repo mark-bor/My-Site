@@ -58,18 +58,14 @@ function Colaps () {
                 return result[Math.floor(Math.random() * res_len)];
         }
 }
+// перевірка повторювання символів та додавання символу у список паролів
 function CheckedRemuv(place) {
         if (puncts.remuv.checked){
                 let item = Colaps();
                 if (place.innerHTML.split('').includes(item)){
-                        for (;;){
-                                if (place.innerHTML.split('').includes(item)){
-                                        item = Colaps();
-                                } else {
-                                        return item;
-                                        break
-                                }
-                        }
-                } else {return item;}
+                        return CheckedRemuv(place);
+                } else {
+                        return item;
+                }
         } else { return Colaps(); }
 }
