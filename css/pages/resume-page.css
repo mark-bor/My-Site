@@ -42,6 +42,42 @@
 	background: linear-gradient(45deg, #1E2939 25%, #A641B5);
 }
 
+/* --------- COMMON WITH CV1 AND CV2 ---------- */
+.my_work {
+	margin-bottom: 10px;
+}
+.my_work > span {
+	vertical-align: top;
+}
+/* .right-line > ol > li  {
+} */
+/*.right-line-block > ol > li > ul > li {
+	line-height: 19px;
+}
+.right-line-block > ol > li > ul > li > a {
+	color: #595959;
+	text-decoration: underline;
+}*/
+.link-R > .number {
+	color: #000;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+}
+.link-R,
+.link-R > a {
+	margin: 0;
+	text-decoration: none;
+	
+	color: #595959;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+}
+/*.link-R > a {
+	color: #000;
+}*/
+
 
 
 @media screen and (max-width:  480px){

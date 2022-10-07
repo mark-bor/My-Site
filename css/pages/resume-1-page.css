@@ -80,16 +80,16 @@
 	padding: 23px 0 102px 88px;
 }
 .download {
-	display: inline-block;
 	width: 150px;
 	height: 35px;
 	margin: 0 0 44px 73%;
 	padding: 0;
+
 	text-decoration: none;
 	background: #78A2E1;
 	border-radius: 3px;
  
-	display: inline-flex;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -98,6 +98,7 @@
 	height: 100%;
 	margin: 0 0 0 18px;
 	padding: 0;
+
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -113,7 +114,7 @@
 	margin: 0;
 	background: #457FD6;
 	border-radius: 0px 3px 3px 0px;
-	
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -124,90 +125,70 @@
 	margin: 0;
 }
 .right-line > h1 {
+	margin: 19px 0;
+
 	font-weight: 700;
 	font-size: 45px;
 	line-height: 55px;
-	margin: 19px 0;
 }
 .right-line > h3 {
+	margin: 0 0 12px 0;
+	
 	font-weight: 700;
 	font-size: 22px;
 	line-height: 27px;
-	margin: 0 0 12px 0;
 }
 .right-line > h4 {
+	margin: 23px 0 0 3px;
+
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 17px;
-	margin: 23px 0 0 3px;
 }
 .right-line-block > h4 {
+	margin: 0;
+
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 20px;
-	margin: 0;
 }
 .right-line-block h4 > span > span {
 	color: #FB6D3A;
 }
-.description,
-ul li {
+.description, ul li {
+	color: #595959;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
-	color: #595959;
 }
 .description {
 	width: 400px;
 	margin-bottom: 40px;
 }
 .date-description {
+	margin-top: 6px;
+	margin-bottom: 8px;
+
+	color: #A8A8A8;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 15px;
-	color: #A8A8A8;
-	margin-top: 6px;
-	margin-bottom: 8px;
 }
 .right-line ol, 
 .right-line ul {
 	padding: 0;
 	margin-left: 20px;
 }
-.right-line ol {
-	margin-bottom: 51px;
-}
 .right-line ul {
 	margin-top: 0;
 }
-/* .right-line > ol > li  {
+.right-line ol {
+	margin-bottom: 51px;
+}
+.right-line ol > li {
 	margin-bottom: 10px;
-} */
-/*.right-line-block > ol > li > ul > li {
-	line-height: 19px;
 }
-.right-line-block > ol > li > ul > li > a {
-	color: #595959;
-	text-decoration: underline;
-}*/
-.link-R > .number {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 24px;
-	color: #000;
-}
-.link-R,
-.link-R > a {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 24px;
-	color: #595959;
-	text-decoration: none;
-	margin-left: 3px;
-}
-/*.link-R > a {
-	color: #000;
-}*/
+
 
 
 @media screen and (max-width: 480px){
@@ -299,6 +280,6 @@ ul li {
 		display: none;
 	}
 	.download {
-		margin: 0 auto 0 auto;
+		margin: 0 auto;
 	}
 }
