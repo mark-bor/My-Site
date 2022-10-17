@@ -1,8 +1,15 @@
 let widthCert;
 window.innerWidth <= 481 ? widthCert = 370 : widthCert = 850;
-const it = { index: 0, };
-const lang = { index: 0, };
+const it = { 
+	index: 0,
+	type: "it"
+};
+const lang = { 
+	index: 0,
+	type: "lang"
+};
 
+/*----------------------- CERTIFICATES ----------------------------*/
 class Certificate {
 	constructor(certificate){
 		this.style = certificate.styles;
@@ -35,16 +42,24 @@ class Certificate {
 	}
 }
 
-async function getAndCreateCertific(object, url) {
+function getAndCreateCertific(object, url) {
 	fetch(url)
 	.then((res) => res.json())
 	.then((res) => {
-		object.srtfcs = res.length;
+		object.len = res.length;
 		const fragment = document.createDocumentFragment();
 		res.forEach((cert) => {
 			fragment.appendChild(new Certificate(cert).createCetificate());
 		});
 		object.slider.appendChild(fragment);
+		return res;
+	})
+	.then((res) => {
+		const place = document.querySelector(`.checkbox_block_${object.type}`);
+		for (let i=1; i<=res.length; i++) {
+			const checkbox =  `<li><button class="checkbox_${object.type} ${i===1 ? `active` : ``}" id="${i}_${object.type}" name="${res[i-1].courseEN}"></button></li>`;
+			place.insertAdjacentHTML('beforeend', checkbox);
+		}
 	})
 	.then(() => {
 		document.querySelectorAll('.block_text_0').forEach((certific) => {
@@ -59,26 +74,13 @@ async function getAndCreateCertific(object, url) {
 				}
 			};
 		});
-	});
-}
 
-function createChackboxes(place, objectType, type, url) {
-	fetch(url)
-	.then((res) => res.json())
-	.then((res) => {
-		objectType.len = res.length;
-		for (let i=1; i<=res.length; i++) {
-			const checkbox =  `<li><button class="checkbox${type} ${i===1 ? `active` : ``}" id="${i}${type}" name="${res[i-1].courseEN}"></button></li>`;
-			place.insertAdjacentHTML('beforeend', checkbox);
-		}
-	})
-	.then(() => {
-		for (let i=0; i<objectType.len; i++) {
-			document.getElementById(`${1+i}` + `${type}`).onclick = () => {
-				if (objectType.slider.style.transform !== `translateX(${(-1)*widthCert * i}px)`){
-					objectType.index = i;
-					objectType.slider.style.transform = `translateX(${(-1)*widthCert * objectType.index}px)`;
-					buttonStyle(objectType, type);
+		for (let i=0; i<object.len; i++) {
+			document.getElementById(`${1+i}_${object.type}`).onclick = () => {
+				if (object.slider.style.transform !== `translateX(${(-1)*widthCert * i}px)`){
+					object.index = i;
+					object.slider.style.transform = `translateX(${(-1)*widthCert * object.index}px)`;
+					buttonStyle(object, object.type);
 				}
 			};
 		}
@@ -87,31 +89,30 @@ function createChackboxes(place, objectType, type, url) {
 
 
 
-/*------------------------------- CERTIFICATES ------------------------------------------*/
 document.addEventListener('DOMContentLoaded', async () => {
 	it.slider = document.querySelector('#menu_block_text');
 	lang.slider = document.querySelector('#menu_block_text_lang');
 
-	await getAndCreateCertific(it, 'script/JSON/cert-IT.json');
-	await getAndCreateCertific(lang, 'script/JSON/cert-Lang.json');
+	getAndCreateCertific(it, 'script/JSON/cert-IT.json');
+	getAndCreateCertific(lang, 'script/JSON/cert-Lang.json');
 
-	it.left = document.querySelector('#to_L');
-	it.right = document.querySelector('#to_R');
-	
-	lang.left = document.querySelector('#to_L-lang');
-	lang.right = document.querySelector('#to_R-lang');
-	
-	/*------------------------------- BOTTOM BUTTONS -----------------------------------*/
-	createChackboxes(document.querySelector('.checkbox_block'), it, '', 'script/JSON/cert-IT.json');
-	createChackboxes(document.querySelector('.checkbox_block_lang'), lang, '_lang', 'script/JSON/cert-Lang.json');
+	/*------------------------------- SCROLL RIGHT ---------------------------------*/
+	document.getElementById('right').addEventListener('click', () => right(it));
+	document.getElementById('right_lang').addEventListener('click', () => right(lang));
+	/*------------------------------- SCROLL LEFT ----------------------------------*/
+	document.getElementById('left').addEventListener('click', () => left(it));
+	document.getElementById('left_lang').addEventListener('click', () => left(lang));
 });
 
 
 
-/*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/
-function buttonStyle(object, type) {
-	document.querySelectorAll(`.checkbox${type}`).forEach((checkbox) => {
-		if (checkbox === document.getElementById(`${1+object.index}` + `${type}`)){
+/*------------ BOTTOM BUTTONS STYLE -------------*/
+function buttonStyle(object) {
+	object.left = document.querySelector(`#to_L_${object.type}`);
+	object.right = document.querySelector(`#to_R_${object.type}`);
+
+	document.querySelectorAll(`.checkbox_${object.type}`).forEach((checkbox) => {
+		if (checkbox === document.getElementById(`${1+object.index}_${object.type}`)){
 			checkbox.classList.add(`active`);
 		} else {
 			checkbox.classList.remove(`active`);
@@ -119,58 +120,33 @@ function buttonStyle(object, type) {
 		object.left.style.width = '100%';
 		object.right.style.width = '100%';
 	});
-	if (object.slider.style.transform === `translateX(${(-1)*widthCert*(object.srtfcs - object.srtfcs)}px)`) {
+	if (object.slider.style.transform === `translateX(${(-1)*widthCert*(object.len - object.len)}px)`) {
 		object.left.style.width = '0';
 		object.right.style.width = '100%';
 	}
-	if (object.slider.style.transform === `translateX(${(-1)*widthCert*(object.srtfcs-1)}px)`) {
+	if (object.slider.style.transform === `translateX(${(-1)*widthCert*(object.len-1)}px)`) {
 		object.left.style.width = '100%';
 		object.right.style.width = '0';
 	}
 }
 
-/*------------------------------- SCROLL RIGHT ---------------------------------------------*/
-document.getElementById('right').addEventListener('click', () => {
-	if (it.slider.style.transform === `translateX(${(-widthCert*(it.srtfcs-1))}px)`){
-		buttonStyle(it, '');
+function right(object) {
+	if (object.slider.style.transform === `translateX(${(-widthCert*(object.len-1))}px)`){
+		buttonStyle(object, object.type);
 		return
-	} else if (it.slider.style.transform === `translateX(${(-widthCert * it.index)}px)`){
-		it.index++;
-		it.slider.style.transform = `translateX(${(-widthCert * it.index)}px)`;
+	} else if (object.slider.style.transform === `translateX(${(-widthCert * object.index)}px)`){
+		object.index++;
+		object.slider.style.transform = `translateX(${(-widthCert * object.index)}px)`;
+		buttonStyle(object, object.type);
 	}
-	buttonStyle(it, '');
-});
-/*------------------------------- SCROLL LEFT ---------------------------------------------*/
-document.getElementById('left').addEventListener('click', () => {
-	if (it.slider.style.transform === `translateX(${(-1)*widthCert*(it.srtfcs - it.srtfcs)}px)`) {
-		buttonStyle(it, '');
+}
+function left(object) {
+	if (object.slider.style.transform === `translateX(${(-1)*widthCert*(object.len - object.len)}px)`) {
+		buttonStyle(object, object.type);
 		return
-	} else if (it.slider.style.transform === `translateX(${(-1)*widthCert * it.index}px)`){
-		it.index--;
-		it.slider.style.transform = `translateX(${(-1)*widthCert * it.index}px)`;
+	} else if (object.slider.style.transform === `translateX(${(-1)*widthCert * object.index}px)`){
+		object.index--;
+		object.slider.style.transform = `translateX(${(-1)*widthCert * object.index}px)`;
+		buttonStyle(object, object.type);
 	}
-	buttonStyle(it, '');
-});
-
-/*------------------------------- SCROLE RIGHT ---------------------------------------------*/
-document.getElementById('right_lang').addEventListener('click', function () {
-	if (lang.slider.style.transform === `translateX(${(-1)*widthCert*(lang.srtfcs-1)}px)`){
-		buttonStyle(lang, '_lang');
-		return
-	} else if (lang.slider.style.transform === `translateX(${(-1)*widthCert * lang.index}px)`){
-		lang.index++;
-		lang.slider.style.transform = `translateX(${(-1)*widthCert * lang.index}px)`;
-	}
-	buttonStyle(lang, '_lang');
-});
-/*------------------------------- SCROLE LEFT ---------------------------------------------*/
-document.getElementById('left_lang').addEventListener('click', function () {
-	if (lang.slider.style.transform === `translateX(${(-1)*widthCert*(lang.srtfcs - lang.srtfcs)}px)`){
-		buttonStyle(lang, '_lang');
-		return
-	} else if (lang.slider.style.transform === `translateX(${(-1)*widthCert * lang.index}px)`){
-		lang.index--;
-		lang.slider.style.transform = `translateX(${(-1)*widthCert * lang.index}px)`;
-	}
-	buttonStyle(lang, '_lang');
-});
+}

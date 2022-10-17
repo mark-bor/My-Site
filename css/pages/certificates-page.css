@@ -24,7 +24,7 @@
 .buttonCert {
   position: relative;
   width: 850px;
-  height: 525px;
+  height: 520px;
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -35,6 +35,7 @@
   height: 100%;
   position: absolute;
   overflow: hidden;
+  /* border: 1px solid lime; */
 }
 
 .menu_block_text,
@@ -50,7 +51,7 @@
   display: inline-block;
   width: 600px;
   height: 445px;
-  margin: 55px 125px 20px 125px;
+  margin: 55px 125px 0 125px;
   padding: 0;
 }
 
@@ -172,9 +173,9 @@
 .to_R { width: 100%; }
 .button:hover img { opacity: 0.7; }
 
-.checkbox_block,
+.checkbox_block_it,
 .checkbox_block_lang {
-  height: 15px;
+  height: 30px;
   margin: 0 auto 60px auto;
   padding: 0;
   list-style-type: none;
@@ -182,25 +183,30 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   gap: 15px;
 }
-.checkbox_block > li,
+.checkbox_block_it > li,
 .checkbox_block_lang > li {
-  display: block;
-  height: 100%;
+  position: relative;
+  height: 15px;
   width: 15px;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-.checkbox, .active,
+.active,
+.checkbox_it, 
 .checkbox_lang {
+  position: absolute;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
   border-radius: 50%;
 }
-.checkbox,
+.checkbox_it,
 .checkbox_lang {
   background-color: #FFF;
 }
@@ -280,13 +286,15 @@
   }
   .button {
     width: 20px;
-    transform: translateY(265px);
+    transform: translateY(263px);
   }
   .button img { height: 100%; }
-  .checkbox_block,
-  .checkbox_block_lang { height: 10px; }
-  .checkbox_block > li,
-  .checkbox_block_lang > li { width: 10px; }
+  .checkbox_block_it, .checkbox_block_lang { height: 20px; }
+  .checkbox_block_it > li, 
+  .checkbox_block_lang > li { 
+    height: 10px;
+    width: 10px; 
+  }
 }
 
 /*# sourceMappingURL=certificates-page.css.map */

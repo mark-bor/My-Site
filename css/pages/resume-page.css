@@ -74,6 +74,12 @@
 	font-size: 14px;
 	line-height: 24px;
 }
+.r_1 .link-R > a {	
+	color: #FB6D3A;
+}
+.r_2 .link-R > a {	
+	color: #502C84;
+}
 /*.link-R > a {
 	color: #000;
 }*/

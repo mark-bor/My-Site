@@ -27,5 +27,12 @@
         "coursePL": "Programowanie sieciowe z Python i JavaScript",
         "company": "Harvard University",
         "file": "Certificates/Web-programming-with-Pithon-and-JavaScript.pdf"
+    },{
+        "styles": "background: #502C84;",
+        "courseUA": "Front-end розробка",
+        "courseEN": "Front-end development",
+        "coursePL": "Front-end rozwój",
+        "company": "Svitlana Sikora, Prometheus",
+        "file": "Certificates/Front-end.pdf"
     }
 ]
