@@ -1,76 +1,25 @@
-// Коли натиснута стрілка назад, показати попередній розділ
-window.onpopstate = function(event) {
-    let eve = event.state.page;
-    showPage(eve);
-}
+import { certificatesLoaded } from "./certificates.js";
+import { birthdayTimer } from "./birthday-timer.js";
 
-// Показати одну сторінку та приховати інші
-function showPage(page) {
-
-    const div_block = document.querySelectorAll('.div');
+// Зачекати завантаження сторінки:
+document.addEventListener('DOMContentLoaded', function() {
     
-    if (page === 'home' | page === 'resume' | page === 'certificates' | page === 'works' | page === 'contacts'){
-            
-        // Позначити вибраний пункт
-        div_block.forEach(div => {
-            if (div.style.display === 'block') {
-                const men_win = document.querySelectorAll('.men_win');
-                const cv = men_win[0].innerHTML;
-                const project = men_win[1].innerHTML;
-                const certificate = men_win[2].innerHTML;
-                const contact = men_win[3].innerHTML;
-                
-                men_win.forEach(win => {
-                    if (page === 'resume' & win.innerHTML === cv){
-                        win.classList.add('act');
-                    } else if (page === 'works' & win.innerHTML === project){
-                        win.classList.add('act');
-                    } else if (page === 'certificates' & win.innerHTML === certificate){
-                        win.classList.add('act');
-                    } else if (page === 'contacts' & win.innerHTML === contact){
-                        win.classList.add('act');
-                    } else {
-                        win.classList.remove('act');
-                    }
-                });
-            }
-        });
-        
-        // Сховати всі div:
-        div_block.forEach(div => div.style.display = 'none');
-        // Показати div, переданий у аргументі функції
-        document.querySelector(`#${page}`).style.display = 'block';
-        
-        document.querySelector('body').style.background = '#D9D9D9';
-        page === 'home'? document.querySelector('#cat').style.display = 'block': document.querySelector('#cat').style.display = 'none';
-        page === 'contacts'? document.querySelector('#footer').style.display = 'none': document.querySelector('#footer').style.display = 'block';
-        
-    } else if (page === 'resume_1' | page === 'resume_2'){
-        
-        // Сховати всі div:
-        div_block.forEach(div => div.style.display = 'none');
-        // Показати div_P, переданий у аргументі функції
-        document.querySelector(`#${page}`).style.display = 'block';
+    getPage();// Перевірка, чи є значення у локальному сховищі, встановити якщо немає
+    
+    // Обрати всі кнопки
+    document.querySelectorAll('.but').forEach(button => {
 
-        document.querySelector('#footer').style.display = 'none';
-        document.querySelector('body').style.background = '#F5F7FA';
-        document.querySelector('#cat').style.display = 'none';
+        // Коли кнопку натиснуто, перейти на сторінку
+        button.onclick = function () {
+            let section = this.dataset.page;
+            localStorage.setItem('section', section);// Зберегти у локальному сховищі
+            showPage(section);// Отримати значення лічильника з локального сховища
+            createURL(section);// Додати поточний стан до історії
+        }
+    })
+});
 
-    } else {
-        // Сховати всі div:
-        div_block.forEach(div => div.style.display = 'none');
-        // Показати div_P, переданий у аргументі функції
-        document.querySelector(`#${page}`).style.display = 'block';
-
-        document.querySelector('#footer').style.display = 'none';
-        document.querySelector('body').style.background = '#242F3E';
-        document.querySelector('#cat').style.display = 'none';
-    }
-
-    document.querySelector('button').className = 'link';
-    document.querySelector('#menu_window').className = 'transMenu_S';
-}
-
+// Отримати сторінку
 function getPage() {
     let url = window.location.hash.split('');
     url.shift();
@@ -106,35 +55,88 @@ function getPage() {
     }
 }
 
-// Зачекати завантаження сторінки:
-document.addEventListener('DOMContentLoaded', function() {
+// Показати одну сторінку та приховати інші
+function showPage(page) {
 
-    // Перевірити, чи вже є значення у локальному сховищі
-    // Bстановити значення у локальному сховищі
-    getPage();
+    const div_block = document.querySelectorAll('.div');
+    const body = document.querySelector('body');
+    const cat = document.querySelector('#cat');
+    const footer = document.querySelector('#footer');
     
-    // Обрати всі кнопки
-    document.querySelectorAll('.but').forEach(button => {
-
-        // Коли кнопку натиснуто, перейти на сторінку
-        button.onclick = function () {
-            let section = this.dataset.page;
-            // Зберегти у локальному сховищі
-            localStorage.setItem('section', section);
-            // Отримати значення лічильника з локального сховища
-            showPage(section);
-
-            // Додати поточний стан до історії
-            if (section === 'home'){
-                history.pushState({page: section}, '', ' ');
-            } else if (section==='resume' | section==='certificates' | 
-                        section==='works' | section==='contacts') {
-                history.pushState({page: section}, '', `#${section}`);
-            } else if (section === 'resume_1' | section === 'resume_2') {
-                history.pushState({page: section}, '', `#resume/${section}`);
-            } else {
-                history.pushState({page: section}, '', `#works/${section}`);
-            }            
+    if (page === 'home' | page === 'resume' | page === 'certificates' | page === 'works' | page === 'contacts'){
+        punctOfMenuWindow(div_block, page);// Позначити вибраний пункт у вспливаючому меню
+        showSection(div_block, page);// Роказати секцію
+        
+        body.style.background = '#D9D9D9';
+        page === 'home'? cat.style.display = 'block': cat.style.display = 'none';
+        page === 'contacts'? footer.style.display = 'none': footer.style.display = 'block';        
+        if  (page === 'certificates') {
+            if (document.querySelector('#menu_block_text').children.length===0 & 
+                document.querySelector('#menu_block_text_lang').children.length===0) { 
+                certificatesLoaded();
+            }
         }
-    })
-});
+
+    } else {
+        showSection(div_block, page);
+        
+        body.style.background = '#242F3E';
+        cat.style.display = 'none';
+        footer.style.display = 'none';
+
+        if (page === 'resume_1' | page === 'resume_2') { body.style.background = '#F5F7FA'; }
+        if (page === 'birthday-timer') { birthdayTimer(); }
+    }
+
+    document.querySelector('button').className = 'link';
+    document.querySelector('#menu_window').className = 'transMenu_S';
+}
+
+function showSection(divBlock, page) {
+    divBlock.forEach(div => div.style.display = 'none');// Сховати всі div:
+    document.querySelector(`#${page}`).style.display = 'block';// Показати div, переданий у аргументі функції
+}
+
+function punctOfMenuWindow(divBlock, page) {
+    divBlock.forEach(div => {
+        if (div.style.display === 'block') {
+            const men_win = document.querySelectorAll('.men_win');
+            const cv = men_win[0].innerHTML;
+            const project = men_win[1].innerHTML;
+            const certificate = men_win[2].innerHTML;
+            const contact = men_win[3].innerHTML;
+            
+            men_win.forEach(win => {
+                if (page === 'resume' & win.innerHTML === cv){
+                    win.classList.add('act');
+                } else if (page === 'works' & win.innerHTML === project){
+                    win.classList.add('act');
+                } else if (page === 'certificates' & win.innerHTML === certificate){
+                    win.classList.add('act');
+                } else if (page === 'contacts' & win.innerHTML === contact){
+                    win.classList.add('act');
+                } else {
+                    win.classList.remove('act');
+                }
+            });
+        }
+    });
+}
+
+function createURL(page) {
+    if (page === 'home'){
+        history.pushState({page: page}, '', ' ');
+    } else if (page==='resume' | page==='certificates' | page==='works' | page==='contacts') {
+        history.pushState({page: page}, '', `#${page}`);
+    } else if (page === 'resume_1' | page === 'resume_2') {
+        history.pushState({page: page}, '', `#resume/${page}`);
+    } else {
+        history.pushState({page: page}, '', `#works/${page}`);
+    }
+}
+
+// Коли натиснута стрілка назад, показати попередній розділ
+window.onpopstate = function(event) {
+    let eve = event.state.page;
+    showPage(eve);
+}

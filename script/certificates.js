@@ -1,3 +1,7 @@
+// THIS FILE IS CONECTED IN pages.js
+// THIS FILE IS CONECTED IN pages.js
+// THIS FILE IS CONECTED IN pages.js
+
 let widthCert;
 window.innerWidth <= 481 ? widthCert = 370 : widthCert = 850;
 const it = { 
@@ -42,6 +46,22 @@ class Certificate {
 	}
 }
 
+/*------------ CREATE CERTIFICATES AND CHECKBOXES -------------*/
+export function certificatesLoaded() {
+	it.slider = document.querySelector('#menu_block_text');
+	lang.slider = document.querySelector('#menu_block_text_lang');
+	
+	getAndCreateCertific(it, 'script/JSON/cert-IT.json')
+	getAndCreateCertific(lang, 'script/JSON/cert-Lang.json')
+	
+	/*------------------------------- SCROLL RIGHT ---------------------------------*/
+	document.getElementById('right').addEventListener('click', () => right(it));
+	document.getElementById('right_lang').addEventListener('click', () => right(lang));
+	/*------------------------------- SCROLL LEFT ----------------------------------*/
+	document.getElementById('left').addEventListener('click', () => left(it));
+	document.getElementById('left_lang').addEventListener('click', () => left(lang));
+}
+
 function getAndCreateCertific(object, url) {
 	fetch(url)
 	.then((res) => res.json())
@@ -84,27 +104,12 @@ function getAndCreateCertific(object, url) {
 				}
 			};
 		}
+	})
+	.catch((error) => {
+		// console.log(error);
+		// object.slider.insertAdjacentHTML('beforeend', `<li>${error}</li>`);
 	});
 }
-
-
-
-document.addEventListener('DOMContentLoaded', async () => {
-	it.slider = document.querySelector('#menu_block_text');
-	lang.slider = document.querySelector('#menu_block_text_lang');
-
-	getAndCreateCertific(it, 'script/JSON/cert-IT.json');
-	getAndCreateCertific(lang, 'script/JSON/cert-Lang.json');
-
-	/*------------------------------- SCROLL RIGHT ---------------------------------*/
-	document.getElementById('right').addEventListener('click', () => right(it));
-	document.getElementById('right_lang').addEventListener('click', () => right(lang));
-	/*------------------------------- SCROLL LEFT ----------------------------------*/
-	document.getElementById('left').addEventListener('click', () => left(it));
-	document.getElementById('left_lang').addEventListener('click', () => left(lang));
-});
-
-
 
 /*------------ BOTTOM BUTTONS STYLE -------------*/
 function buttonStyle(object) {
@@ -130,6 +135,7 @@ function buttonStyle(object) {
 	}
 }
 
+/*------------ SKROLL -------------*/
 function right(object) {
 	if (object.slider.style.transform === `translateX(${(-widthCert*(object.len-1))}px)`){
 		buttonStyle(object, object.type);
