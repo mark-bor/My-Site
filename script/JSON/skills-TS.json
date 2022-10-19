@@ -1,0 +1,30 @@
+[
+    {
+        "skill": "HTML5 / CSS3",
+        "level": "85"
+    },
+    {
+        "skill": "JavaScript",
+        "level": "75"
+    },
+    {
+        "skill": "SCSS / Sass",
+        "level": "80"
+    },
+    {
+        "skill": "Git / GitHub",
+        "level": "60"
+    },
+    {
+        "skill": "React.js",
+        "level": "27"
+    },
+    {
+        "skill": "WEB API",
+        "level": "70"
+    },
+    {
+        "skill": "Test documentation",
+        "level": "60"
+    }
+]

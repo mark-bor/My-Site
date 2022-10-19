@@ -1,5 +1,6 @@
 import { certificatesLoaded } from "./certificates.js";
 import { birthdayTimer } from "./birthday-timer.js";
+import { addSkills } from "./skills.js";
 
 // Зачекати завантаження сторінки:
 document.addEventListener('DOMContentLoaded', function() {
@@ -84,7 +85,12 @@ function showPage(page) {
         cat.style.display = 'none';
         footer.style.display = 'none';
 
-        if (page === 'resume_1' | page === 'resume_2') { body.style.background = '#F5F7FA'; }
+        if (page === 'resume_1' | page === 'resume_2') { 
+            body.style.background = '#F5F7FA';
+            if (page === 'resume_2') {
+                addSkills();
+            }
+        }
         if (page === 'birthday-timer') { birthdayTimer(); }
     }
 
