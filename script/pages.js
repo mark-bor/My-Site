@@ -88,7 +88,10 @@ function showPage(page) {
         if (page === 'resume_1' | page === 'resume_2') { 
             body.style.background = '#F5F7FA';
             if (page === 'resume_2') {
-                addSkills();
+                if (document.querySelector('#tech_skills').children.length===0 & 
+                    document.querySelector('#soft_skills').children.length===0) { 
+                    addSkills();
+                }
             }
         }
         if (page === 'birthday-timer') { birthdayTimer(); }
