@@ -1,3 +1,7 @@
+// THIS FILE IS CONECTED IN exchange-rate.js
+// THIS FILE IS CONECTED IN exchange-rate.js
+// THIS FILE IS CONECTED IN exchange-rate.js
+
 const GEO_CODES = {
 	"UA":{code:"UA", ln:"uk|uk-ua", name:"Україна"},
 	"PL":{code:"PL", ln:"pl|pl-pl", name:"Польща"}
@@ -23,13 +27,12 @@ function getGeolocationDateTimeLocale(){
 }
 // getGeolocationDateTimeLocale();
 
-let language = document.querySelector(".form_in_head");
+export const language = document.querySelector(".form_in_head");
 let ukraine, english, polish;
 let ua, en, pl;
-let input_first, input_second;
+// let input_first, input_second;
 
 document.addEventListener('DOMContentLoaded', function() {
-
 	ukraine = document.querySelectorAll(".ukraine");
 	english = document.querySelectorAll(".english");
 	polish = document.querySelectorAll(".polish");

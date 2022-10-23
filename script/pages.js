@@ -97,7 +97,7 @@ function showPage(page) {
         if (page === 'birthday-timer') { birthdayTimer(); }
     }
 
-    document.querySelector('button').className = 'link';
+    document.querySelector('#link').className = 'link';
     document.querySelector('#menu_window').className = 'transMenu_S';
 }
 

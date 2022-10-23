@@ -1,0 +1,199 @@
+/*-------------------- BODY ------------------------------------------------------*/
+@font-face {
+	font-family: "e-Ukraine-Regular";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Regular.otf');
+}
+body {
+	font-family: "e-Ukraine-Regular", normal;
+	margin: 0;
+	background: #D9D9D9;
+}
+
+.div {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+button, input {
+	outline: none;
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+/* ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+} */
+
+a {
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*-------------------- LANGUAGE ------------------------------------------------------*/
+.ukraine {
+	display: none;
+}
+.english {
+	display: block;
+}
+.polish {
+	display: none;
+}
+
+/*-------------------- SCROLLBAR -----------------------------*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color:  #D9D9D9;
+	box-shadow: inset 0px 0px 5px #616974;
+	border-radius: 10px;
+	visibility: hidden;
+}
+::-webkit-scrollbar-track:hover {
+	visibility: visible;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #616974;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	box-shadow: 0px 0px 5px #616974;
+}
+
+/*-------------------- TITLE --------------------------*/
+@font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+}
+main > section > h1 {
+	margin: 55px auto;
+	color: #D9D9D9;
+	font-family: "e-Ukraine-Light", sans-serif;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 77px;
+	text-align: center;
+}
+
+@media screen and (max-width: 480px){
+	main > section > h1  {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+
+/*-------------------- ERROR MESSAGE --------------------------*/
+.massege {
+	display: none;
+	max-width: 550px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto 30px auto;
+	
+	color: #FF5555;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+  }
+  
+
+/*-------------------- WINDOW ERROR --------------------------*/
+.error_background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 70px auto;
+	background-color: rgba(217, 217, 217, 0.79);
+	z-index: 7;
+	transition: 0.3s;
+	
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.window_error {
+	position: relative;
+	width: 500px;
+	height: 350px;
+	margin: 0 auto 70px auto;
+	padding: 1px 30px 0 30px;
+	background: #F5F5F5;
+	border-radius: 15px;
+	text-align: center;
+	z-index: inherit;
+	
+	background-image: url("../Images/OOPS.png");
+	background-repeat: no-repeat;
+	background-size: 33%;
+	background-position: top center;
+}
+.close_error {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close_error > span {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 2px;
+	margin: auto;
+	background-color: #1E2939;
+	border-radius: 3px;
+}
+.close_error > span:nth-child(1) {
+	transform: rotate(45deg);
+}
+.close_error > span:nth-child(2) {
+	transform: rotate(-45deg);
+}
+.message_error {
+	width: auto;
+	margin: 170px auto 0 auto;
+	
+	color: #FF5555;
+	font-weight: 400;
+	font-size: 29px;
+	line-height: 35px;
+}
+.error_status {
+	margin: 23px 0 0 0;
+
+	color: #1E2939;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+}
+.error_code {
+	color: #FF9900;
+}
+
+@media screen and (max-width: 480px){
+	.window_error {
+		width: 250px;
+		height: 180px;
+	}
+	.message_error {
+		margin: 85px auto 0 auto;
+		font-size: 15px;
+		line-height: 21px;
+	}
+	.error_status {
+		margin: 5px 0 0 0;
+		font-size: 11px;
+		line-height: 15px;
+	}
+}

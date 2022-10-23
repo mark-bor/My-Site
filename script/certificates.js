@@ -6,14 +6,16 @@ let widthCert;
 window.innerWidth <= 481 ? widthCert = 370 : widthCert = 850;
 const it = { 
 	index: 0,
-	type: "it"
+	type: "it",
+	url: "script/JSON/cert-IT.json"
 };
 const lang = { 
 	index: 0,
-	type: "lang"
+	type: "lang",
+	url: "script/JSON/cert-Lang.json"
 };
 
-/*----------------------- CERTIFICATES ----------------------------*/
+/*------------ CERTIFICATES ----------------------------*/
 class Certificate {
 	constructor(certificate){
 		this.style = certificate.styles;
@@ -46,24 +48,8 @@ class Certificate {
 	}
 }
 
-/*------------ CREATE CERTIFICATES AND CHECKBOXES -------------*/
-export function certificatesLoaded() {
-	it.slider = document.querySelector('#menu_block_text');
-	lang.slider = document.querySelector('#menu_block_text_lang');
-	
-	getAndCreateCertific(it, 'script/JSON/cert-IT.json')
-	getAndCreateCertific(lang, 'script/JSON/cert-Lang.json')
-	
-	/*------------------------------- SCROLL RIGHT ---------------------------------*/
-	document.getElementById('right').addEventListener('click', () => right(it));
-	document.getElementById('right_lang').addEventListener('click', () => right(lang));
-	/*------------------------------- SCROLL LEFT ----------------------------------*/
-	document.getElementById('left').addEventListener('click', () => left(it));
-	document.getElementById('left_lang').addEventListener('click', () => left(lang));
-}
-
-function getAndCreateCertific(object, url) {
-	fetch(url)
+function getAndCreateCertific(object) {
+	fetch(object.url)
 	.then((res) => res.json())
 	.then((res) => {
 		object.len = res.length;
@@ -105,9 +91,21 @@ function getAndCreateCertific(object, url) {
 			};
 		}
 	})
-	.catch((error) => {
-		// console.log(error);
-		// object.slider.insertAdjacentHTML('beforeend', `<li>${error}</li>`);
+	.catch((error) => {		
+		document.getElementById(`buttonCert_${object.type}`).insertAdjacentHTML('beforebegin', `
+			<article id="error_background" class="window_error">				
+				<h2 id="message_error" class="message_error">Failed to load certificates</h2>
+				<p class="error_status">
+					Error status: 
+					<span id="error_code" class="error_code"></span>
+				</p>
+			</article>
+		`);
+
+		console.log(error);
+
+		document.getElementById(`buttonCert_${object.type}`).style.display = 'none';
+		document.querySelector(`.checkbox_block_${object.type}`).style.display = 'none';
 	});
 }
 
@@ -155,4 +153,20 @@ function left(object) {
 		object.slider.style.transform = `translateX(${(-1)*widthCert * object.index}px)`;
 		buttonStyle(object, object.type);
 	}
+}
+
+/*------------ CREATE CERTIFICATES AND CHECKBOXES -------------*/
+export function certificatesLoaded() {
+	it.slider = document.querySelector('#menu_block_text');
+	lang.slider = document.querySelector('#menu_block_text_lang');
+	
+	getAndCreateCertific(it)
+	getAndCreateCertific(lang)
+	
+	/*------------------------------- SCROLL RIGHT ---------------------------------*/
+	document.getElementById('right').addEventListener('click', () => right(it));
+	document.getElementById('right_lang').addEventListener('click', () => right(lang));
+	/*------------------------------- SCROLL LEFT ----------------------------------*/
+	document.getElementById('left').addEventListener('click', () => left(it));
+	document.getElementById('left_lang').addEventListener('click', () => left(lang));
 }

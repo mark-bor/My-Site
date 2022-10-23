@@ -112,8 +112,9 @@
 	margin: auto 0;
 	padding: 0;
 }
-.icons_and_contacts > li > a,
+.icons_and_contacts > li > button,
 .icons_and_contacts > li > p {
+	display: inline;
 	height: 100%;
 	margin: 0 0 0 15px;
 	padding: 0;
