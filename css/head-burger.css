@@ -27,8 +27,9 @@
 /*-------------------- HEAD --------------------------*/
 .form_in_head {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  gap: 15px;
 }
 .language {
   width: 60px;
@@ -56,29 +57,41 @@
 
 .sites_color {
   display: block;
-  width: 70px;
-  height: 35px;
-  background: #D9D9D9;
+  width: 60px;
+  height: 30px;
+  background: #F5F5F5;
   border-radius: 17.5px;
-  transition: 0.3s;
+  /* box-shadow: inset 2px 1px 20px #616974; */
+  overflow: hidden;
 }
 .input_in_sites_color {
   display: none;
-  transition: 0.3s;
 }
 .sun_moon {
   display: block;
-  width: 35px;
-  height: 35px;
-  margin: 0 auto 0 0;
+  width: 30px;
+  height: 100%;
+  margin: 0 50% 0 0;
   background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
   filter: blur(1px);
-  border-radius: 17.5px;
-  transition: 0.3s;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 .input_in_sites_color:checked + .sun_moon {
-  margin: 0 0 0 auto;
+  margin: 0 0 0 50%;
   background: linear-gradient(316.41deg, #457FD6 0%, #A1BEEA 47.28%);
+}
+.sun_moon > span {
+  display: none;
+}
+.input_in_sites_color:checked + .sun_moon > span {
+  display: block;
+  width: 80%;
+  height: 80%;
+  filter: none;
+  border-radius: 50%;
+  background: #595959;
+  transform: translateX(-20%) translateY(-10%);
 }
 
 .head > .but {
@@ -336,6 +349,9 @@
     height: 100%;
     margin: 0;
   }
+  .form_in_head {
+    gap: 10px;
+  }
  
   .language {
     width: 47px;
@@ -351,6 +367,14 @@
   .button_in_puncts {
     width: 100%;
     height: 100%;
+  }
+
+  .sites_color {
+    width: 40px;
+    height: 20px;
+  }
+  .sun_moon {
+    width: 20px;
   }
   
   .head > .but {
