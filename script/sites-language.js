@@ -27,7 +27,7 @@ function getGeolocationDateTimeLocale(){
 }
 // getGeolocationDateTimeLocale();
 
-export const language = document.querySelector(".form_in_head");
+export const language = document.querySelector(".language");
 let ukraine, english, polish;
 let ua, en, pl;
 // let input_first, input_second;

@@ -25,6 +25,7 @@
 		<script defer src="script/menu-burger.js"></script>
 		<script defer type="module" src="script/pages.js"></script>
 		<!-- <script defer src="script/sites-language.js"></script> -->
+		<!-- <script defer src="script/sites-color.js"></script> -->
 		<script defer src="script/calculator.js"></script>
 		<script defer src="script/password-generator.js"></script>
 		<script defer src="script/memory-game.js"></script>
@@ -56,29 +57,32 @@
 
 		<!--__________ HEAD _____________________-->
 		<header class="head">
-			<div class="menu-burger">
-				<button id="link" class="link" name="window menu">
-					<div class="burger"></div>
-				</button>
-			</div>
+			<form class="form_in_head">
+				<select class="language">
+					<option class="puncts" id="ua" value="UA">UA</option>
+					<option class="puncts" id="en" value="EN">EN</option>
+					<option class="puncts" id="pl" value="PL">PL</option>
+				</select>
+				
+				<label id="sites_color" class="sites_color">
+					<input id="input_in_sites_color" class="input_in_sites_color" type="checkbox" />
+					<span id="sun_moon" class="sun_moon"></span>
+				</label>
+			</form>
 
 			<button class="but" data-page="home" name="logo">
 				<img class="logo" src="images/Logo.png" alt="logo">
 			</button>
 
-			<div class="help">
-				<form>
-					<select class="form_in_head">
-						<option class="puncts" id="ua" value="UA">UA</option>
-						<option class="puncts" id="en" value="EN">EN</option>
-						<option class="puncts" id="pl" value="PL">PL</option>
-					</select>
-				</form>
+			<div class="menu_burger">
+				<button id="link" class="link" name="window menu">
+					<div class="burger"></div>
+				</button>
 				
 				<a target="_blank" href="https://github.com/mark-bor?tab=repositories">
 					<img id="cat" src="images/cat.png" alt="cat" title="GitHub">
 				</a>
-			</div>
+			</div>				
 		</header>
 		<!--__________ TRANS MENU _____________________-->
 		<nav class="transMenu_S" id="menu_window">
@@ -122,7 +126,7 @@
 			<!--__________ HOME MENU _____________________-->
 			<section class="div h" id="home" >
 				<!--__________ TITLE _____________________-->
-				<h1 class="title">
+				<h1 class="title light_dark">
 					<span class="ukraine">Мій Сайт</span>
 					<span class="english">My Site</span>
 					<span class="polish">Moja strona internetowa</span>
@@ -171,7 +175,7 @@
 			<!--__________ RESUME MENU _____________________-->
 			<section class="div h" id="resume" >
 				<!--__________ TITLE _____________________-->
-				<h1 class="title">
+				<h1 class="title light_dark">
 					<span class="ukraine">Резюме</span>
 					<span class="english">CV</span>
 					<span class="polish">CV</span>
@@ -711,14 +715,14 @@
 			<!--__________ CERTIFICATES MENU _____________________-->
 			<section class="div cer" id="certificates">
 				<!--__________ TITLE _____________________-->
-				<h1 class="title">
+				<h1 class="title light_dark">
 					<span class="ukraine">Сертифікати</span>
 					<span class="english">Certificates</span>
 					<span class="polish">Certyfikaty</span>
 				</h1>
 				<!--__________ MENU NOT TECHNICAL IT _____________________-->
 				<section id="buttonCert_it" class="buttonCert">
-					<h3 class="title-sert"><!--Not technical--> IT</h3>
+					<h3 class="title-sert light_dark"><!--Not technical--> IT</h3>
 
 					<div class="block_menu" id="button_certificate">
 						<ul id="menu_block_text" class="menu_block_text" style="transform: translateX(0px)">
@@ -739,7 +743,7 @@
 				<ul class="checkbox_block_it"></ul>
 				<!--__________ MENU LAHGUAGES _____________________-->
 				<section id="buttonCert_lang" class="buttonCert">
-					<h3 class="title-sert">
+					<h3 class="title-sert light_dark">
 						<span class="ukraine">Мови</span>
 						<span class="english">Languages</span>
 						<span class="polish">Języki</span>
@@ -767,7 +771,7 @@
 			<!--__________ PROJECTS MENU _____________________-->
 			<section class="div wor" id="works">
 				<!--__________ TITLE _____________________-->
-				<h1 class="title">
+				<h1 class="title light_dark">
 					<span class="ukraine">Роботи</span>
 					<span class="english">Works</span>
 					<span class="polish">Prace</span>
@@ -777,7 +781,7 @@
 					<ul>
 						<li class="leg-el">
 							<div class="color" id="blue"></div>
-							<p>
+							<p class="light_dark">
 								<span class="ukraine"> - в процесі розробки.</span>
 								<span class="english"> - in developing proces.</span>
 								<span class="polish"> - w procesie rozwoju.</span>
@@ -785,7 +789,7 @@
 						</li>
 						<li class="leg-el">
 							<div class="color" id="green"></div>
-							<p>
+							<p class="light_dark">
 								<span class="ukraine"> - завершено.</span>
 								<span class="english"> - to complete.</span>
 								<span class="polish"> - zakończony.</span>
@@ -800,54 +804,54 @@
 							<button class="but close q_e_c" data-page="calculator">
 								<img src="css/pages/img/school-bord.jpg" alt="school board">
 
-								<span class="ukraine">Калькулятор<br>квадратних<br>рівнянь</span>
-								<span class="english">Quadratic<br>equation<br>calculator</span>
-								<span class="polish">Kalkulator<br>równań<br>kwadratowych</span>
+								<span class="light_dark ukraine">Калькулятор<br>квадратних<br>рівнянь</span>
+								<span class="light_dark english">Quadratic<br>equation<br>calculator</span>
+								<span class="light_dark polish">Kalkulator<br>równań<br>kwadratowych</span>
 							</button>
 						</li>
 						<li>
 							<button class="but close b_t" data-page="birthday-timer">
 								<img src="css/pages/img/tort.jpg" alt="pie">
 
-								<span class="ukraine">Таймер<br>до Дня<br>Народження</span>
-								<span class="english">Birthday<br>timer</span>
-								<span class="polish">Minutnik<br>Urodzin</span>
+								<span class="light_dark ukraine">Таймер<br>до Дня<br>Народження</span>
+								<span class="light_dark english">Birthday<br>timer</span>
+								<span class="light_dark polish">Minutnik<br>Urodzin</span>
 							</button>
 						</li>
 						<li>
 							<button class="but close p_g" data-page="password-generator">
 								<img src="css/pages/img/passwords.png" alt="head with password">
 									
-								<span class="ukraine">Генератор<br>паролей</span>
-								<span class="english">Password<br>generator</span>
-								<span class="polish">Generator<br>hasła</span>
+								<span class="light_dark ukraine">Генератор<br>паролей</span>
+								<span class="light_dark english">Password<br>generator</span>
+								<span class="light_dark polish">Generator<br>hasła</span>
 							</button>
 						</li>
 						<li>
 							<button class="but close m_g" data-page="memory-game">
 								<img src="css/pages/img/memory-game.png" alt="abstract image">
 								
-								<span class="ukraine">Memory<br>гра</span>
-								<span class="english">Memory<br>game</span>
-								<span class="polish">Memory<br>gra</span>
+								<span class="light_dark ukraine">Memory<br>гра</span>
+								<span class="light_dark english">Memory<br>game</span>
+								<span class="light_dark polish">Memory<br>gra</span>
 							</button>
 						</li>
 						<li>
 							<button class="but close e_r" data-page="exchange-rate">
 								<img src="css/pages/img/exchange-rate.jpg" alt="coins">
 								
-								<span class="ukraine">Курс<br>валют</span>
-								<span class="english">Exchange<br>rate</span>
-								<span class="polish">Kurs<br>wymiany<br>walut</span>
+								<span class="light_dark ukraine">Курс<br>валют</span>
+								<span class="light_dark english">Exchange<br>rate</span>
+								<span class="light_dark polish">Kurs<br>wymiany<br>walut</span>
 							</button>
 						</li>
 						<li>
 							<button class="but close t" data-page="timer">
 								<img src="css/pages/img/event-timer.jpg" alt="stopwatch in hand">
 								
-								<span class="ukraine">Таймер<br>до події</span>
-								<span class="english">Event<br>timer</span>
-								<span class="polish">Minutnik<br>wydarzenie</span>
+								<span class="light_dark ukraine">Таймер<br>до події</span>
+								<span class="light_dark english">Event<br>timer</span>
+								<span class="light_dark polish">Minutnik<br>wydarzenie</span>
 							</button>
 						</li>
 					</ul>
@@ -857,13 +861,13 @@
 			<!--__________ CONTACS MENU _____________________-->
 			<section class="div con" id="contacts">
 				<!--__________ TITLE _____________________-->
-				<h1 class="title">
+				<h1 class="title light_dark">
 					<span class="ukraine">Контакти</span>
 					<span class="english">Contacts</span>
 					<span class="polish">Moje kontakty</span>
 				</h1>
 
-				<address class="phone-email">+38 095 762 56 69<br />mark12bor@gmail.com</address>
+				<address class="phone-email light_dark">+38 095 762 56 69<br />mark12bor@gmail.com</address>
 
 				<!--__________ CONTACTS _____________________-->
 				<section class="contacts">

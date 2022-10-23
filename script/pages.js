@@ -1,6 +1,7 @@
 import { certificatesLoaded } from "./certificates.js";
 import { birthdayTimer } from "./birthday-timer.js";
 import { addSkills } from "./skills.js";
+import { bodiesColor } from "./sites-color.js";
 
 // Зачекати завантаження сторінки:
 document.addEventListener('DOMContentLoaded', function() {
@@ -68,7 +69,7 @@ function showPage(page) {
         punctOfMenuWindow(div_block, page);// Позначити вибраний пункт у вспливаючому меню
         showSection(div_block, page);// Роказати секцію
         
-        body.style.background = '#D9D9D9';
+        bodiesColor();
         page === 'home'? cat.style.display = 'block': cat.style.display = 'none';
         page === 'contacts'? footer.style.display = 'none': footer.style.display = 'block';        
         if  (page === 'certificates') {
@@ -86,7 +87,7 @@ function showPage(page) {
         footer.style.display = 'none';
 
         if (page === 'resume_1' | page === 'resume_2') { 
-            body.style.background = '#F5F7FA';
+            bodiesColor('#F5F7FA');
             if (page === 'resume_2') {
                 if (document.querySelector('#tech_skills').children.length===0 & 
                     document.querySelector('#soft_skills').children.length===0) { 
