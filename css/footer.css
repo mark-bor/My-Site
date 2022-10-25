@@ -13,26 +13,28 @@
   border-radius: 30% 30% 0 0;
 }
 
-.footer > button {
+.footer > a {
   width: 170px;
   height: 35px;
   margin: 20px auto;
+  color: rgb(255, 255, 255);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
 }
 
-.footer > button:hover {
+.footer > a:hover {
   color: #8FD855;
 }
 
-.footer > button > span {
+.footer > a > span {
+  margin: 0px;
+
   font-family: "e-Ukraine-Light", sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-  margin: 0px;
 }
 
 .contacts_C {
@@ -88,18 +90,18 @@
 .string_foot {
   width: 50%;
   min-height: 60px;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-around;
-  margin: 0px auto;
+  align-items: flex-start;
 }
 
 .img_contacts {
-  width: 200px;
-  height: 80px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 0px auto;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=footer.css.map */

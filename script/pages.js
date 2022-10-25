@@ -9,14 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
     getPage();// Перевірка, чи є значення у локальному сховищі, встановити якщо немає
     
     // Обрати всі кнопки
-    document.querySelectorAll('.but').forEach(button => {
+    document.querySelectorAll('.but').forEach(link => {
 
         // Коли кнопку натиснуто, перейти на сторінку
-        button.onclick = function () {
+        link.onclick = function (e) {
+            e.preventDefault();
             let section = this.dataset.page;
             localStorage.setItem('section', section);// Зберегти у локальному сховищі
-            showPage(section);// Отримати значення лічильника з локального сховища
             createURL(section);// Додати поточний стан до історії
+            showPage(section);// Отримати значення лічильника з локального сховища
         }
     })
 });
@@ -39,21 +40,23 @@ function getPage() {
         showPage('home');
         localStorage.setItem('section', 'home');
 
-    } else if (urlHash==='resume' | urlHash==='certificates' | urlHash==='works' | urlHash==='contacts') {
-        showPage(urlHash);
-        localStorage.setItem('section', urlHash);
-
-    } else if (urlHash === 'resume/resume_1') {
-        showPage('resume_1');
-        localStorage.setItem('section', 'resume_1');
-
-    } else if (urlHash === 'resume/resume_2') {
-        showPage('resume_2');
-        localStorage.setItem('section', 'resume_2');
-
     } else {
-        showPage(urlProjHash);
-        localStorage.setItem('section', urlProjHash);
+        if (urlHash==='resume' | urlHash==='certificates' | urlHash==='works' | urlHash==='contacts') {
+            showPage(urlHash);
+            localStorage.setItem('section', urlHash);
+
+        } else if (urlHash === 'resume/resume_1') {
+            showPage('resume_1');
+            localStorage.setItem('section', 'resume_1');
+
+        } else if (urlHash === 'resume/resume_2') {
+            showPage('resume_2');
+            localStorage.setItem('section', 'resume_2');
+
+        } else {
+            showPage(urlProjHash);
+            localStorage.setItem('section', urlProjHash);
+        }
     }
 }
 
@@ -61,7 +64,6 @@ function getPage() {
 function showPage(page) {
 
     const div_block = document.querySelectorAll('.div');
-    const body = document.querySelector('body');
     const cat = document.querySelector('#cat');
     const footer = document.querySelector('#footer');
     
@@ -81,11 +83,11 @@ function showPage(page) {
 
     } else {
         showSection(div_block, page);
-        
-        body.style.background = '#242F3E';
+        // body.style.background = '#242F3E';
+        bodiesColor('#242F3E');
         cat.style.display = 'none';
         footer.style.display = 'none';
-
+        
         if (page === 'resume_1' | page === 'resume_2') { 
             bodiesColor('#F5F7FA');
             if (page === 'resume_2') {
@@ -95,6 +97,7 @@ function showPage(page) {
                 }
             }
         }
+        
         if (page === 'birthday-timer') { birthdayTimer(); }
     }
 

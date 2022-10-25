@@ -97,11 +97,12 @@
 	align-content: flex-end;
 }
 .icons_and_contacts > li {
-	display: flex;
 	width: 100%;
 	height: 32px;
 	margin: 0;
 	padding: 0;
+
+	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
 	align-content: flex-end;
@@ -112,9 +113,8 @@
 	margin: auto 0;
 	padding: 0;
 }
-.icons_and_contacts > li > button,
+.icons_and_contacts > li > a,
 .icons_and_contacts > li > p {
-	display: inline;
 	height: 100%;
 	margin: 0 0 0 15px;
 	padding: 0;

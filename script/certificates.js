@@ -29,7 +29,7 @@ class Certificate {
 		const article = `
 		<li>
 			<button class="block_text_0" name="${this.courseEN}">
-				<div class="block0" style="${this.style}">
+				<span class="block0" style="${this.style}">
 					<h3 class="data_from_certificate course">
 						<span class="ukraine">${this.courseUA}</span>
 						<span class="english">${this.courseEN}</span>
@@ -37,7 +37,7 @@ class Certificate {
 					</h3>
 					<hr class="data_from_certificate line">
 					<h4 class="data_from_certificate company">${this.company}</h4>
-				</div>
+				</span>
 				<object class="text0" type="application/pdf" data="${this.file}"></object>
 			</button>
 		</li>

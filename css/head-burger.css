@@ -61,7 +61,6 @@
   height: 30px;
   background: #F5F5F5;
   border-radius: 17.5px;
-  /* box-shadow: inset 2px 1px 20px #616974; */
   overflow: hidden;
 }
 .input_in_sites_color {
@@ -71,27 +70,63 @@
   display: block;
   width: 30px;
   height: 100%;
-  margin: 0 50% 0 0;
-  background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
-  filter: blur(1px);
   border-radius: 50%;
-  transition: 0.5s;
+  /* filter: blur(1px); */
+  /* transition-duration: 0.3s; */
+  /* margin: 0 50% 0 0;
+  background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%); */
+
+  animation-name: sun;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes sun {
+  0% {
+  margin: 0 0 0 50%;
+  background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+  } 
+  50% {
+    margin: 0 50% 0 0;
+    background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+  }
+  100% {
+    margin: 0 50% 0 0;
+    background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+  }
 }
 .input_in_sites_color:checked + .sun_moon {
-  margin: 0 0 0 50%;
-  background: linear-gradient(316.41deg, #457FD6 0%, #A1BEEA 47.28%);
+  animation-name: moon;
+}
+@keyframes moon {
+  0% {
+    margin: 0 50% 0 0;
+    background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+  } 
+  50% {
+    margin: 0 0 0 50%;
+    background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+  }
+  100% {
+    margin: 0 0 0 50%;
+    background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+  }
 }
 .sun_moon > span {
-  display: none;
-}
-.input_in_sites_color:checked + .sun_moon > span {
+  /* display: none; */
   display: block;
-  width: 80%;
-  height: 80%;
+  opacity: 0;
   filter: none;
   border-radius: 50%;
+  transition-delay: 0.1s;
+  transition-duration: 0.1s;
+  transform: translateX(-33%) translateY(-15%);
+}
+.input_in_sites_color:checked + .sun_moon > span {
+  /* display: block; */
+  opacity: 1;
+  width: 100%;
+  height: 100%;
   background: #595959;
-  transform: translateX(-20%) translateY(-10%);
 }
 
 .head > .but {
@@ -118,7 +153,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
 }
 .menu_burger > .link {
   position: relative;
@@ -139,6 +173,7 @@
 .link > .burger:before,
 .link > .burger:after {
   position: absolute;
+  display: block;
   top: 50%;
   margin-top: -3px;
   height: 6px;
@@ -180,6 +215,7 @@
 .link_active > .burger:before,
 .link_active > .burger:after {
   position: absolute;
+  display: block;
   top: 50%;
   margin-top: -3px;
   width: 40px;
@@ -215,6 +251,7 @@
   align-self: flex-end;
 }
 .menu_burger img {
+  margin: 0 0 0 15px;
   height: 70px;
 }
 
