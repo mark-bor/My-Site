@@ -1,0 +1,696 @@
+.menu_in_tank_game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+
+    background-color: rgba(35, 46, 62, 0.95);
+    border: 1px solid #616974;
+
+    color: #FFF;
+}
+
+
+
+/*-------------------- BUTTON FOR CLOSE MENU -----------------------------*/
+/*-------------------- BUTTON FOR CLOSE MENU -----------------------------*/
+/*-------------------- BUTTON FOR CLOSE MENU -----------------------------*/
+.close_menu {
+    position: absolute;
+	width: 30px;
+	height: 30px;
+    top: 15px;
+	right: 10px;
+    z-index: 1;
+    /* top: calc(10% + 60px);
+	right: calc(15% + 10px); */
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close_menu > span {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 2px;
+	margin: auto;
+	background-color: #FFF85C;
+	border-radius: 3px;
+}
+.close_menu > span:nth-child(1) {transform: rotate(45deg);}
+.close_menu > span:nth-child(2) {transform: rotate(-45deg);}
+
+
+
+/*-------------------- NAVIGATION ON PUNCTS MENU -----------------------------*/
+/*-------------------- NAVIGATION ON PUNCTS MENU -----------------------------*/
+/*-------------------- NAVIGATION ON PUNCTS MENU -----------------------------*/
+.nav_on_puncts_menu {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(5, 25, 55, 0.80);
+}
+.list_with_puncts_menu {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list_with_puncts_menu > li {
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.punct_menu_from_list {
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+
+    text-align: center;
+    vertical-align: baseline;
+    color: #FFF;
+    font-size: 20px;
+}
+.punct_active {
+    background-color: #232E3E;
+}
+.punct_menu_from_list:hover {
+    background-color: #232E3E;
+    opacity: 0.9;
+}
+
+.section_in_menu_tank_game {
+    width: 100%;
+    height: calc(100% - 60px);
+    margin: 0;
+    padding: 0; 
+    overflow-y: scroll;
+}
+
+
+
+/*-------------------- SCROLLBAR -----------------------------*/
+/*-------------------- SCROLLBAR -----------------------------*/
+/*-------------------- SCROLLBAR -----------------------------*/
+.section_in_menu_tank_game::-webkit-scrollbar-track {
+	background-color:  #232E3E;
+	box-shadow: none;
+	border-radius: 0;
+    visibility: visible;
+}
+.section_in_menu_tank_game::-webkit-scrollbar-thumb {
+	border-radius: 0;
+}
+.section_in_menu_tank_game::-webkit-scrollbar-thumb:hover {
+	box-shadow: none;
+}
+
+.menu_title {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto 0 auto;
+    background-color: #232E3E;
+    border-radius: 0 0 17px 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #8FD855;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+
+/*-------------------- MAIN MENU -----------------------------*/
+/*-------------------- MAIN MENU -----------------------------*/
+/*-------------------- MAIN MENU -----------------------------*/
+#main {
+    overflow: visible;
+}
+.mein_menu_with_tank {
+    height: calc(100% - 50px);
+    padding:  0 30px 0 30px;
+    
+    display: flex;
+    /* gap: 15px; */
+}
+
+
+
+.main_section_in_mein_menu {
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-track {
+    display: none;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-thumb {
+    display: none;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
+
+.section_in_main_menu {
+    width: 100%;
+    padding: 0 0 30px 0;
+}
+.tank_image,
+.machine_gun_image {
+    width: 330px;
+    height: 217px;
+    margin: 0 auto 30px auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.tank_image > img,
+.machine_gun_image > img {
+    display: block;
+    margin: 0 auto;
+}
+.tank_image > img { width: 100%; }
+.machine_gun_image > img { width: 80%; }
+.block_with_name_and_button {
+    height: 30px;
+    margin: 30px 0 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wepon_name,
+.machine_gun_name {
+    margin: 0;
+    
+    font-weight: 300;
+    font-size: 21px;
+}
+.confirm_selection {
+    width: 70px;
+    height: 30px;
+    background: linear-gradient(180deg, #A1BEEA 0%, #457FD6 100%);
+    border-radius: 17px;
+}
+.confirm_selection > span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    margin: auto;
+    background: linear-gradient(180deg, #457FD6 0%, #A1BEEA 100%);
+    border-radius: 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    font-weight: 500;
+    font-size: 13px;
+
+}
+.change_wepon {
+    height: 35px;
+    margin: 0 auto 30px auto;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid lime; */
+}
+.change_wepon > li {
+    display: block;
+    width: 70px;
+    height: 100%;
+}
+.select_wepon {
+    width: 100%;
+    height: 100%;
+    background-color: #D9D9D9;
+    border-radius: 7px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+#select_tank_abrams {
+    background-image: url('../../../Images/abrams_remove_background.png');
+}
+#select_tank_leopard {
+    background-image: url('../../../Images/leopard_remove_background.png');
+}
+
+#select_machine_gun_browning {
+    background-image: url('../../../Images/browning.png');
+}
+#select_machine_gun_mg-42 {
+    background-image: url('../../../Images/MG-42(1).png');
+}
+
+.table_whith_characteristics {
+    width: 70%;
+    margin: 0 0 0 10px;
+    border-collapse: collapse;
+}
+.table_name {
+    margin: 0 0 17px 0;
+    text-align: start;
+}
+.characteristic_name,
+.characteristic {
+    height: 37px;
+    border: 1px solid #C9B897;
+}
+.characteristic_name {
+    width: 65%;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+}
+.characteristic {
+    width: 35%;
+    text-align: center;
+}
+
+
+
+.sidebar_with_buttons {
+    width: 25%;
+    margin: 0;
+    padding: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* align-content: space-between; */
+}
+.navigation_on_mein_menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.navigation_on_mein_menu > li {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+.button_in_nav_on_main_menu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: #E3D1AD; */
+    background-color: #C9B897;
+    border-radius: 10px;
+    transition: 0.05s;
+
+    text-align: center;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 19px;
+}
+.button_in_nav_on_main_menu:hover {
+    box-shadow: 3px 3px 10px #051937;
+}
+.button_in_nav_on_main_menu_activ {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px #051937;
+}
+
+.start_game {
+    width: 120px;
+    height: 45px;
+    transition: 0.1s;
+
+    background-image: url('../img/start_game.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    /* border: 1px solid lime; */
+}
+.start_game:hover {
+    opacity: 0.8;
+}
+
+
+
+/*-------------------- OPTIONS -----------------------------*/
+/*-------------------- OPTIONS -----------------------------*/
+/*-------------------- OPTIONS -----------------------------*/
+.section_in_options {
+    width: 250px;
+    height: auto;
+    margin: 30px;
+}
+
+.section_title {
+    height: 30px;
+    margin: 0 0 10px 10px;
+    
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.global_sound {
+    border: 2px solid #051937;
+    border-radius: 12px;
+}
+.block_with_management_body {
+    height: 70px;
+    padding: 0;
+    background-color: #051937;
+    border: 1px solid #051937;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+.more_sounds {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+    transition: 0.1s;
+
+    background-image: url('../img/arrow_down_for_options.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center 30%;
+}
+.more_sounds:hover {
+    opacity: 0.9;
+    background-color: #232E3E;
+    border-radius: 50%;
+}
+.more_sounds_active {
+    transform: rotateX(180deg);
+}
+.global_volume {
+    display: flex;
+    align-items: center;
+}
+.global_volume > input {
+    -webkit-appearance: none;
+
+    width: 130px;
+    height: 30px;
+    margin: 10px 0;
+}
+.global_volume > input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+
+    width: 100%;
+    height: 14px;
+    
+    background: #50555C;
+    border-radius: 15px;
+    border: 0px solid #000000;
+    cursor: pointer;
+}
+.global_volume > input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 30px;
+    width: 10px;
+    margin: -7.5px 0 0 0;
+
+    background: #529DE1;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.volume_number {
+    margin: 0 0 0 10px;
+    padding: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 19px;
+}
+
+.detailed_sounds {
+    height: 0;
+    margin: 0;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.detailed_sounds_show {
+    height: 240px;
+}
+.detailed_volume {
+    display: flex;
+    align-items: center;
+}
+.label {
+    width: 130px;
+    
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 29px;
+}
+.detailed_volume > input {
+    -webkit-appearance: none;
+
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin: 10px 0;
+}
+.detailed_volume > input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+
+    width: 100%;
+    height: 10px;
+    
+    background: #50555C;
+    border-radius: 15px;
+    border: 0px solid #000000;
+    cursor: pointer;
+}
+.detailed_volume > input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 20px;
+    width: 5px;
+    margin: -5px 0 0 0;
+
+    background: #529DE1;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.hide_controllers_label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.hide_controllers_explanation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    display: flex;
+}
+.hide_controllers_explanation > span {
+    width: 50%;
+    height: 100%;
+    z-index: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 13px;
+}
+.hide_controllers {
+    display: none;
+}
+.thumb_in_hide_controllers {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: 0 50% 0 0;
+    z-index: 1;
+    transition: 0.5s;
+
+    background-color: #50555C;
+    border-radius: 10px;
+
+    background-image: url('../img/gamepad_without_backgraund.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.hide_controllers:checked + .thumb_in_hide_controllers {
+    margin: 0 0 0 50%;
+    background-image: url('../img/none_gamepad.png');
+}
+
+
+
+/*-------------------- EXPLANATION -----------------------------*/
+/*-------------------- EXPLANATION -----------------------------*/
+/*-------------------- EXPLANATION -----------------------------*/
+.part_of_explanation_card {
+    margin: 30px 30px 45px 30px;
+
+    font-weight: lighter;
+}
+.part_of_explanation_card > h3 {
+    margin-top: 0;
+
+    color: #FFF85C;
+    font-weight: 100;
+    font-size: 21px;
+}
+.part_of_explanation_card > img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 50%;
+    max-width: 200px;
+}
+.explanation_list {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.lists_element {
+    min-height: 40px;
+    display: inline-flex;
+    color: #FFF;
+}
+
+.element_for_explanation_navigation,
+.element_for_explanation_fire {
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    margin: 0;
+    background-color: #8FD855;
+    border-radius: 10px;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 18px;
+    line-height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.element_for_explanation_navigation {
+    background-color: #8FD855;
+    border-radius: 10px;
+    
+    background-position: center;
+}
+.element_for_explanation_fire {
+    background: none;
+    border-radius: 50%;
+    border: 3px solid #8FD855;
+}
+.driving_up {
+    background-image: url('../img/arrow_up.png');
+}
+.driving_down {
+    background-image: url('../img/arrow_down.png');
+}
+.driving_left {
+    background-image: url('../img/arrow_left.png');
+}
+.driving_right {
+    background-image: url('../img/arrow_right.png');
+}
+
+.rotate_left {
+    background-image: url('../img/rotate_left.png');
+    background-position: center 60%;
+}
+.rotate_right {
+    background-image: url('../img/rotate_right.png');
+    background-position: center 60%;
+}
+#explanation_fire_from_MG {
+    background-image: url('../img/machine-gun.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+}
+
+.defis {
+    min-width: 20px;
+    max-width: 20px;
+    height: 30px;
+    margin: 0;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.lists_element > p {
+    margin: 3px 0 0 0;
+    padding: 0;
+    
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+
+
+@media screen and (max-width: 481px) {
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    .explanation_card_title {
+        font-size: 25px;
+    }
+    .part_of_explanation_card > h3 {
+        font-size: 18px;
+    }
+    .lists_element > p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+}

@@ -7,12 +7,12 @@ window.innerWidth <= 481 ? widthCert = 370 : widthCert = 850;
 const it = { 
 	index: 0,
 	type: "it",
-	url: "script/JSON/cert-IT.json"
+	url: `${window.location.protocol}//${window.location.host}/script/JSON/cert-IT.json`
 };
 const lang = { 
 	index: 0,
 	type: "lang",
-	url: "script/JSON/cert-Lang.json"
+	url: `${window.location.protocol}//${window.location.host}/script/JSON/cert-Lang.json`
 };
 
 /*------------ CERTIFICATES ----------------------------*/

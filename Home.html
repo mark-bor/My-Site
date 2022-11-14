@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="stylesheet" type="text/css" href="css/global.css">
-		<link rel="stylesheet" type="text/css" href="css/head-burger.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 
 		<link rel="stylesheet" type="text/css" href="css/pages/home-page.css">
@@ -15,13 +15,18 @@
 		<link rel="stylesheet" type="text/css" href="css/pages/certificates-page.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/project-page.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/contacts-page.css">
+		
 		<link rel="stylesheet" type="text/css" href="css/pages/calculator-page.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/birthday-timer.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/password-generator.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/memory-game.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/exchange-rate.css">
 		<link rel="stylesheet" type="text/css" href="css/pages/event-timer.css">
-
+		<link rel="stylesheet" type="text/css" href="css/pages/tank_game/game_body.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/tank_game/menu.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/tank_game/controllers.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/tank_game/tanks.css">
+		
 		<script defer src="script/menu-burger.js"></script>
 		<script defer type="module" src="script/pages.js"></script>
 		<!-- <script defer src="script/sites-language.js"></script> -->
@@ -70,7 +75,7 @@
 				</label>
 			</form>
 
-			<a class="but" href="#" data-page="home" name="logo">
+			<a class="but" href="/" data-page="home" name="logo">
 				<img class="logo" src="images/Logo.png" alt="logo">
 			</a>
 
@@ -80,7 +85,7 @@
 				</button>
 				
 				<a target="_blank" href="https://github.com/mark-bor?tab=repositories">
-					<img id="cat" src="images/cat.png" alt="cat" title="GitHub">
+					<img id="cat" src="images/cat.png" alt="cat" title="GitHub" height="70">
 				</a>
 			</div>				
 		</header>
@@ -88,28 +93,28 @@
 		<nav class="transMenu_S" id="menu_window">
 			<ul>
 				<li class="men_win">
-					<a id="top" class="but" href="#resume" data-page="resume" name="Cv">
+					<a id="top" class="but" href="/resume" data-page="resume" name="Cv">
 						<span class="ukraine">Резюме</span>
 						<span class="english">CV</span>
 						<span class="polish">CV</span>
 					</a>
 				</li>
 				<li class="men_win">
-					<a class="but" href="#works" data-page="works" name="Projects">
+					<a class="but" href="/works" data-page="works" name="Projects">
 						<span class="ukraine">Мої Роботи</span>
 						<span class="english">My Works</span>
 						<span class="polish">Мoje prace</span>
 					</a>
 				</li>
 				<li class="men_win">
-					<a class="but" href="#certificates" data-page="certificates" name="Certificates">
+					<a class="but" href="/certificates" data-page="certificates" name="Certificates">
 						<span class="ukraine">Сертифікати</span>
 						<span class="english">Certificates</span>
 						<span class="polish">Certyfikaty</span>
 					</a>
 				</li>
 				<li class="men_win">
-					<a class="but" href="#contacts" data-page="contacts" name="Contacts">
+					<a class="but" href="/contacts" data-page="contacts" name="Contacts">
 						<span class="ukraine">Контакти</span>
 						<span class="english">Contacts</span>
 						<span class="polish">Moje kontakty</span>
@@ -134,7 +139,7 @@
 				<!--__________ MENU _____________________-->
 				<ul class="head_block_menu">
 					<li class="one">
-						<a class="but block_text" href="#resume" data-page="resume" name="Cv">
+						<a class="but block_text" href="/resume" data-page="resume" name="Cv">
 							<span class="block">				
 								<img src="images/cv.png" alt="cv">
 							</span>
@@ -146,7 +151,7 @@
 						</a>
 					</li>
 					<li class="two">
-						<a class="but block_text" href="#certificates" data-page="certificates" name="Certificates">
+						<a class="but block_text" href="/certificates" data-page="certificates" name="Certificates">
 							<span class="block">
 								<img id="certificate" src="images/certificate 5.png" alt="certificate" />
 							</span>
@@ -158,7 +163,7 @@
 						</a>
 					</li>
 					<li class="three">
-						<a class="but block_text" href="#works" data-page="works" name="My Project">
+						<a class="but block_text" href="/works" data-page="works" name="My Project">
 							<span class="block">
 								<img src="images/gear.png" alt="gear">
 							</span>
@@ -184,14 +189,14 @@
 				<div class="cvs">
 					<ul class="div_in_cvs">
 						<li class="li_one">
-							<a class="but button_in_cvs button_in_cvs_one" href="#resume_1" data-page="resume_1" name="Cv 1">
+							<a class="but button_in_cvs button_in_cvs_one" href="/resume/resume_1" data-page="resume_1" name="Cv 1">
 								<span class="ukraine">Резюме 1</span>
 								<span class="english">CV 1</span>
 								<span class="polish">CV 1</span>
 							</a>
 						</li>
 						<li>
-							<a class="but button_in_cvs button_in_cvs_two" href="#resume_2" data-page="resume_2" name="Cv 2">
+							<a class="but button_in_cvs button_in_cvs_two" href="/resume/resume_2" data-page="resume_2" name="Cv 2">
 								<span class="ukraine">Резюме 2</span>
 								<span class="english">CV 2</span>
 								<span class="polish">CV 2</span>
@@ -488,6 +493,17 @@
 			<!--__________ RESUME 2 MENU _____________________-->
 			<section class="div r_2" id="resume_2">
 				<section class="cv_list">
+					<a class="download" href="Resume/M. Bordakov - Front-end.pdf" download>
+						<p>
+							<span class="ukraine">Завантажити</span>
+							<span class="english">Download</span>
+							<span class="polish">Ściągnij</span>
+						</p>
+						<div>
+							<img src="images/Download.png" alt="arrow button">
+						</div>
+					</a>
+
 					<!--_____________ HEADER _________-->
 					<header class="header_in_cv2">
 						<img src="images/Photo-for-Resume.jpg" alt="my photo portrait">
@@ -508,29 +524,7 @@
 
 					<!--____________ LEFT LINE ________-->
 					<aside class="left_line_in_cv2">
-						<section class="section_in_LLICV2">
-							<h2 class="title_in_left_line">CONTACTS</h2>
-							<ul class="icons_and_contacts">
-								<!-- <li>
-									<img src="images/placeholder.png">
-									<p>Ukraine</p>
-								</li> -->
-								<li>
-									<img src="images/web.png" alt="world wide web">
-									<a class="but" href="#contacts" data-page="contacts" name="Contacts">takct.netlify.app</a>
-								</li>
-								<li>
-									<img src="images/email.png" alt="email">
-									<p>mark12bord@gmail.com</p>
-								</li>
-								<li>
-									<img src="images/telephone.png" alt="phone">
-									<p>+380 95 76 25 669</p>						
-								</li>
-							</ul>
-						</section>
-
-						<section class="section_in_LLICV2">
+						<section>
 							<h2 class="title_in_left_line">LANGUAGES</h2>
 							<ul class="languages_lavels">
 								<li>
@@ -576,7 +570,7 @@
 							</ul>
 						</section>
 
-						<section class="section_in_LLICV2">
+						<section>
 							<h2 class="title_in_left_line">TECH SKILLS</h2>
 							<ul class="skills_lavels" id="tech_skills">
 								<!-- <li>
@@ -586,25 +580,13 @@
 							</ul>
 						</section>
 
-						<section class="section_in_LLICV2">
+						<section>
 							<h2 class="title_in_left_line">SOFT SKILLS</h2>
 							<ul class="skills_lavels"  id="soft_skills">
 								<!-- <li>
 									<p class="skills_in_left_line">Knowledge Waterfall, Agile (Scrum, Kanban)</p>
 									<div class="gray_line"><div class="green_line one_SS"></div></div>
 								</li> -->
-							</ul>
-						</section>
-
-						<section class="section_in_LLICV2">
-							<h2 class="title_in_left_line">HOBBIES</h2>
-							<ul class="hobbyes">
-								<li>
-									<img title="Listening and writing music" src="images/headphone.png" alt="Listening and writing music">
-								</li>
-								<li>
-									<img title="Studying languages" src="images/languages.jpg" alt="Studying languages">
-								</li>
 							</ul>
 						</section>
 					</aside>
@@ -708,6 +690,42 @@
 								</li>
 							</ul>
 						</section>
+
+						<div class="block_contacts_and_hobbies">
+							<section class="contacts_and_hobbies">
+								<h2 class="title_in_left_line">CONTACTS</h2>
+								<ul class="icons_and_contacts">
+									<!-- <li>
+										<img src="images/placeholder.png">
+										<p>Ukraine</p>
+									</li> -->
+									<li>
+										<img src="images/web.png" alt="world wide web">
+										<a class="but" href="#contacts" data-page="contacts" name="Contacts">takct.netlify.app</a>
+									</li>
+									<li>
+										<img src="images/email.png" alt="email">
+										<p>mark12bord@gmail.com</p>
+									</li>
+									<li>
+										<img src="images/telephone.png" alt="phone">
+										<p>+380 95 76 25 669</p>						
+									</li>
+								</ul>
+							</section>
+
+							<section class="contacts_and_hobbies">
+								<h2 class="title_in_left_line">HOBBIES</h2>
+								<ul class="hobbyes">
+									<li>
+										<img title="Listening and writing music" src="images/headphone.png" alt="Listening and writing music">
+									</li>
+									<li>
+										<img title="Studying languages" src="images/languages.jpg" alt="Studying languages">
+									</li>
+								</ul>
+							</section>
+						</div>
 					</section>
 				</section>
 			</section>
@@ -798,64 +816,71 @@
 					</ul>
 				</section>
 				<!--__________ MENU _____________________-->
-				<section class="block-menu-p">
-					<ul class="string-p">
-						<li>
-							<a class="but close q_e_c" href="#works/calculator" data-page="calculator">
-								<img src="css/pages/img/school-bord.jpg" alt="school board">
+				<ul class="block_menu_p">
+					<li>
+						<a class="but close q_e_c" href="/works/calculator" data-page="calculator">
+							<img src="css/pages/img/school-bord.jpg" alt="school board">
 
-								<span class="light_dark ukraine">Калькулятор<br>квадратних<br>рівнянь</span>
-								<span class="light_dark english">Quadratic<br>equation<br>calculator</span>
-								<span class="light_dark polish">Kalkulator<br>równań<br>kwadratowych</span>
-							</a>
-						</li>
-						<li>
-							<a class="but close b_t" href="#works/birthday-timer" data-page="birthday-timer">
-								<img src="css/pages/img/tort.jpg" alt="pie">
+							<span class="light_dark ukraine">Калькулятор<br>квадратних<br>рівнянь</span>
+							<span class="light_dark english">Quadratic<br>equation<br>calculator</span>
+							<span class="light_dark polish">Kalkulator<br>równań<br>kwadratowych</span>
+						</a>
+					</li>
+					<li>
+						<a class="but close b_t" href="/works/birthday-timer" data-page="birthday-timer">
+							<img src="css/pages/img/tort.jpg" alt="pie">
 
-								<span class="light_dark ukraine">Таймер<br>до Дня<br>Народження</span>
-								<span class="light_dark english">Birthday<br>timer</span>
-								<span class="light_dark polish">Minutnik<br>Urodzin</span>
-							</a>
-						</li>
-						<li>
-							<a class="but close p_g" href="#works/password-generator" data-page="password-generator">
-								<img src="css/pages/img/passwords.png" alt="head with password">
-									
-								<span class="light_dark ukraine">Генератор<br>паролей</span>
-								<span class="light_dark english">Password<br>generator</span>
-								<span class="light_dark polish">Generator<br>hasła</span>
-							</a>
-						</li>
-						<li>
-							<a class="but close m_g" href="#works/memory-game" data-page="memory-game">
-								<img src="css/pages/img/memory-game.png" alt="abstract image">
+							<span class="light_dark ukraine">Таймер<br>до Дня<br>Народження</span>
+							<span class="light_dark english">Birthday<br>timer</span>
+							<span class="light_dark polish">Minutnik<br>Urodzin</span>
+						</a>
+					</li>
+					<li>
+						<a class="but close p_g" href="/works/password-generator" data-page="password-generator">
+							<img src="css/pages/img/passwords.png" alt="head with password">
 								
-								<span class="light_dark ukraine">Memory<br>гра</span>
-								<span class="light_dark english">Memory<br>game</span>
-								<span class="light_dark polish">Memory<br>gra</span>
-							</a>
-						</li>
-						<li>
-							<a class="but close e_r" href="#works/exchange-rate" data-page="exchange-rate">
-								<img src="css/pages/img/exchange-rate.jpg" alt="coins">
-								
-								<span class="light_dark ukraine">Курс<br>валют</span>
-								<span class="light_dark english">Exchange<br>rate</span>
-								<span class="light_dark polish">Kurs<br>wymiany<br>walut</span>
-							</a>
-						</li>
-						<li>
-							<a class="but close t" href="#works/timer" data-page="timer">
-								<img src="css/pages/img/event-timer.jpg" alt="stopwatch in hand">
-								
-								<span class="light_dark ukraine">Таймер<br>до події</span>
-								<span class="light_dark english">Event<br>timer</span>
-								<span class="light_dark polish">Minutnik<br>wydarzenie</span>
-							</a>
-						</li>
-					</ul>
-				</section>
+							<span class="light_dark ukraine">Генератор<br>паролей</span>
+							<span class="light_dark english">Password<br>generator</span>
+							<span class="light_dark polish">Generator<br>hasła</span>
+						</a>
+					</li>
+					<li>
+						<a class="but close m_g" href="/works/memory-game" data-page="memory-game">
+							<img src="css/pages/img/memory-game.png" alt="abstract image">
+							
+							<span class="light_dark ukraine">Memory<br>гра</span>
+							<span class="light_dark english">Memory<br>game</span>
+							<span class="light_dark polish">Memory<br>gra</span>
+						</a>
+					</li>
+					<li>
+						<a class="but close e_r" href="/works/exchange-rate" data-page="exchange-rate">
+							<img src="css/pages/img/exchange-rate.jpg" alt="coins">
+							
+							<span class="light_dark ukraine">Курс<br>валют</span>
+							<span class="light_dark english">Exchange<br>rate</span>
+							<span class="light_dark polish">Kurs<br>wymiany<br>walut</span>
+						</a>
+					</li>
+					<li>
+						<a class="but close e_t" href="/works/timer" data-page="timer">
+							<img src="css/pages/img/event-timer.jpg" alt="stopwatch in hand">
+							
+							<span class="light_dark ukraine">Таймер<br>до події</span>
+							<span class="light_dark english">Event<br>timer</span>
+							<span class="light_dark polish">Minutnik<br>wydarzenie</span>
+						</a>
+					</li>
+					<li>
+						<a class="but open t_g" href="/works/game" data-page="game">
+							<img src="css/pages/img/tanks_game.png" alt="">
+							
+							<span class="light_dark ukraine">Гра<br>в танки</span>
+							<span class="light_dark english">Tanks<br>game</span>
+							<span class="light_dark polish">Gra<br>czołgowa</span>
+						</a>
+					</li>
+				</ul>
 			</section>
 
 			<!--__________ CONTACS MENU _____________________-->
@@ -1065,7 +1090,7 @@
 				<div class="functional">
 					<div class="left">
 							
-						<form class="options">
+						<form class="parametrs">
 
 							<h3 class="param">
 								<span class="ukraine">Параметри генератора</span>
@@ -1403,8 +1428,13 @@
 				</h1>
 
 				<form class="date" method="get">
-					<input class="date_time" id="date_time" type="datetime-local" required>
-					</input>
+					<label class="date_time" for="date_time">
+						<span class="ukraine">Введіть дату та час</span>
+						<span class="english">Input date and time</span>
+						<span class="polish">Wprowadź datę i godzinę</span>
+
+						<input id="date_time" type="datetime-local" required />
+					</label>
 				</form>
 				<div class="buttons">
 					<button id="reload" class="reload" type="reset" name="reload">
@@ -1503,10 +1533,306 @@
 					</article>
 				</section>
 			</section>
+
+			<!--__________ GAME _____________________-->
+			<section class="div gam" id="game">
+				<!--__________ TITLE _____________________-->
+				<h1>
+					<span class="ukraine">Танкова гра</span>
+					<span class="english">Tanks game</span>
+					<span class="polish">Gra czołgowa</span>
+				</h1>
+
+				
+				<!--__________ BODY _____________________-->
+				<div id="games_body" class="games_body">
+
+					<div class="game_map">
+						<!-- <img class="game_map_image" src="./Images/game_map.jpg" alt="game map"> -->
+					</div>
+
+					<div id="game_field" class="game_field"></div>
+					
+					<div class="games_control">
+						<button id="open_menu" class="open_menu" name="Explanation" title="Menu (on keyboard F)"></button>
+						<button id="increase" class="increase" name="full screen or zoom out" title="Full screen or zoom out"></button>
+						
+						<div class="block_with_btns position_left">
+							<button id="move_up" class="btn_control btn_control_nav" name="move tank straight" title="button Arrow Up on keyboard"></button>
+							<button id="move_left" class="btn_control btn_control_nav" name="rotate tank to left" title="button Arrow Left on keyboard"></button>
+							<button id="move_down" class="btn_control btn_control_nav" name="move tank back" title="button Arrow Down on keyboard"></button>
+							<button id="move_right" class="btn_control btn_control_nav" name="rotate tank to right" title="button Arrow Right on keyboard"></button>
+						</div>
+
+						<div class="information_about_tank">
+							<p class="information_about_mg">
+								<span class="mg_information"></span>
+								<span id="information_about_mg" class="information_mg">200/200</span>
+								<span id="mg_remainder" class="remainder"></span>
+							</p>
+							<p class="information_about_gun">
+								<span class="fire_information">&#128293;</span>
+								<span id="information_about_gun" class="information_gun">20/20</span>
+								<span id="g_remainder" class="remainder"></span>
+							</p>
+						</div>
+						
+						<div class="block_with_btns position_right">
+							<button id="fire_frome_MG" class="btn_control btn_control_fire" name="fire" title="button E on keyboard">
+								<svg><circle id="fire_MG_timer" class="fire_MG_timer" cx="20" cy="20" r="19" /></svg>
+							</button>
+							
+							<button id="fire" class="btn_control btn_control_fire" name="fire" title="button W on keyboard">
+								<svg><circle id="fire_timer" class="fire_timer" cx="25" cy="25" r="23" /></svg>
+								<span>&#128293;</span>
+							</button>
+							
+							<button id="rotate_left" class="btn_control btn_control_nav" name="rotate tower to left" title="button A on keyboard"></button>
+							<button id="rotate_right" class="btn_control btn_control_nav" name="rotate tower to right" title="button D on keyboard"></button>
+						</div>
+					</div>
+
+					<div id="menu_in_tank_game" class="menu_in_tank_game" style="display: block;">
+						<button id="close_menu" class="close_menu"><span></span><span></span></button>
+						
+						<nav class="nav_on_puncts_menu">
+							<ul class="list_with_puncts_menu">
+								<li><button class="punct_menu_from_list punct_active" data-section="main">Main</button></li>
+								<li><button class="punct_menu_from_list" data-section="options">Options</button></li>
+								<li><button class="punct_menu_from_list" data-section="explanation">Explanation</button></li>
+							</ul>
+						</nav>
+	
+						<section id="main" class="section_in_menu_tank_game" style="display: block;">
+		
+							<h2 class="menu_title">Main menu</h2>
+
+							<div class="mein_menu_with_tank">
+								<div class="main_section_in_mein_menu">
+									<section id="tank_in_main_menu_section" class="section_in_main_menu">
+	
+										<div class="tank_image">
+											<img id="tank_image" src="./Images/abrams_remove_background.png" alt="tank" width="350" />
+											<div class="block_with_name_and_button">
+												<h3 id="tank_name" class="wepon_name">M1 Abrams</h3>
+												<button id="confirm_selection" class="confirm_selection"><span>SELECT</span></button>
+											</div>
+										</div>
+	
+										<ul class="change_wepon">
+											<li><button id="select_tank_abrams" class="select_wepon" name="abrams"></button></li>
+											<li><button id="select_tank_leopard" class="select_wepon" name="leopard"></button></li>
+										</ul>
+	
+										<table class="table_whith_characteristics">
+											<caption class="table_name">Characteristics</caption>
+											<tr>
+												<td class="characteristic_name">Number of bullets</td>
+												<td class="characteristic"><span id="tank_number_of_bullets">20</span>x</td>
+											</tr>
+											<tr>
+												<td class="characteristic_name">Rate of fire</td>
+												<td class="characteristic"><span id="tank_rate_of_fire">20</span>rate/min</td>
+											</tr>
+											<tr>
+												<td class="characteristic_name">Recharge speed</td>
+												<td class="characteristic"><span id="tank_recharge_speed">20</span>s</td>
+											</tr>
+										</table>
+										
+									</section>
+	
+									<section id="tank_gun_in_main_menu_section" class="section_in_main_menu" style="display: none;">
+	
+										<img src="./Images/leopard_remove_background.png" alt="tank abrams" width="350" />
+	
+										<h3 class="wepon_name">M1 Abrams</h3>
+										
+									</section>
+	
+									<section id="machine_gun_in_main_menu_section" class="section_in_main_menu" style="display: none;">
+										
+										<figure class="machine_gun_image">
+											<img id="machine_gun_image" src="./Images/browning.png" alt="machine gun" width="230" />
+											<figcaption id="machine_gun_name" class="wepon_name">M2 Browning</figcaption>
+										</figure>
+	
+										<ul class="change_wepon">
+											<li><button id="select_machine_gun_browning" class="select_wepon" name="abrams"></button></li>
+											<li><button id="select_machine_gun_mg-42" class="select_wepon" name="leopard"></button></li>
+										</ul>
+	
+										<table class="table_whith_characteristics">
+											<caption class="table_name">Characteristics</caption>
+											<tr>
+												<td class="characteristic_name">Number of bullets</td>
+												<td class="characteristic">200x</td>
+											</tr>
+										</table>
+	
+									</section>
+								</div>
+
+								<aside class="sidebar_with_buttons">
+									<ul class="navigation_on_mein_menu">
+										<li>
+											<button class="button_in_nav_on_main_menu" data-section="tank">Tank</button>
+										</li>
+										<!-- <li>
+											<button class="button_in_nav_on_main_menu" data-section="tank_gun">Tank gun</button>
+										</li> -->
+										<li>
+											<button class="button_in_nav_on_main_menu" data-section="machine_gun">Machine gun</button>
+										</li>
+									</ul>
+									
+									<button id="start_game" class="start_game"></button>
+								</aside>
+							</div>
+							
+						</section>
+	
+						<section id="options" class="section_in_menu_tank_game" style="display: none;">
+		
+							<h2 class="menu_title">Options</h2>
+							
+							<section class="section_in_options">
+	
+								<h3 class="section_title">Sound</h3>
+
+								<audio id="music_one" src="./Sounds/Creedence_Clearwater_Revival-Fortunate_Son.mp3"></audio>
+								<audio id="music_two" src="./Sounds/Jefferson_Airplane-Somebody_To_Love.mp3"></audio>
+								<audio id="music_three" src="./Sounds/James_Brown-I_Got_You_(I Feel Good).mp3"></audio>
+	
+								<div class="global_sound">
+									<div class="block_with_management_body">
+										<button id="more_sounds" class="more_sounds"></button>
+										<label for="volume" class="global_volume">
+											<input id="volume" type="range" name="volume" value="10">
+											<span id="volume_number" class="volume_number"></span>
+										</label>
+									</div>
+									
+									<div id="detailed_sounds" class="detailed_sounds">
+										<label class="detailed_volume" for="volume_motor">
+											<span class="label">Tank motor</span>
+											<input id="volume_motor" type="range" name="volume" value="50">
+										</label>
+										<label class="detailed_volume" for="volume_move">
+											<span class="label">Tank movement</span>
+											<input id="volume_move" type="range" name="volume" value="50">
+										</label>
+										<label class="detailed_volume" for="volume_rotate_tower">
+											<span class="label">Tower</span>
+											<input id="volume_rotate_tower" type="range" name="volume" value="50">
+										</label>
+										<label class="detailed_volume" for="volume_fire_from_g">
+											<span class="label">Fire from gun</span>
+											<input id="volume_fire_from_g" type="range" name="volume" value="50">
+										</label>
+										<label class="detailed_volume" for="volume_fire_from_mg">
+											<span class="label">Machine gun</span>
+											<input id="volume_fire_from_mg" type="range" name="volume" value="50">
+										</label>
+										<label class="detailed_volume" for="volume_music">
+											<span class="label">Music</span>
+											<input id="volume_music" type="range" name="volume" value="50">
+										</label>
+									</div>
+								</div>
+							</section>
+	
+							<section class="section_in_options">
+	
+								<h3 class="section_title">Game controllers</h3>
+	
+								<div class="block_with_management_body">
+									<label class="hide_controllers_label" for="hide_controllers">
+										<span class="hide_controllers_explanation">
+											<span>Without<br>controllers</span>
+											<span>With<br>controllers</span>
+										</span>
+										<input id="hide_controllers" class="hide_controllers" type="checkbox" name="with or without controllers">
+										<span class="thumb_in_hide_controllers"></span>
+									</label>
+								</div>
+								
+							</section>
+							
+						</section>
+						
+						<section id="explanation" class="section_in_menu_tank_game" style="display: none;">
+		
+							<h2 class="menu_title">Explanation of the game and driving</h2>
+							
+							<section class="part_of_explanation_card">
+								<h3>Driving on a tank</h3>
+		
+								<img src="./Images/left_control.png" alt="left controller" width="200" />
+			
+								<ul class="explanation_list">
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation driving_up"></span>
+										<span class="defis"> - </span>
+										<p>Tank move straight (On keyboard - button "Arrow Up")</p>
+									</li>
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation driving_down"></span>
+										<span class="defis"> - </span>
+										<p>Tank move back (On keyboard - button "Arrow Down")</p>
+									</li>
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation driving_left"></span>
+										<span class="defis"> - </span>
+										<p>Tank rotate to left (On keyboard - button "Arrow Left")</p>
+									</li>
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation driving_right"></span>
+										<span class="defis"> - </span>
+										<p>Tank rotate to right (On keyboard - button "Arrow Right")</p>
+									</li>
+								</ul>
+							</section>
+		
+							<section class="part_of_explanation_card">
+								<h3>Tower rotation and fire</h3>
+		
+								<img src="./Images/right_control.png" alt="right controller" width="200" />
+			
+								<ul class="explanation_list">
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation rotate_left"></span>
+										<span class="defis"> - </span>
+										<p>Tower rotate to left (On keyboard - button "A")</p>
+									</li>
+									<li class="lists_element">
+										<span class="element_for_explanation_navigation rotate_right"></span>
+										<span class="defis"> - </span>
+										<p>Tower rotate to right (On keyboard - button "D")</p>
+									</li>
+		
+									<li class="lists_element">
+										<span class="element_for_explanation_fire">&#128293;</span>
+										<span class="defis"> - </span>
+										<p>Fire (On keyboard - button "W")</p>
+									</li>
+									
+									<li class="lists_element">
+										<span id="explanation_fire_from_MG" class="element_for_explanation_fire"></span>
+										<span class="defis"> - </span>
+										<p>Fire from machine gun (On keyboard - button "E")</p>
+									</li>
+								</ul>
+							</section>
+						</section>
+					</div>
+
+				</div>
+			</section>
 		</main>
 		<!--__________ FOOTER _____________________-->
 		<footer class="footer" id="footer">
-			<a class="but" href="#contacts" data-page="contacts">
+			<a class="but" href="/contacts" data-page="contacts">
 				<span class="ukraine">Контакти</span>
 				<span class="english">Contacts</span>
 				<span class="polish">Moje kontakty</span>

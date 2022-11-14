@@ -1,12 +1,16 @@
+import { bodiesColor } from "./sites-color.js";
+import { addSkills } from "./skills.js";
 import { certificatesLoaded } from "./certificates.js";
 import { birthdayTimer } from "./birthday-timer.js";
-import { addSkills } from "./skills.js";
-import { bodiesColor } from "./sites-color.js";
+import { game } from "./tanks_game/game.js";
+import { music } from "./tanks_game/menu/assembly.js";
+import { soundStor } from "./tanks_game/menu/options/options.js";
+
 
 // Зачекати завантаження сторінки:
 document.addEventListener('DOMContentLoaded', function() {
     
-    getPage();// Перевірка, чи є значення у локальному сховищі, встановити якщо немає
+    getPage();// Показати сторінку
     
     // Обрати всі кнопки
     document.querySelectorAll('.but').forEach(link => {
@@ -24,39 +28,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Отримати сторінку
 function getPage() {
-    let url = window.location.hash.split('');
-    url.shift();
-    let urlHash = url.join('');
+    if (!window.location.hash) {
+        showPage('home');
+        localStorage.setItem('section', 'home');
+        return;
+    }
 
-    url.shift();
-    url.shift();
-    url.shift();
-    url.shift();
-    url.shift();
-    url.shift();
-    let urlProjHash = url.join('');
+    let url = deleteElement(deleteElement(window.location.hash.split(''), '#').split(''), '/');
+    const urlHead = deleteElement(url.split(' '), ' ');
+    const urlResume = deleteElement(deleteElement(url.split(' '), 'resume').split(' '), ' ');
+    const urlWorks = deleteElement(deleteElement(url.split(' '), 'works').split(' '), ' ');
     
-    if (!window.location.hash){
+    if (urlHead === 'Home.html') {
+        showPage('home');
+        localStorage.setItem('section', 'home');
+
+    } else if (url===' ' | url==='') {
+        showPage('home');
+        localStorage.setItem('section', 'home');
+
+    } else if (!window.location.hash) {
         showPage('home');
         localStorage.setItem('section', 'home');
 
     } else {
-        if (urlHash==='resume' | urlHash==='certificates' | urlHash==='works' | urlHash==='contacts') {
-            showPage(urlHash);
-            localStorage.setItem('section', urlHash);
+        if (urlHead==='resume' | urlHead==='certificates' | urlHead==='works' | urlHead==='contacts') {
+            showPage(urlHead);
+            localStorage.setItem('section', urlHead);
 
-        } else if (urlHash === 'resume/resume_1') {
-            showPage('resume_1');
-            localStorage.setItem('section', 'resume_1');
-
-        } else if (urlHash === 'resume/resume_2') {
-            showPage('resume_2');
-            localStorage.setItem('section', 'resume_2');
+        } else if (urlResume === 'resume_1' | urlResume === 'resume_2') {
+            showPage(urlResume);
+            localStorage.setItem('section', urlResume);
 
         } else {
-            showPage(urlProjHash);
-            localStorage.setItem('section', urlProjHash);
+            showPage(urlWorks);
+            localStorage.setItem('section', urlWorks);
         }
+    }
+}
+
+function deleteElement(arr, elem) {
+    let array = [...arr];
+    if (array.length>0) {
+        array.forEach((e) => {
+            if (e===elem) {
+                const elemIndex = array.indexOf(e);
+                array.splice(elemIndex, 1, ' ');
+            }
+        });
+        return array.join('');
     }
 }
 
@@ -66,6 +86,11 @@ function showPage(page) {
     const div_block = document.querySelectorAll('.div');
     const cat = document.querySelector('#cat');
     const footer = document.querySelector('#footer');
+
+    document.getElementById('menu_in_tank_game').style.display='block';
+    // document.getElementById('open_menu').click();
+    music?.pause();
+    soundStor.tankMotor?.pause();
     
     if (page === 'home' | page === 'resume' | page === 'certificates' | page === 'works' | page === 'contacts'){
         punctOfMenuWindow(div_block, page);// Позначити вибраний пункт у вспливаючому меню
@@ -99,6 +124,7 @@ function showPage(page) {
         }
         
         if (page === 'birthday-timer') { birthdayTimer(); }
+        if (page === 'game') { document.getElementById('game_field').children.length===0? game(): null; }
     }
 
     document.querySelector('#link').className = 'link';

@@ -1,10 +1,14 @@
 /*-------------------- BODY ------------------------------------------------------*/
-@font-face {
+/* @font-face {
 	font-family: "e-Ukraine-Regular";
 	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Regular.otf');
+} */
+@font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
 }
 body {
-	font-family: "e-Ukraine-Regular", normal;
+	font-family: "e-Ukraine-Light", normal;
 	margin: 0;
 	background: #D9D9D9;
 }
@@ -72,10 +76,10 @@ a {
 
 
 /*-------------------- TITLE IN WORKS --------------------------*/
-@font-face {
+/* @font-face {
 	font-family: "e-Ukraine-Light";
 	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
-}
+} */
 main > section > h1 {
 	margin: 55px auto;
 	color: #D9D9D9;
@@ -117,7 +121,9 @@ main > section > h1 {
 	background-color: rgba(217, 217, 217, 0.79);
 	z-index: 7;
 	transition: 0.3s;
+	backdrop-filter: blur(3px);
 	
+	/* display: flex; */
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -131,7 +137,7 @@ main > section > h1 {
 	background: #F5F5F5;
 	border-radius: 15px;
 	text-align: center;
-	z-index: inherit;
+	z-index: 8;
 	
 	background-image: url("../Images/OOPS.png");
 	background-repeat: no-repeat;

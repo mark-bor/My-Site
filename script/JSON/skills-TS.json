@@ -4,12 +4,16 @@
         "level": "85"
     },
     {
-        "skill": "JavaScript",
-        "level": "75"
-    },
-    {
         "skill": "SCSS / Sass",
         "level": "80"
+    },
+    {
+        "skill": "Bootstrap",
+        "level": "40"
+    },
+    {
+        "skill": "JavaScript / ES6",
+        "level": "75"
     },
     {
         "skill": "Git / GitHub",
@@ -24,7 +28,7 @@
         "level": "70"
     },
     {
-        "skill": "Test documentation",
+        "skill": "Test docs",
         "level": "60"
     }
 ]

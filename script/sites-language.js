@@ -9,14 +9,9 @@ const GEO_CODES = {
 
 function getGeolocationDateTimeLocale(){
 	try {
-		// var nf = Intl.DateTimeFormat();
-		// var local = nf.resolvedOptions().locale.toLowerCase();
 		let local = navigator.language;
-		// console.log(local);
-
 		for(var i in GEO_CODES){
 			if(GEO_CODES[i].ln.split('|').indexOf(local)>-1) {
-				// console.log(GEO_CODES[i].code);
 				return GEO_CODES[i];
 			}
 		}
@@ -46,10 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Перевірити, чи вже є значення у локальному сховищі
 	if (!localStorage.getItem('language')) {
-		if (getGeolocationDateTimeLocale()){
-			Lang(getGeolocationDateTimeLocale().code);// Встановити мову на сайті та у локальному сховищі
-		} else {
+		const loc = getGeolocationDateTimeLocale().code;
+		if (!loc){
 			Lang('EN');
+		} else {
+			Lang(loc);// Встановити мову на сайті та у локальному сховищі
 		}
 	} else {
 		Lang(localStorage.getItem('language'));// Якщо є, встановити мову сайту
@@ -57,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //встановити слухач події для перемикача мови
-language.addEventListener('change', function Language(){
-	Lang(language.value);
-});
+language.addEventListener('change', () => Lang(language.value));
 
 function Lang(lang) {
 	if (lang === 'UA') {

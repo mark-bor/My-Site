@@ -3,8 +3,11 @@
   src: url('.../e-Ukraine_font/e-Ukraine/e-Ukraine-UltraLight.otf');
 }
 
-/*-------------------- LEGEND --------------------*/
+.wor {
+  margin: 0 30px;
+}
 
+/*-------------------- LEGEND --------------------*/
 .legend {
   width: 220px;
   height: 50px;
@@ -58,38 +61,31 @@
 }
 
 /*-------------------- MENU --------------------*/
-
-.block-menu-p {
-  min-height: 100px;
-  max-width: 630px;
-  margin: 0px auto;
-}
-.string-p {
+.block_menu_p {
+  max-width: 510px;
   height: 100%;
-  max-width: 570px;
-  margin: 0px 30px;
+  margin: 0px auto;
   padding: 0;
   list-style-type: none;
+
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 200px;
-  grid-auto-rows: auto;
-  grid-auto-columns: 270px;
-  grid-auto-columns: auto;
+  grid-auto-rows: 170px;
+  /* grid-auto-rows: auto;
+  grid-auto-columns: 250px; */
+  /* grid-auto-columns: auto; */
   grid-row-gap: 35px;
   grid-column-gap: 30px;
 }
-.string-p > li {
+.block_menu_p > li {
   display: block;
-  max-width: 270px;
-  max-height: 200px;
-  min-width: 270px;
-  min-height: 200px;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
-.string-p .but {
+.block_menu_p .but {
   position: relative;
   width: 100%;
   height: 100%;
@@ -112,16 +108,18 @@
   opacity: 0.3;
 }
 /* .q_e_c {} */
-.q_e_c > img {
-  width: 150%;
-}
+.q_e_c > img {width: 150%;}
 /* .b_t {} */
 /* .p_g {} */
 /* .m_g {} */
 /* .e_r {} */
-.t > img {
-  width: 120%;
+.e_t > img {width: 120%;}
+.t_g > img {
+  width: auto;
+  height: 110%;
+  bottom: 0;
 }
+
 .wor .but span {
   color: #1E2939;
   font-weight: 100;
@@ -130,7 +128,7 @@
   text-align: center;
   opacity: 1;
 }
-.wor .string-p .close {
+.wor .block_menu_p .close {
   animation-name: close;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -147,7 +145,7 @@
     box-shadow: 0px 0px 7px #8FD855;
   }
 }
-.wor .string-p .open {
+.wor .block_menu_p .open {
   animation-name: open;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -164,7 +162,7 @@
     box-shadow: 0px 0px 7px #78A2E1;
   }
 }
-.wor .string-p .but:hover {
+.wor .block_menu_p .but:hover {
   animation-name: t_hover;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -180,7 +178,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .wor .string-p {
+  .wor .block_menu_p {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
@@ -188,14 +186,14 @@
     grid-row-gap: 15px;
     grid-column-gap: 10px;
   }
-  .wor .string-p > li {
+  .wor .block_menu_p > li {
     min-width: 110px;
     min-height: 100px;
   }
-  .wor .string-p .but {
+  .wor .block_menu_p .but {
     border-radius: 23px;
   }
-  .wor .string-p .but span {
+  .wor .block_menu_p .but span {
     color: #1E2939;
     font-weight: 400;
     font-size: 19px;

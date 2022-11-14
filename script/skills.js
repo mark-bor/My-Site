@@ -18,6 +18,6 @@ function getSkills(place, url) {
 }
 
 export function addSkills() {
-    getSkills(document.querySelector('#tech_skills'), 'script/JSON/skills-TS.json');
-    getSkills(document.querySelector('#soft_skills'), 'script/JSON/skills-SS.json');
+    getSkills(document.querySelector('#tech_skills'), `${window.location.protocol}//${window.location.host}/script/JSON/skills-TS.json`);
+    getSkills(document.querySelector('#soft_skills'), `${window.location.protocol}//${window.location.host}/script/JSON/skills-SS.json`);
 }

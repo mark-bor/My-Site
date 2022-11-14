@@ -1,0 +1,18 @@
+{
+    "abrams": {
+        "url": "./Images/abrams_remove_background.png",
+        "name": "M1 Abrams",
+        "numberOfBullets": "20",
+        "rateOfFire": "20",
+        "rechargeSpeed": "20",
+        "color": "#C9B897"
+    },
+    "leopard": {
+        "url": "./Images/leopard_remove_background.png",
+        "name": "Leopard 2",
+        "numberOfBullets": "20",
+        "rateOfFire": "20",
+        "rechargeSpeed": "20",
+        "color": "#849878"
+    }
+}

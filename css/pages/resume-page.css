@@ -47,6 +47,59 @@
 }
 
 /* --------- COMMON WITH CV1 AND CV2 ---------- */
+.download {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	position: absolute;
+	width: 150px;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+	top: 23px;
+	right: 23px;
+	z-index: 1;
+
+	text-decoration: none;
+	background: #78A2E1;
+	border-radius: 3px;
+}
+.download > p {
+	display: inline-block;
+	height: 100%;
+	margin: 0 0 0 18px;
+	padding: 0;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17px;
+}
+.download > div {
+	width: 35px;
+	height: 100%;
+	margin: 0;
+	background: #457FD6;
+	border-radius: 0px 3px 3px 0px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.download > div > img {
+	width: 11px;
+	height: 13px;
+	margin: 0;
+}
+
+
+
+
 .my_work {
 	margin-bottom: 10px;
 }
